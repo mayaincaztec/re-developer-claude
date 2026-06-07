@@ -1,71 +1,63 @@
-# RE Developer Suite Marketplace
+# RE Developer Suite — Claude Code / Cowork plugin
 
-Private Codex marketplace for a Vietnamese real-estate developer operating model.
+Bộ workflow tiếng Việt cho mô hình vận hành của một Chủ đầu tư bất động sản,
+đóng gói theo chuẩn plugin của Claude Code / Cowork.
 
-## Included
+> Bản này được chuyển đổi từ marketplace Codex gốc (`mayaincaztec/re-developer`)
+> sang chuẩn Claude. Nội dung skills, references, templates giữ nguyên; chỉ thay
+> lớp manifest (`.claude-plugin/`).
 
-- RE-HQ coordination and routing
-- RE-Legal
+## Bao gồm
+
+- RE-HQ — điều phối và phân luồng yêu cầu
+- RE-Legal — pháp lý (licensing-expert, legal-counsel, legal-writing, deliverable templates…)
 - RE-Investment-Finance
 - RE-Market-Research
 - RE-Project-Design
-- Due diligence and deal-structuring workflows
-- Safe custom-agent installer and data-workspace initializer
+- Due diligence và deal-structuring workflows
 
-The plugin contains workflows and templates only. Keep deal documents, internal
-knowledge, credentials and generated outputs in a separate data workspace.
+Plugin chỉ chứa workflow và template. Lưu hồ sơ deal, tri thức nội bộ, credentials
+và output sinh ra ở một data workspace riêng.
 
-## Install From Private GitHub
+## Cài đặt (Claude Code / Cowork)
 
-```powershell
-codex plugin marketplace add mayaincaztec/re-developer --ref v0.2.0 --sparse .agents/plugins --sparse plugins
-codex plugin add re-developer-suite@re-developer-suite-private
+```
+/plugin marketplace add mayaincaztec/re-developer-claude
+/plugin install re-developer-suite
 ```
 
-Start a new thread, invoke `setup-re-agents`, then invoke
-`initialize-re-workspace` from the intended data workspace.
+Sau khi cài, mở thread mới và gọi các skill, ví dụ:
 
-Private Git authentication must already work on the machine. Prefer the
-organization's approved credential manager or SSH policy; do not store tokens
-inside this repository.
+- "Dùng RE-HQ để phân luồng yêu cầu này."
+- "Điều phối due diligence cho thương vụ này."
+- "Soạn công văn pháp lý cho dự án ..."
 
-## Pilot And Promotion
+## Cấu trúc
 
-1. Tag a semantic version such as `v0.2.0`.
-2. Install that tag on the personal pilot machine.
-3. Run the checks in `tests/ACCEPTANCE.md`.
-4. Promote the same immutable tag to the company machine.
-5. Do not use `main` as a production installation source.
-
-## Upgrade
-
-Upgrade the marketplace snapshot to an approved tag, reinstall the plugin, open
-a new thread, and run `setup-re-agents` in check mode before applying agent
-template updates.
-
-```powershell
-codex plugin marketplace upgrade re-developer-suite-private
-codex plugin add re-developer-suite@re-developer-suite-private
+```
+.claude-plugin/marketplace.json          # marketplace ở gốc repo
+plugins/re-developer-suite/
+  .claude-plugin/plugin.json             # manifest plugin
+  skills/                                # 20 skills (SKILL.md) — Claude tự quét
+  references/                            # tài liệu tham chiếu
+  templates/                            # template deliverable
+  agent-templates/  scripts/  tests/     # tiện ích bổ sung
 ```
 
-## Development Checks
+## Skills
 
-Run from the repository root with Python 3.11+:
+20 skills: dd-coordinator, deal-structuring-advisor, deal-structuring, doc-renamer,
+initialize-re-workspace, legal-counsel, legal-writing, licensing-expert, re-hq,
+re-investment-finance, re-legal, re-legal-deliverable-templates, re-legal-intake-router,
+re-legal-operating-matrix, re-legal-skill-maintenance, re-legal-verification-rules,
+re-market-research, re-project-design, setup-re-agents, vn-re-research.
 
-```powershell
-python plugins/re-developer-suite/scripts/check_bundle.py
-python -m unittest discover -s tests -v
-```
+## Ghi chú
 
-Validate the plugin with Codex's `plugin-creator` validator before release.
-
-## Migrated Business Library
-
-Version `0.2.0` contains the complete selected business library from the prior
-profiles: 12 detailed skills containing 50 files, their references, legal
-templates, checklists, DD and structuring workflows, plus eight department
-operating/library guides.
-
-The migration intentionally excludes memories, sessions, cache, logs,
-databases, model configuration, authentication, runtime files and `.env`
-files. See `plugins/re-developer-suite/references/migration-manifest.json`.
+- `agent-templates/*.toml` và `scripts/*.py` là tiện ích từ bản Codex; Claude không
+  tự chạy chúng — giữ lại để tham chiếu, có thể lược bỏ sau.
+- Để chạy kiểm thử bundle (tuỳ chọn, Python 3.11+):
+  ```
+  python plugins/re-developer-suite/scripts/check_bundle.py
+  python -m unittest discover -s tests -v
+  ```

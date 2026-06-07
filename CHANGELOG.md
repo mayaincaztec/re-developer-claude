@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.2.1 - 2026-06-07
+
+- Ported the suite to the Claude Code / Cowork plugin standard.
+- Added `.claude-plugin/marketplace.json` (repo root) and
+  `plugins/re-developer-suite/.claude-plugin/plugin.json`.
+- Removed Codex-only manifests (`.agents/plugins/marketplace.json`,
+  `.codex-plugin/plugin.json`). Skills, references and templates unchanged.
+- Rewrote README install instructions for `/plugin marketplace add` + `/plugin install`.
+
 ## 0.2.0 - 2026-06-07
 
 - Migrated the complete selected legal reference, template and checklist library.

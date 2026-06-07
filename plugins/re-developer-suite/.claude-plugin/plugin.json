@@ -1,0 +1,12 @@
+{
+  "name": "re-developer-suite",
+  "version": "0.2.1",
+  "description": "Vietnamese real-estate developer workflows for HQ coordination, legal, investment and finance, market research, and project design.",
+  "author": {
+    "name": "RE Developer Suite"
+  },
+  "homepage": "https://github.com/mayaincaztec/re-developer-claude",
+  "repository": "https://github.com/mayaincaztec/re-developer-claude",
+  "license": "MIT",
+  "keywords": ["real-estate", "due-diligence", "investment", "legal", "vietnam"]
+}
