@@ -9,11 +9,11 @@ license: MIT
 
 Specialist skill của `RE-Project-Design`. Đóng vai **Trợ lý Quản lý Thiết kế (Design Manager)** đại diện cho Chủ đầu tư (CĐT): lập & rà soát quy hoạch chi tiết 1/500, tính toán đầy đủ chỉ tiêu quy hoạch, phản biện hồ sơ thiết kế, và tối ưu hiệu quả dự án. Đứng về lợi ích dài hạn của CĐT; mọi phân tích gắn số liệu và hành động cụ thể.
 
-## When to Use
+## Khi nào dùng
 
 Dùng khi: tính chỉ tiêu quy hoạch (FAR/GFA/NSA/mật độ/dân số/đỗ xe/hầm) từ giả định đất–mật độ–tầng cao; kiểm tra tuân thủ QCVN / chỉ tiêu 1/2000; rà soát & phản biện hồ sơ tư vấn (quy hoạch, kiến trúc, hạ tầng, MEP, cảnh quan); tối ưu công năng/mật độ/tầng cao/product mix; lập concept brief có cơ sở chỉ tiêu.
 
-Do not use for: thẩm định pháp lý dự án (→ `licensing-expert`); FS tài chính chi tiết (→ `re-feasibility-study`); area study / comps thị trường (→ `re-market-research`).
+Không dùng cho: thẩm định pháp lý dự án (→ `licensing-expert`); FS tài chính chi tiết (→ `re-feasibility-study`); area study / comps thị trường (→ `re-market-research`).
 
 ## Tài liệu kèm
 
@@ -61,7 +61,7 @@ Chỉ có DT đất + loại hình → giả định D/H/FAR theo QCVN. D×H ra 
 
 Chuyên nghiệp, sắc bén, thực tế — như báo cáo nội bộ cho HĐQT/Ban TGĐ. Ưu tiên **bảng số liệu** + bullet ngắn; kết luận actionable. Tiếng Việt mặc định.
 
-## Verification
+## Kiểm tra
 
 - [ ] Đã chạy đủ 9 bước (hoặc nêu rõ bước nào không áp dụng)
 - [ ] Mọi giả định có `[GIẢ ĐỊNH]` + căn cứ; chỉ tiêu 1/2000 (nếu có) được ưu tiên

@@ -7,7 +7,7 @@ license: MIT
 
 # Legal Writing for Licensing — Vietnamese Professional Drafting
 
-## Overview
+## Tổng quan
 
 Skill này dùng để soạn và rà soát **công văn pháp lý**, **báo cáo pháp lý** và các deliverable tiếng Việt khác trong agent `RE-Legal`. Mục tiêu là tạo ra văn bản:
 - đúng mực;
@@ -24,7 +24,7 @@ Skill gồm 6 module companion:
 5. `references/hybrid-specialist-input-drafting.md` — soạn specialist legal input cho HQ-led workflow
 6. `references/hybrid-specialist-input-review.md` — rà specialist legal input trước khi gửi `RE-HQ`
 
-## When to Use
+## Khi nào dùng
 
 - soạn công văn giải trình, bổ sung hồ sơ, đề nghị, phản hồi hoặc xin ý kiến;
 - soạn báo cáo pháp lý về điều kiện cấp phép, legal status, issue / risk, licensing roadmap hoặc option analysis;
@@ -32,13 +32,13 @@ Skill gồm 6 module companion:
 - rà soát draft legal tiếng Việt để bớt mùi AI nhưng vẫn giữ giọng pháp lý chuyên nghiệp;
 - đóng vai companion skill cho `licensing-expert` hoặc `legal-counsel`.
 
-Do not use for:
+Không dùng cho:
 - redline hợp đồng clause-by-clause;
 - opinion letter chuyên biệt ngoài scope profile;
 - pure marketing content hoặc thought leadership;
 - thay thế specialist analysis của `licensing-expert` hoặc `legal-counsel`.
 
-## Routing
+## Định tuyến
 
 ### 1. Dùng cùng `licensing-expert` khi:
 - tài liệu gắn với giải trình thủ tục, hồ sơ cấp phép, approval path, legal status, compliance, điều kiện dự án hoặc permit gap analysis.
@@ -60,7 +60,13 @@ Do not use for:
 ### 5. Không dùng skill này để ôm coordination
 Nếu công việc đã chuyển thành điều phối Rà Soát Thẩm Định (Due Diligence), data room orchestration hoặc structuring nhiều phòng ban, skill này chỉ nên polish deliverable legal; phần coordination thuộc `RE-Investment-Finance` (deal lifecycle) hoặc `RE-HQ` (executive synthesis).
 
-## Workflow
+### 6. Deliverable tiếng Anh
+Ngôn ngữ làm việc của skill là tiếng Việt, nhưng **deliverable có thể là tiếng Anh** theo `../../references/operating-contract.md` (mục Output language) — vd memo/redline cho hợp đồng bản tiếng Anh, hoặc khi Sếp yêu cầu.
+- Khi viết tiếng Anh: dùng văn phong pháp lý tiếng Anh chuẩn, **không dịch máy** từ bản tiếng Việt; giữ issue framing, judgment, risk articulation và recommendation.
+- Phần review chống dấu vết AI và các module `*-cong-van` / `*-bao-cao` được tối ưu cho tiếng Việt; với tiếng Anh, áp tinh thần tương đương (bỏ cấu trúc đối xứng rỗng, nhãn AI, filler) nhưng theo register tiếng Anh.
+- Khi tài liệu song ngữ hoặc có rủi ro mâu thuẫn bản Việt–Anh, nêu rõ **controlling language**.
+
+## Quy trình
 
 1. Xác định loại tài liệu: công văn, báo cáo, memo, issue list hay recommendation note.
 2. Xác định vai nói: doanh nghiệp, specialist legal nội bộ, legal counsel hoặc phối hợp.
@@ -79,11 +85,11 @@ Nếu công việc đã chuyển thành điều phối Rà Soát Thẩm Định 
 
 Xem thêm: `references/department-application.md` để áp dụng skill này theo bối cảnh specialist legal team.
 
-## Language Rule
+## Quy tắc ngôn ngữ
 
 Đây là rule chuẩn của `RE-Legal` ở phase hiện tại:
 - tên skill giữ bằng tiếng Anh theo convention chung;
-- toàn bộ body, workflow và SOP viết bằng tiếng Việt;
+- toàn bộ body, workflow và SOP viết bằng tiếng Việt (ngôn ngữ làm việc); ngôn ngữ **deliverable** theo mục Output language trong `../../references/operating-contract.md`;
 - tiếng Anh chỉ dùng khi không có từ tiếng Việt tương đương tự nhiên hoặc cần giữ thuật ngữ chuyên ngành;
 - với thuật ngữ quan trọng, ưu tiên kiểu **Việt ngữ (Anh ngữ)**, ví dụ: Rà Soát Thẩm Định (Due Diligence), Điều Kiện Tiên Quyết (Conditions Precedent), Điều Khoản Bồi Thường (Indemnity).
 
@@ -119,7 +125,7 @@ Quy tắc thực hiện:
 
 Xem thêm reference: `references/pdf-export-workflow.md`.
 
-## Common Pitfalls
+## Lỗi thường gặp
 
 1. Trộn giọng công văn với giọng báo cáo trong cùng một tài liệu.
 2. Chỉ paraphrase quy định mà không áp vào dữ kiện thực tế.
@@ -130,7 +136,7 @@ Xem thêm reference: `references/pdf-export-workflow.md`.
 7. Không phát hiện lúc deliverable legal thực chất chỉ là một phần của workflow coordination thuộc `RE-HQ`.
 8. Viết chat reply quá ngắn và quá cộc, làm đúng ý nhưng tạo cảm giác máy móc.
 
-## Verification Checklist
+## Checklist kiểm tra
 
 - [ ] Đã chọn đúng module theo loại tài liệu
 - [ ] Vai nói nhất quán từ đầu đến cuối

@@ -9,19 +9,19 @@ license: MIT
 
 Specialist market-research execution cho thị trường BĐS Việt Nam, không phải lớp điều phối liên phòng ban. Khi task chuyển thành tổng hợp đa phòng ban hoặc ra quyết định đầu tư tích hợp, route về `RE-HQ`.
 
-## When to Use
+## Khi nào dùng
 
 Dùng khi trọng tâm là: area study / khu vực; comps & pricing; supply-demand & pipeline mở bán; competitor / project scan; absorption observation; xây dựng market thesis từ dữ liệu công khai.
 
-Do not use for: underwriting / IRR (→ `RE-Investment-Finance`); legal status / pháp lý dự án (→ `RE-Legal`); product mix / concept (→ `RE-Project-Design`); tổng hợp đa phòng ban (→ `RE-HQ`).
+Không dùng cho: underwriting / IRR (→ `RE-Investment-Finance`); legal status / pháp lý dự án (→ `RE-Legal`); product mix / concept (→ `RE-Project-Design`); tổng hợp đa phòng ban (→ `RE-HQ`).
 
-## Engine & companion
+## Bộ máy & skill đi kèm
 
 - **`vn-re-research`** là engine vận hành của phòng này: quản lý database dự án BĐS VN có cấu trúc, scan giá thứ cấp (batdongsan.com.vn qua Claude in Chrome), và sinh báo cáo thị trường theo 4 protocol (thêm dự án / cập nhật giá / báo cáo / weekly scan). **Mặc định load `vn-re-research`** khi task liên quan database, scan giá hoặc báo cáo định kỳ.
 - Template comparable: `../../templates/market-comp-table.md`.
 - Browser: ưu tiên Claude in Chrome (`mcp__Claude_in_Chrome__*`) cho site BĐS VN có anti-bot; fallback WebFetch / WebSearch.
 
-## Workflow
+## Quy trình
 
 1. Define geography, asset class, customer, period và decision to support.
 2. Search official developer và government sources first, then reputable research và listing sources.
@@ -32,14 +32,14 @@ Do not use for: underwriting / IRR (→ `RE-Investment-Finance`); legal status /
 7. Dùng `../../templates/market-comp-table.md` cho bảng dự án so sánh.
 8. Explain implications và remaining uncertainty; không biến một mẫu nhỏ thành kết luận toàn thị trường.
 
-## Output shapes
+## Dạng đầu ra
 
 - **Market snapshot** — tóm tắt cung-cầu, giá, pipeline + nhận định ngắn.
 - **Comparable table** — theo template, mỗi dòng có price basis + source + access date + confidence.
 - **Area / sector study** — bối cảnh, comps, xu hướng, hệ quả cho quyết định.
 - **Market thesis** — luận điểm + bằng chứng + rủi ro / điểm còn bất định.
 
-## Verification checklist
+## Kiểm tra checklist
 
 - [ ] Đã nêu rõ geography / asset class / period / decision to support
 - [ ] Mỗi data point có source + access date + price basis + confidence

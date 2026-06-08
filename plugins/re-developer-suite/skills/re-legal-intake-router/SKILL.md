@@ -7,7 +7,7 @@ license: MIT
 
 # re-legal Intake Router
 
-## Overview
+## Tổng quan
 
 Skill này là lớp điều phối đầu vào của agent `RE-Legal`.
 
@@ -19,7 +19,7 @@ Mục tiêu là giúp agent làm đúng 4 việc ngay từ đầu:
 
 `RE-Legal` là profile **specialist legal execution**. Vì vậy skill này phải ưu tiên phát hiện sớm các bài toán đã chuyển thành **cross-functional coordination** để không ôm sai vai.
 
-## When to Use
+## Khi nào dùng
 
 Dùng skill này khi:
 - Sếp giao task mới nhưng chưa rõ nên vào lane nào;
@@ -28,13 +28,13 @@ Dùng skill này khi:
 - cần chốt deliverable trước khi bắt đầu phân tích;
 - cần chọn companion skill như `legal-writing`.
 
-Do not use for:
+Không dùng cho:
 - phân tích nội dung pháp lý sâu sau khi lane đã rõ hoàn toàn;
 - review hợp đồng chi tiết từng điều khoản;
 - approval path analysis chi tiết;
 - thao tác rename / move file cụ thể.
 
-## Routing Logic
+## Định tuyến Logic
 
 ### 1. Giữ task trong `RE-Legal` khi:
 - trọng tâm là **phân tích pháp lý dự án**;
@@ -169,7 +169,7 @@ Legal package tối thiểu nên trả lời được:
 3. nếu vẫn cần deliverable legal riêng, chỉ giữ phần specialist legal trong `RE-Legal`
 4. nếu vừa sửa boundary hoặc workflow graph, cân nhắc `re-legal-skill-maintenance` để rà anti-drift
 
-## Output Shape for Intake
+## Dạng đầu ra cho intake
 
 Khi task chưa rõ lane, có thể trả lời bằng format intake ngắn sau:
 
@@ -188,14 +188,14 @@ Khi task chưa rõ lane, có thể trả lời bằng format intake ngắn sau:
 - ...
 ```
 
-## Language Rule
+## Quy tắc ngôn ngữ
 
 - Tên skill giữ bằng tiếng Anh theo convention chung.
 - Body, workflow và SOP viết bằng tiếng Việt.
 - Chỉ dùng tiếng Anh khi không có từ Việt tương đương tự nhiên hoặc cần giữ thuật ngữ chuẩn.
 - Với thuật ngữ quan trọng, ưu tiên kiểu **Việt ngữ (Anh ngữ)** nếu giúp rõ nghĩa hơn.
 
-## Common Pitfalls
+## Lỗi thường gặp
 
 1. Thấy từ “DD” rồi tự động ôm luôn trong `RE-Legal` dù bản chất là coordination.
 2. Không chốt deliverable đầu ra nên phân tích lan man.
@@ -203,7 +203,7 @@ Khi task chưa rõ lane, có thể trả lời bằng format intake ngắn sau:
 4. Không gọi `legal-writing` cho memo/report tiếng Việt quan trọng, làm output thiếu polish.
 5. Không phát hiện lúc task đã vượt khỏi specialist legal execution và đáng ra phải route `RE-HQ`.
 
-## Verification Checklist
+## Checklist kiểm tra
 
 - [ ] Đã xác định task thuộc lane nào
 - [ ] Đã xác định deliverable cuối

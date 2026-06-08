@@ -7,7 +7,7 @@ license: MIT
 
 # Legal Counsel
 
-## Overview
+## Tổng quan
 
 Skill này là specialist procedure skill của `RE-Legal` cho **hợp đồng, giao dịch và dispute-oriented advisory**.
 
@@ -20,7 +20,7 @@ Dùng skill này khi trọng tâm công việc là:
 
 Skill này phục vụ **specialist legal execution**. Nếu task chuyển thành điều phối deal nhiều stream, structuring nhiều bộ phận, hoặc DD coordination tổng thể, phải route sang `RE-Investment-Finance` (deal lifecycle owner); chỉ tổng hợp đa phòng cấp executive mới thuộc `RE-HQ`.
 
-## When to Use
+## Khi nào dùng
 
 Dùng skill này khi:
 - rà soát NDA, LOI, Term Sheet, SPA, SHA, JVA, hợp đồng chuyển nhượng dự án, hợp đồng thuê đất, hợp đồng mua bán nhà ở;
@@ -30,14 +30,14 @@ Dùng skill này khi:
 - cần dispute advisory note, notice of breach note, claim framing hoặc remedial options;
 - cần giải thích legal effect của một điều khoản cho business / management / legal team.
 
-Do not use for:
+Không dùng cho:
 - approval path hoặc permit analysis;
 - legal status review thuần dự án;
 - DD coordination nhiều workstream;
 - overall deal structuring / transaction architecture nhiều phòng ban;
 - document renaming / inventory / move file.
 
-## Companion Skills
+## Skill đi kèm
 
 - Dùng cùng `re-legal-deliverable-templates` để chọn nhanh format như contract review memo, clause issue list, legal question list hoặc recommendation memo.
 - Dùng cùng `re-legal-verification-rules` ở cuối để kiểm tra quote support, mức ưu tiên, fallback và ranh giới scope.
@@ -45,7 +45,7 @@ Do not use for:
 - Dùng cùng `licensing-expert` khi issue hợp đồng phụ thuộc điều kiện pháp lý dự án, tình trạng dự án, permits, chuyển nhượng dự án hoặc regulatory feasibility.
 - Dùng cùng `re-legal-intake-router` khi đầu bài mới vào chưa rõ là contract-only hay mixed legal/project issue.
 
-## Core Modes
+## Chế độ chính
 
 ### 1. Review Hợp đồng từ góc nhìn một bên
 Áp dụng khi user đưa draft cần review theo vai Buyer / Seller / Investor / JV partner / Landlord / Tenant / Developer.
@@ -88,7 +88,10 @@ Không phải mọi điểm lệch khỏi thông lệ đều là deal-breaker. N
 ### 5. Nói rõ giới hạn khi thiếu tài liệu
 Nếu chưa có phụ lục, định nghĩa, schedule, side letter hoặc tài liệu liên quan, phải ghi rõ đó là giới hạn của kết luận.
 
-## Workflow
+### 6. Ngôn ngữ đầu ra theo bối cảnh hợp đồng
+Ngôn ngữ làm việc là tiếng Việt, nhưng **deliverable theo ngôn ngữ của hợp đồng gốc / yêu cầu của Sếp** (xem `../../references/operating-contract.md` — Output language): hợp đồng/SPA bản tiếng Anh → review memo/redline tiếng Anh; hợp đồng VN → tiếng Việt; song ngữ khi một bên là tổ chức/cá nhân VN. Khi review hợp đồng song ngữ, nêu rõ **controlling language** (bản tiếng Việt thường được ưu tiên tại tòa Việt Nam).
+
+## Quy trình
 
 ### Bước 1 — Xác định mục tiêu review hoặc drafting
 Chốt rõ user muốn gì:
@@ -165,7 +168,7 @@ Phải kéo `licensing-expert` nếu điều khoản phụ thuộc các vấn đ
 - Nếu output là memo / recommendation / breach note tiếng Việt, mặc định gọi `legal-writing` để polish ngôn ngữ và tăng độ counsel-ready.
 - Trước khi chốt, so lại bằng `re-legal-verification-rules` để kiểm tra clause support, fallback quality, missing facts và ranh giới scope.
 
-## Output Shapes
+## Dạng đầu ra
 
 ### 1. Clause Review ngắn
 ```md
@@ -228,7 +231,7 @@ Phải coi task đã vượt scope `RE-Legal` khi:
 
 Trong case đó, `RE-Legal` vẫn làm contract memo / legal note, nhưng **coordination deal lifecycle (DD, structuring, closing) thuộc `RE-Investment-Finance`**; chỉ tổng hợp đa phòng cấp executive mới thuộc `RE-HQ`.
 
-## Language Rule
+## Quy tắc ngôn ngữ
 
 - Tên skill giữ bằng tiếng Anh.
 - Nội dung, workflow và output guidance viết bằng tiếng Việt.
@@ -242,6 +245,7 @@ Dùng khi cần đào sâu guide theo loại tài liệu:
 - `references/ma-document-guides.md`
 - `references/transaction-document-family-map.md`
 - `references/cp-closing-and-structuring-support.md`
+- `references/negotiation-and-dispute-playbook.md` — tier issue, đàm phán 3 vòng, khung & bảng so sánh phương án tranh chấp, thời hiệu, trọng tài
 
 Đặc biệt trong operating model hiện tại, `references/legal-counsel-entry-points.md` cũng là map cho các hybrid requests từ `RE-HQ` như:
 - DD legal findings — corporate / transaction stream;
@@ -253,7 +257,7 @@ Ngoài ra, dùng thêm:
 - `transaction-document-family-map.md` để chọn sub-mode theo family của tài liệu;
 - `cp-closing-and-structuring-support.md` khi issue xoay quanh CP, closing hoặc structuring-driven legal input.
 
-## Common Pitfalls
+## Lỗi thường gặp
 
 1. Review hợp đồng mà chưa xác định client-side.
 2. Kết luận “không có điều khoản X” mà không search kỹ.
@@ -262,7 +266,7 @@ Ngoài ra, dùng thêm:
 5. Bỏ qua ảnh hưởng của pháp lý dự án lên điều khoản giao dịch.
 6. Ôm luôn phần structuring / DD coordination thay vì route `RE-Investment-Finance`.
 
-## Verification Checklist
+## Checklist kiểm tra
 
 - [ ] Đã xác định client-side và mục tiêu output
 - [ ] Đã áp dụng Quote-First Protocol cho các issue trọng yếu

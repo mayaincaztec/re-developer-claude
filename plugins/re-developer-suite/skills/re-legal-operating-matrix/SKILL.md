@@ -7,7 +7,7 @@ license: MIT
 
 # re-legal Operating Matrix
 
-## Overview
+## Tổng quan
 
 Skill này là bảng điều hướng vận hành của `RE-Legal`.
 
@@ -20,7 +20,7 @@ Mục tiêu là map nhanh từ **loại việc** sang:
 
 Skill này không thay thế analysis. Nó là lớp chọn workflow nhanh để giảm lệch lane và giảm việc phải quyết định lại từ đầu ở mỗi task.
 
-## When to Use
+## Khi nào dùng
 
 Dùng skill này khi:
 - task mới vào nhưng lane đã tương đối rõ;
@@ -28,12 +28,12 @@ Dùng skill này khi:
 - cần so operating flow giữa nhiều loại legal task;
 - cần kiểm tra xem output nên đi theo template nào.
 
-Do not use for:
+Không dùng cho:
 - thay specialist analysis;
 - thay intake decision nếu task còn mơ hồ hoàn toàn;
 - ôm coordination nhiều workstream.
 
-## Core Matrix
+## Ma trận chính
 
 | Loại việc | Primary skill | Companion skill(s) | Template / output | Verification | Escalation trigger |
 |---|---|---|---|---|---|
@@ -50,7 +50,7 @@ Do not use for:
 | Hybrid legal input cho `RE-HQ` — project stream | `licensing-expert` | `legal-writing` hoặc none | `hybrid-legal-package-template` hoặc `blocker-memo-template` hoặc `legal-question-list-template` | `re-legal-verification-rules` | nếu package bắt đầu phình thành multi-owner tracker hoặc overall DD coordination |
 | Hybrid legal input cho `RE-HQ` — corporate / transaction stream | `legal-counsel` | `legal-writing` hoặc none | `hybrid-legal-package-template` hoặc `cp-closing-issue-note-template` hoặc `legal-question-list-template` | `re-legal-verification-rules` | nếu package bắt đầu phình thành closing coordination hoặc structuring decision framework tổng thể |
 
-## Quick Selection Rule
+## Quy tắc chọn nhanh
 
 1. Nếu task chưa rõ lane → dùng `re-legal-intake-router` trước.
 2. Nếu lane đã rõ nhưng chưa rõ output → dùng `re-legal-deliverable-templates`.
@@ -72,7 +72,7 @@ Do not use for:
    - project stream → `hybrid-legal-package-template` hoặc `blocker-memo-template`
    - corporate / transaction stream → `hybrid-legal-package-template` hoặc `cp-closing-issue-note-template`
 
-## System Sync Rule
+## Quy tắc đồng bộ hệ thống
 
 Khi thay đổi operating boundary hoặc hybrid workflow của bundle `RE-Legal`, không được chỉ sửa một skill đơn lẻ rồi dừng.
 
@@ -97,20 +97,20 @@ Tối thiểu phải so đồng bộ các lớp sau nếu chúng có liên quan:
 
 phải nói cùng một logic ở tất cả các lớp trên. Nếu không, agent sẽ chọn đúng lane nhưng phát hành sai output shape, hoặc ngược lại.
 
-## Language Rule
+## Quy tắc ngôn ngữ
 
 - Tên skill giữ bằng tiếng Anh.
 - Body và matrix guidance viết bằng tiếng Việt.
 - Thuật ngữ quan trọng có thể dùng kiểu **Việt ngữ (Anh ngữ)** khi cần.
 
-## Common Pitfalls
+## Lỗi thường gặp
 
 1. Dùng matrix này như quyết định cuối cùng dù task vẫn còn mơ hồ.
 2. Chọn đúng primary skill nhưng quên template layer.
 3. Có output quan trọng nhưng quên verification layer.
 4. Thấy task phình thành coordination mà vẫn cố giữ trong `RE-Legal`.
 
-## Verification Checklist
+## Checklist kiểm tra
 
 - [ ] Đã xác định đúng loại việc trước khi dùng matrix
 - [ ] Đã chọn đúng primary skill

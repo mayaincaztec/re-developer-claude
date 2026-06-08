@@ -9,11 +9,11 @@ license: MIT
 
 Đánh giá sơ bộ ban đầu cho một dự án tiềm năng trong `RE-Investment-Finance`, sau khi đã qua sàng lọc (`re-investment-screening`) và trước khi làm FS đầy đủ. Đây là báo cáo **định hướng quyết định theo đuổi**, dựa trên dữ kiện hiện có + giả định có căn cứ.
 
-## When to Use
+## Khi nào dùng
 
 Dùng khi: một deal đã Proceed từ screening và cần đánh giá sơ bộ đa chiều; cần go/conditional/no-go view trước khi đầu tư công sức làm FS chi tiết.
 
-Do not use for: sàng lọc nhanh (→ `re-investment-screening`); mô hình tài chính chi tiết (→ `re-feasibility-study`); báo cáo chuyên sâu cuối (→ `re-full-investment-report`).
+Không dùng cho: sàng lọc nhanh (→ `re-investment-screening`); mô hình tài chính chi tiết (→ `re-feasibility-study`); báo cáo chuyên sâu cuối (→ `re-full-investment-report`).
 
 ## Cấu trúc 5 phần
 
@@ -48,7 +48,7 @@ Dùng template `../../templates/preliminary-investment-report.md`. Qua `re-inves
 - Pháp lý và thị trường là **specialist input** — Investment tổng hợp, không tự kết luận thay specialist.
 - Pre-FS là ước lượng định hướng, **không thay FS**; nói rõ giới hạn.
 
-## Verification
+## Kiểm tra
 
 - [ ] Đủ 5 phần; mỗi phần có kết luận sơ bộ, không chỉ liệt kê
 - [ ] Pháp lý đã kéo `licensing-expert` + kiểm chứng hiệu lực qua `tvpl` cho điểm trọng yếu

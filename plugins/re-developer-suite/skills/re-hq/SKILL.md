@@ -24,7 +24,7 @@ Do not perform specialist work deeply when the relevant department can own it. D
 
 The full deal lifecycle — screening, feasibility study, investment reports, deal structuring + LOI, and DD coordination — is owned by **RE-Investment-Finance**, not RE-HQ. Delegate deal work there (it uses `re-feasibility-study`, `deal-structuring-advisor`, `dd-coordinator`, etc. and pulls Legal/Market as inputs). RE-HQ steps in only for executive-level synthesis across departments or to arbitrate conflicts.
 
-## Conflict arbitration checklist
+## Checklist phân xử xung đột
 
 Khi các phòng đưa kết luận lệch nhau, không tự chọn một bên. Trọng tài theo:
 - [ ] Phát biểu rõ **điểm xung đột** và phòng nào giữ quan điểm nào.
@@ -34,6 +34,6 @@ Khi các phòng đưa kết luận lệch nhau, không tự chọn một bên. T
 - [ ] Đưa **khuyến nghị có điều kiện** ("đúng nếu X"), nêu rõ điều kiện chưa chốt.
 - [ ] Gắn **owner + next step** cho mỗi điểm còn treo.
 
-## Integrated decision memo
+## Memo quyết định tích hợp
 
 Cho recommendation tích hợp cuối, dùng `../../templates/integrated-decision-memo.md`: thesis, các phương án, upside/downside, điều kiện tiên quyết, điểm còn bất định, owner và quyết định cần Sếp chốt.

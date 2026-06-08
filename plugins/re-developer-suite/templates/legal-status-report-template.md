@@ -28,11 +28,22 @@ Dùng template này khi cần báo cáo tình trạng pháp lý dự án / tài 
 - ...
 
 ## 5. Rủi ro và khoảng trống hồ sơ
-- ...
+- Phân loại theo thang 4 cấp: 🔴 Blocker / 🟠 High / 🟡 Medium / 🟢 Low — mỗi rủi ro: mô tả · căn cứ · tác động · hướng xử lý.
 
 ## 6. Hướng xử lý đề xuất
 - ...
 ```
+
+## Thang rủi ro 4 cấp (dùng cho mục 5 và kết luận Go/No-Go)
+
+| Mức | Ý nghĩa |
+|---|---|
+| 🔴 **Blocker / Fatal flaw** | Có thể dừng giao dịch/thủ tục; dự án không thể triển khai theo cấu trúc hiện tại |
+| 🟠 **High risk** | Xử lý được nhưng ảnh hưởng mạnh timeline/chi phí/cấu trúc/khả năng mở bán |
+| 🟡 **Medium risk** | Khắc phục được theo lộ trình nhưng phải quản trị chặt |
+| 🟢 **Low / Housekeeping** | Hoàn thiện hồ sơ, chuẩn hóa thủ tục, xác minh bổ sung |
+
+Kết luận tổng thể có thể gắn nhãn: 🟢 Go / 🟡 Conditional Go / 🔴 No-Go.
 
 ## Khi không nên dùng
 - khi Sếp chỉ cần approval matrix;

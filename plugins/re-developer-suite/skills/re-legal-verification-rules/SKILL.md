@@ -7,7 +7,7 @@ license: MIT
 
 # re-legal Verification Rules
 
-## Overview
+## Tổng quan
 
 Skill này là quality-control layer của `RE-Legal`.
 
@@ -15,7 +15,7 @@ Mục tiêu là buộc agent kiểm tra lại output theo logic phù hợp với
 
 Skill này dùng ở cuối workflow, sau khi specialist analysis đã xong và trước khi chốt deliverable cho Sếp.
 
-## When to Use
+## Khi nào dùng
 
 Dùng skill này khi:
 - chuẩn bị chốt legal memo, legal report, approval matrix, issue list hoặc recommendation;
@@ -24,12 +24,12 @@ Dùng skill này khi:
 - cần rà nhanh chất lượng câu trả lời chat pháp lý ngắn trước khi gửi Sếp.
 - rà nhanh tính đồng bộ giữa template layer, specialist skills và verification graph sau khi refactor legal workflow.
 
-Do not use for:
+Không dùng cho:
 - thay thế specialist analysis ban đầu;
 - quyết định routing lane từ đầu;
 - thay thế việc polish tiếng Việt của `legal-writing`.
 
-## Universal Rules
+## Quy tắc chung
 
 ### 1. Không kết luận mạnh hơn hồ sơ hiện có
 Nếu hồ sơ thiếu, phải nêu rõ giới hạn. Không được biến inference thành fact.
@@ -46,7 +46,7 @@ Nếu đến cuối mới lộ ra task thực chất là coordination đa stream
 ### 5. Kiểm chứng hiệu lực văn bản (tvpl)
 Nếu output có viện dẫn văn bản pháp luật, phải đã đối chiếu tình trạng hiệu lực qua MCP `tvpl` (xem `../../references/tvpl-lookup-protocol.md`) hoặc gắn caveat **"chưa kiểm chứng hiệu lực"**. Không để output dẫn một văn bản có thể đã bị thay thế mà không có dấu kiểm chứng hoặc caveat. Điều này đặc biệt quan trọng với Legal Status Report, Approval Matrix và Recommendation Memo.
 
-## Deliverable-Specific Rules
+## Quy tắc theo loại deliverable
 
 ### A. Legal Status Report
 Phải kiểm tra:
@@ -111,7 +111,7 @@ Phải kiểm tra:
 - đã phân biệt phần việc còn thuộc `RE-Legal` với phần cần `RE-HQ` điều phối chưa;
 - legal question list hoặc missing-docs note có bị phình thành tracker nhiều owner không.
 
-## Escalation Triggers
+## Dấu hiệu chuyển cấp
 
 Phải cân nhắc route ra ngoài `RE-Legal` (deal lifecycle → `RE-Investment-Finance`; tổng hợp đa phòng cấp executive → `RE-HQ`) hoặc ít nhất ghi chú rõ ranh giới scope khi có các dấu hiệu sau:
 - output đòi hỏi tracker nhiều owner;
@@ -119,7 +119,7 @@ Phải cân nhắc route ra ngoài `RE-Legal` (deal lifecycle → `RE-Investment
 - legal chỉ là một module trong deal workflow tổng thể;
 - recommendation phụ thuộc structuring hoặc DD coordination ngoài phạm vi legal specialist.
 
-## Hardening Review Rule
+## Quy tắc rà hardening
 
 Khi vừa sửa skill graph hoặc refactor workflow, phải rà thêm:
 - `skill relationship graph` có còn phản ánh graph hiện tại không;
@@ -129,7 +129,7 @@ Khi vừa sửa skill graph hoặc refactor workflow, phải rà thêm:
 
 Nếu một trong các điểm trên lệch, chưa nên coi refactor là hoàn tất.
 
-## Quick Verification Format
+## Mẫu kiểm tra nhanh
 
 ```md
 ## Kiểm tra trước khi chốt
@@ -150,13 +150,13 @@ Nếu một trong các điểm trên lệch, chưa nên coi refactor là hoàn t
 - Bước tiếp theo: ...
 ```
 
-## Language Rule
+## Quy tắc ngôn ngữ
 
 - Tên skill giữ bằng tiếng Anh.
 - Body, workflow và rule viết bằng tiếng Việt.
 - Thuật ngữ quan trọng có thể trình bày theo kiểu **Việt ngữ (Anh ngữ)** khi cần.
 
-## Common Pitfalls
+## Lỗi thường gặp
 
 1. Chỉ rà ngôn ngữ mà không rà logic kết luận.
 2. Không kiểm tra xem output có đang over-claim không.
@@ -166,7 +166,7 @@ Nếu một trong các điểm trên lệch, chưa nên coi refactor là hoàn t
 6. Với output gửi `RE-HQ`, chỉ tóm tắt findings mà không nói rõ owner boundary nên dễ bị hiểu nhầm là `RE-Legal` đang ôm coordination.
 7. Để legal question list / missing-docs note phình thành multi-owner tracker, làm lệch vai specialist legal execution.
 
-## Verification Checklist
+## Checklist kiểm tra
 
 - [ ] Đã áp đúng rule theo loại deliverable
 - [ ] Kết luận không vượt quá hồ sơ hiện có

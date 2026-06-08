@@ -9,7 +9,7 @@ license: MIT
 
 # Licensing Expert
 
-## Overview
+## Tổng quan
 
 Skill này là specialist procedure skill của `RE-Legal` cho **pháp lý dự án bất động sản**.
 
@@ -21,7 +21,7 @@ Dùng skill này khi trọng tâm công việc là:
 
 Skill này phục vụ **specialist legal execution**, không phải lớp điều phối liên phòng ban. Nếu task chuyển thành điều phối Rà Soát Thẩm Định (Due Diligence), issue tracker nhiều stream, hoặc approval strategy nhiều phòng ban, phải route sang `RE-HQ`.
 
-## When to Use
+## Khi nào dùng
 
 Dùng skill này khi:
 - Sếp hỏi về approval path, permits, compliance matrix;
@@ -31,14 +31,14 @@ Dùng skill này khi:
 - cần gap list giữa hồ sơ hiện có và điều kiện pháp lý phải đáp ứng;
 - cần go / conditional go / no-go view cho bài toán pháp lý dự án.
 
-Do not use for:
+Không dùng cho:
 - clause-by-clause contract review;
 - redline hợp đồng;
 - dispute memo thiên về allocation of liability;
 - điều phối DD nhiều workstream;
 - deal structuring hoặc transaction architecture nhiều team.
 
-## Companion Skills
+## Skill đi kèm
 
 - Dùng cùng `re-legal-deliverable-templates` để chọn đúng khung output như legal status report, approval matrix, permit gap list hoặc recommendation memo.
 - Dùng cùng `re-legal-verification-rules` ở cuối để kiểm tra logic kết luận, mức caveat và dấu hiệu vượt scope.
@@ -60,8 +60,8 @@ Bổ sung kiểm tra ngoài tvpl khi cần: cổng pháp luật chính thức / 
 
 Không dùng văn bản đã hết hiệu lực làm căn cứ mà không nói rõ giới hạn. Nếu chưa tra được qua tvpl, ghi rõ **"chưa kiểm chứng hiệu lực"** thay vì giả định còn hiệu lực.
 
-### 2. Xác định địa phương trước khi phân tích thủ tục
-Với câu hỏi về thủ tục, thẩm quyền, văn bản địa phương hoặc thực tiễn xử lý hồ sơ, phải xác định dự án thuộc tỉnh / thành phố nào. Nếu user chưa nêu, đây là missing fact quan trọng phải đánh dấu.
+### 2. Xác định địa phương và cơ quan thẩm quyền hiện hành
+Với câu hỏi về thủ tục, thẩm quyền, văn bản địa phương hoặc thực tiễn xử lý hồ sơ, phải xác định dự án thuộc tỉnh / thành phố nào. Nếu user chưa nêu, đây là missing fact quan trọng phải đánh dấu. Khi nêu cơ quan thẩm quyền, dùng tên **sau sáp nhập 2025** và lưu ý mô hình **chính quyền 2 cấp** (xem `references/agencies-and-authority-2025.md`); viện dẫn cấp huyện chỉ cho sự kiện quá khứ.
 
 ### 3. Không đồng nhất các trạng thái pháp lý khác nhau
 Không được đánh đồng:
@@ -83,7 +83,7 @@ Khi hồ sơ thiếu hoặc căn cứ chưa chắc, phải nói rõ:
 - thiếu dữ kiện nào;
 - khoảng trống đó ảnh hưởng ra sao đến kết luận.
 
-## Workflow
+## Quy trình
 
 ### Bước 1 — Xác định mục tiêu và deliverable
 Chốt đầu ra trước khi đi sâu. Các deliverable thường gặp:
@@ -192,7 +192,7 @@ Mỗi issue nên đi theo cấu trúc:
 - Nếu output là tài liệu tiếng Việt dùng nội bộ hoặc gửi stakeholder, mặc định gọi thêm `legal-writing` để polish ngôn ngữ và cấu trúc kết luận.
 - Trước khi chốt, so lại bằng `re-legal-verification-rules` để kiểm tra mức caveat, missing docs và dấu hiệu phải route `RE-HQ`.
 
-## Output Shapes
+## Dạng đầu ra
 
 ### 1. Trả lời ngắn cho câu hỏi cụ thể
 ```md
@@ -248,7 +248,7 @@ Phải coi task đã vượt scope `RE-Legal` khi có một hoặc nhiều dấu
 
 Trong trường hợp đó, `RE-Legal` chỉ nên phát hành phần legal analysis. Coordination deal lifecycle (DD, structuring, data room của một thương vụ) thuộc `RE-Investment-Finance`; tổng hợp đa phòng cấp executive thuộc `RE-HQ`.
 
-## Language Rule
+## Quy tắc ngôn ngữ
 
 - Tên skill giữ bằng tiếng Anh.
 - Nội dung, workflow và output guidance viết bằng tiếng Việt.
@@ -261,6 +261,7 @@ Dùng khi cần đào sâu nguồn nền:
 - `references/licensing-entry-points.md`
 - `references/project-stage-playbook.md`
 - `references/title-and-transferability-guide.md`
+- `references/agencies-and-authority-2025.md` — cơ quan & thẩm quyền sau sáp nhập 2025, chính quyền 2 cấp, quy tắc trích dẫn
 
 Đặc biệt trong operating model hiện tại, reference này không chỉ để chọn mode legal status / approval path, mà còn để map các hybrid requests từ `RE-HQ` như:
 - DD legal findings — project stream;
@@ -272,7 +273,7 @@ Ngoài ra, dùng thêm:
 - `title-and-transferability-guide.md` khi issue tập trung vào title chain, hạn chế quyền hoặc transferability.
 
 
-## Common Pitfalls
+## Lỗi thường gặp
 
 1. Kết luận quá sớm chỉ vì “thấy có giấy tờ”.
 2. Không phân biệt trạng thái pháp lý của từng mốc dự án.
@@ -281,7 +282,7 @@ Ngoài ra, dùng thêm:
 5. Ôm luôn vai điều phối DD hoặc structuring dù việc đã vượt scope `RE-Legal`.
 6. Chỉ liệt kê luật mà không áp vào facts cụ thể.
 
-## Verification Checklist
+## Checklist kiểm tra
 
 - [ ] Đã xác định đúng deliverable
 - [ ] Đã xác định địa phương hoặc đánh dấu đây là missing fact trọng yếu

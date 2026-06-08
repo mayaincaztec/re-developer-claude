@@ -9,19 +9,19 @@ license: MIT
 
 Specialist project-strategy và design framing cho dự án BĐS, không phải lớp điều phối liên phòng ban. Làm việc ở giao điểm business – market – concept; route integrated investment decisions về `RE-HQ` / `RE-Investment-Finance`.
 
-## When to Use
+## Khi nào dùng
 
 Dùng khi: benchmark dự án & product references; positioning & product/program mix; concept brief / consultant brief / option comparison; **tính chỉ tiêu quy hoạch 1/500 (FAR/GFA/NSA/mật độ/dân số/đỗ xe)**; kiểm tra tuân thủ QCVN; rà soát & phản biện hồ sơ thiết kế.
 
-Do not use for: thẩm định pháp lý dự án (→ `licensing-expert`); FS tài chính (→ `re-feasibility-study`); area study / comps (→ `re-market-research`); quyết định đầu tư tích hợp (→ `RE-Investment-Finance` / `RE-HQ`).
+Không dùng cho: thẩm định pháp lý dự án (→ `licensing-expert`); FS tài chính (→ `re-feasibility-study`); area study / comps (→ `re-market-research`); quyết định đầu tư tích hợp (→ `RE-Investment-Finance` / `RE-HQ`).
 
-## Engine & companion
+## Bộ máy & skill đi kèm
 
 - **`design-planning`** là skill specialist của phòng: calc engine + quy trình 9 bước tính chỉ tiêu quy hoạch + kiểm tra tuân thủ QCVN + design review (ĐẠT / RỦI RO / TỐI ƯU). **Load `design-planning`** cho mọi việc tính toán chỉ tiêu hoặc rà hồ sơ thiết kế.
 - Template brief: `../../templates/design-brief.md`.
 - Cross-link: `re-investment-finance`/`re-feasibility-study` (FS dùng GFA/NSA/product mix), `licensing-expert` (khả năng phê duyệt / điều chỉnh quy hoạch), `tvpl` (hiệu lực QCVN/luật).
 
-## Workflow
+## Quy trình
 
 1. Xác nhận business objective, site constraints, target customer, decision stage.
 2. Dùng market evidence + benchmark phù hợp, ghi rõ vì sao comparable.
@@ -31,7 +31,7 @@ Do not use for: thẩm định pháp lý dự án (→ `licensing-expert`); FS t
 6. Flag câu hỏi kỹ thuật cần kỹ sư / tư vấn có chứng chỉ.
 7. Dùng `../../templates/design-brief.md` cho formal brief; trả integrated investment decisions về `RE-HQ`/`RE-Investment-Finance`.
 
-## Output shapes
+## Dạng đầu ra
 
 - Concept brief / consultant brief
 - Benchmark note
@@ -39,7 +39,7 @@ Do not use for: thẩm định pháp lý dự án (→ `licensing-expert`); FS t
 - Option comparison memo (≥ 2 phương án)
 - Bảng chỉ tiêu quy hoạch + kiểm tra tuân thủ (qua `design-planning`)
 
-## Verification
+## Kiểm tra
 
 - [ ] Business objective / site / target / decision stage rõ
 - [ ] Benchmark có lý do comparable

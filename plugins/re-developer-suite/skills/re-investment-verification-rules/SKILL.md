@@ -9,13 +9,13 @@ license: MIT
 
 Quality-control layer của `RE-Investment-Finance`, dùng ở cuối workflow trước khi chốt output cho Sếp hoặc IC. Mirror vai trò của `re-legal-verification-rules` bên pháp lý.
 
-## When to Use
+## Khi nào dùng
 
 Dùng khi chuẩn bị chốt: screening note, báo cáo đầu tư (sơ bộ/đầy đủ), FS model, IC memo, structuring/LOI, DD summary.
 
-Do not use for: thay phân tích gốc; quyết định routing từ đầu.
+Không dùng cho: thay phân tích gốc; quyết định routing từ đầu.
 
-## Universal Rules
+## Quy tắc chung
 
 ### 1. Không bịa số liệu
 Thiếu dữ kiện → giả định có căn cứ + đánh dấu, không điền số khống. Không nâng giả định thành sự thật.
@@ -44,7 +44,7 @@ Nếu quyết định thực chất cần tổng hợp đa phòng cấp executiv
 - **Structuring / LOI**: option có tiêu chí so sánh; LOI nêu rõ điều kiện, tính ràng buộc/không ràng buộc, CP.
 - **DD summary**: go/conditional/no-go + deal-breakers + owners + missing items.
 
-## Quick Verification Format
+## Mẫu kiểm tra nhanh
 
 ```md
 ## Kiểm tra trước khi chốt (Investment)
@@ -57,7 +57,7 @@ Nếu quyết định thực chất cần tổng hợp đa phòng cấp executiv
 - Có cần route `RE-HQ` không: ...
 ```
 
-## Common Pitfalls
+## Lỗi thường gặp
 
 1. Trộn số tính toán với giả định, người đọc tưởng là chắc chắn.
 2. Chỉ đưa base case, không sensitivity/downside.

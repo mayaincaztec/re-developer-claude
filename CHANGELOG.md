@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.6.0 - 2026-06-08
+
+- Merged superior content from the user's standalone skills into the plugin (dropping legacy "OpenClaw" branding, keeping tvpl/routing): `licensing-expert` gains `references/agencies-and-authority-2025.md` (post-merger agencies, 2-level local government from 01/07/2025, citation order) and a 4-level risk scale (🔴🟠🟡🟢) in the legal-status report template; `legal-counsel` gains `references/negotiation-and-dispute-playbook.md` (issue tiers, 3-round negotiation, dispute-resolution comparison, statute of limitations, arbitration).
+- Vietnamese-principle audit: localized 125 English section headers and inline labels to Vietnamese across 22 skills (When to Use → Khi nào dùng, Workflow → Quy trình, Overview → Tổng quan, etc.); skill name/description stay English for triggering. Codified the header rule in `skill-authoring-guide.md`.
+- English-deliverable support: added an Output-language rule to `operating-contract.md` (working language Vietnamese; deliverable language follows the user's request or governing context — e.g. English-form contract → English memo), wired into `legal-writing`, `legal-counsel`, and the authoring guide.
+
 ## 0.5.0 - 2026-06-08
 
 - Unified template location: moved the 14 legal deliverable templates from `re-legal-deliverable-templates/references/` to the shared `templates/`; that skill now selects/points to `../../templates/...`. Convention (documented in `skill-authoring-guide.md`): deliverables live in `templates/`, only technical specs/guides live in a skill's `references/`.

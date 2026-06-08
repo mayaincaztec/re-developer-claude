@@ -7,7 +7,7 @@ license: MIT
 
 # DD Coordinator
 
-## Overview
+## Tổng quan
 
 Trong workflow `RE-Investment-Finance`, skill này là **orchestration skill** cho Rà Soát Thẩm Định (Due Diligence) nhiều workstream. Phòng Đầu tư (deal team) chạy DD; chỉ route `RE-HQ` khi DD bắc cầu một quyết định đa phòng cấp executive.
 
@@ -19,7 +19,7 @@ Vai trò của skill này là:
 
 Skill này **không tự làm sâu toàn bộ legal analysis**. Khi cần findings pháp lý chuyên sâu, phải huy động specialist phù hợp ở agent `RE-Legal`.
 
-## When to Use
+## Khi nào dùng
 
 Dùng skill này khi:
 - cần điều phối DD nhiều workstream;
@@ -29,13 +29,13 @@ Dùng skill này khi:
 - cần DD findings report hoặc executive summary tổng hợp;
 - legal chỉ là một stream trong chương trình DD tổng thể.
 
-Do not use for:
+Không dùng cho:
 - legal status review một stream;
 - clause review hoặc contract memo một stream;
 - approval path analysis độc lập;
 - document ops nhẹ không cần multi-team coordination.
 
-## Specialist Pull Rule
+## Quy tắc kéo chuyên môn
 
 Chỉ huy động `RE-Legal` khi cần **nội dung đánh giá pháp lý chuyên sâu**.
 
@@ -48,7 +48,7 @@ Chỉ huy động `RE-Legal` khi cần **nội dung đánh giá pháp lý chuyê
 
 Nguyên tắc: `RE-Investment-Finance` điều phối DD; `RE-Legal` phát hành legal analysis chuyên sâu theo từng lane.
 
-## Workflow
+## Quy trình
 
 ### Bước 1 — Xác định scope DD
 Chốt tối thiểu:
@@ -101,7 +101,7 @@ Kết luận rõ:
 - missing items còn treo;
 - action owners sau DD.
 
-## Output Shapes
+## Dạng đầu ra
 
 ### 1. DD Coordination Snapshot
 ```md
@@ -129,7 +129,7 @@ Kết luận rõ:
 
 - `references/dd-document-request-templates.md`
 
-## Common Pitfalls
+## Lỗi thường gặp
 
 1. Biến `dd-coordinator` thành legal specialist thay vì coordinator.
 2. Kéo `RE-Legal` vào điều phối tổng thể thay vì chỉ yêu cầu legal findings chuyên sâu.
@@ -137,7 +137,7 @@ Kết luận rõ:
 4. Trộn findings giữa các workstream mà không gắn owner rõ ràng.
 5. Chốt recommendation khi critical missing items vẫn chưa được flag.
 
-## Verification Checklist
+## Checklist kiểm tra
 
 - [ ] Đã tách rõ coordination layer với specialist legal layer
 - [ ] Legal project findings đã map sang `licensing-expert` khi cần

@@ -9,22 +9,22 @@ license: MIT
 
 Dựng nghiên cứu khả thi tài chính cho dự án BĐS trong `RE-Investment-Finance`. Deliverable gồm **(a)** model Excel `.xlsx` chạy được và **(b)** cấu trúc/spec chuẩn để tái lập. FS gắn số cho Báo cáo đầu tư đầy đủ và làm nền cho structuring/LOI.
 
-## When to Use
+## Khi nào dùng
 
 Dùng khi: cần model tài chính dự án (đất + CAPEX + doanh thu + dòng tiền + return); cần NPV/IRR/payback + sensitivity; cần con số cho IC memo hoặc offer/LOI.
 
-Do not use for: ước lượng định hướng nhanh (→ phần pre-FS trong `re-preliminary-investment-report`); chỉ tiêu quy hoạch (→ `design-planning`).
+Không dùng cho: ước lượng định hướng nhanh (→ phần pre-FS trong `re-preliminary-investment-report`); chỉ tiêu quy hoạch (→ `design-planning`).
 
 ## Tài liệu kèm
 
 - `references/fs-structure.md` — spec chuẩn các sheet, dòng, công thức (nguồn sự thật của cấu trúc FS).
 - `references/fs-excel-build-guide.md` — hướng dẫn dựng `.xlsx` thật qua skill `xlsx` (named ranges, công thức NPV/IRR, data table sensitivity).
 
-## Prerequisite (để sinh .xlsx)
+## Điều kiện tiên quyết (để sinh .xlsx)
 
 Việc xuất file `.xlsx` cần skill `xlsx` (dùng `openpyxl`). Nếu môi trường chưa có `openpyxl`, skill `xlsx` sẽ tự xử lý khi được gọi; nếu không cài được, vẫn có thể giao FS ở dạng spec/bảng theo `references/fs-structure.md` và nêu rõ chưa xuất được Excel. Không hardcode số — luôn giữ công thức sống trong file.
 
-## Workflow
+## Quy trình
 
 ### Bước 1 — Chốt assumption register
 Mọi driver phải có **source / date / owner / confidence**. Tối thiểu: diện tích đất & chỉ tiêu (GFA/NSA — có thể kéo `design-planning`), product mix & số sản phẩm, đơn giá bán (kéo `re-market-research`/`vn-re-research`), suất đầu tư xây dựng/m², chi phí mềm %, tiền đất & thuế/phí, lịch tiến độ & absorption, cấu trúc vốn (equity/debt, lãi suất, giải ngân), discount rate (WACC), escalation.
@@ -52,7 +52,7 @@ Qua `re-investment-verification-rules`: không bịa số, phân biệt calculat
 - Thiếu dữ kiện → giả định bảo thủ + đánh dấu, không bỏ trống âm thầm.
 - FS là model giả định, không phải cam kết; nêu rõ giới hạn và ngày dữ liệu.
 
-## Verification
+## Kiểm tra
 
 - [ ] Assumption register đủ source/date/owner/confidence
 - [ ] Công thức tham chiếu Assumptions, không hardcode

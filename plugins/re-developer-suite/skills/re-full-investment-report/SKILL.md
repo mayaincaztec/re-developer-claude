@@ -9,11 +9,11 @@ license: MIT
 
 Báo cáo đầu tư chuyên sâu cuối cùng trong `RE-Investment-Finance`, gắn số từ FS, dùng để trình quyết định đầu tư (Investment Committee). Là bản sâu hơn của `re-preliminary-investment-report`, với phân tích và bằng chứng đầy đủ.
 
-## When to Use
+## Khi nào dùng
 
 Dùng khi: deal đã có Báo cáo sơ bộ Go/Conditional và đã chạy FS; cần báo cáo đầy đủ + IC memo để ra quyết định đầu tư; cần recommendation có thesis/cases/conditions cho cấp duyệt.
 
-Do not use for: đánh giá sơ bộ (→ `re-preliminary-investment-report`); chỉ dựng model (→ `re-feasibility-study`).
+Không dùng cho: đánh giá sơ bộ (→ `re-preliminary-investment-report`); chỉ dựng model (→ `re-feasibility-study`).
 
 ## Cấu trúc
 
@@ -36,7 +36,7 @@ Mở rộng 5 phần của báo cáo sơ bộ, chuyên sâu hơn và gắn số 
 - Không trộn legal/market specialist conclusion với phán đoán đầu tư — ghi rõ owner từng phần.
 - Qua `re-investment-verification-rules` trước khi chốt.
 
-## Verification
+## Kiểm tra
 
 - [ ] 5 phần đầy đủ + gắn số FS
 - [ ] Pháp lý dự án + giao dịch đã kéo specialist; hiệu lực văn bản kiểm chứng qua `tvpl`

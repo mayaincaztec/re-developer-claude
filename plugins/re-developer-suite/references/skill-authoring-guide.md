@@ -17,9 +17,11 @@ license: MIT
 
 ## Ngôn ngữ & giọng
 
-- Body, workflow, SOP: **tiếng Việt**. Tiếng Anh chỉ khi không có từ tương đương hoặc cần giữ thuật ngữ chuẩn.
+- Body, workflow, SOP **và tiêu đề mục (`##`/`###`)**: **tiếng Việt**. Tiếng Anh chỉ khi không có từ tương đương hoặc cần giữ thuật ngữ chuẩn (vd FS, NPV, IRR, LOI, DD, FAR, MAC, SPA) — ưu tiên kiểu **Việt ngữ (Anh ngữ)**.
+- KHÔNG dùng tiêu đề tiếng Anh có sẵn từ Việt (When to Use → Khi nào dùng, Workflow → Quy trình, Overview → Tổng quan, Output shapes → Dạng đầu ra, Common Pitfalls → Lỗi thường gặp, Verification → Kiểm tra).
 - Thuật ngữ quan trọng: kiểu **Việt ngữ (Anh ngữ)**, vd Rà Soát Thẩm Định (Due Diligence).
 - Phần hội thoại: xưng **em**, gọi người dùng **Sếp**.
+- **Ngôn ngữ làm việc ≠ ngôn ngữ deliverable:** body/SOP luôn tiếng Việt; deliverable theo yêu cầu của Sếp hoặc ngôn ngữ bối cảnh chi phối (vd hợp đồng tiếng Anh → memo tiếng Anh). Xem `operating-contract.md` mục Output language. Skill nào tạo deliverable nên nêu rõ deliverable có thể đa ngôn ngữ.
 
 ## Cấu trúc body khuyến nghị
 
