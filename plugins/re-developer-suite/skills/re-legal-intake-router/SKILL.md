@@ -43,20 +43,19 @@ Do not use for:
 - trọng tâm là **chuẩn hóa document set đầu vào ở mức cơ bản**;
 - kết quả đầu ra chủ yếu là memo, issue list, legal report hoặc recommendation từ góc legal specialist.
 
-### 2. Route sang `RE-HQ` khi:
-- task là điều phối Rà Soát Thẩm Định (Due Diligence);
-- task cần issue tracker nhiều workstream;
-- task cần data room orchestration quy mô lớn;
-- task là deal structuring hoặc transaction architecture nhiều nhánh quyết định;
-- cần phối hợp legal với investment, finance, tax, project, operations hoặc nhiều bộ phận khác;
-- legal chỉ là một stream trong tổng thể deal coordination.
+### 2. Route ra ngoài `RE-Legal` khi:
+- task là điều phối Rà Soát Thẩm Định (Due Diligence) → **`RE-Investment-Finance`** (`dd-coordinator`);
+- task là deal structuring / transaction architecture / LOI → **`RE-Investment-Finance`** (`deal-structuring-advisor`);
+- task cần issue tracker nhiều workstream / data room orchestration của một thương vụ → **`RE-Investment-Finance`**;
+- legal chỉ là một stream trong tổng thể deal coordination → **`RE-Investment-Finance`**;
+- cần tổng hợp đa phòng (legal + investment + market + design) ở **tầm quyết định executive** → **`RE-HQ`**.
 
 ### 3. Trường hợp hybrid
 Nếu task có phần legal specialist và phần coordination:
-- `RE-HQ` giữ vai trò điều phối;
+- owner điều phối là `RE-Investment-Finance` (deal lifecycle) hoặc `RE-HQ` (executive synthesis);
 - `RE-Legal` chỉ xử lý phần memo / analysis / issue note thuộc legal stream.
 
-Khi gặp case này, phải nói rõ trong chat rằng việc điều phối thuộc `RE-HQ`, còn `RE-Legal` phụ trách phần phân tích pháp lý chuyên sâu.
+Khi gặp case này, phải nói rõ trong chat rằng việc điều phối thuộc owner phù hợp, còn `RE-Legal` phụ trách phần phân tích pháp lý chuyên sâu.
 
 ## Intake Workflow
 
@@ -84,7 +83,7 @@ Nếu đề bài chưa nói rõ, chọn deliverable theo mục tiêu thực tế
 - **Pháp lý dự án** → `licensing-expert`
 - **Hợp đồng / giao dịch** → `legal-counsel`
 - **Document ops** → `doc-renamer`
-- **Coordination / đa stream** → route `RE-HQ`
+- **Coordination / đa stream** → route `RE-Investment-Finance` (DD/structuring/deal lifecycle) hoặc `RE-HQ` (executive synthesis)
 
 ### Bước 4 — Quyết định sequencing giữa các lane
 Dùng các rule sau khi task có dấu hiệu mixed legal issue:
@@ -166,7 +165,7 @@ Legal package tối thiểu nên trả lời được:
 
 ### Case 4 — Coordination / đa stream
 1. `re-legal-intake-router`
-2. xác nhận đây là việc phải route `RE-HQ`
+2. xác nhận đây là việc phải route `RE-Investment-Finance` (DD/structuring/deal lifecycle) hoặc `RE-HQ` (executive synthesis)
 3. nếu vẫn cần deliverable legal riêng, chỉ giữ phần specialist legal trong `RE-Legal`
 4. nếu vừa sửa boundary hoặc workflow graph, cân nhắc `re-legal-skill-maintenance` để rà anti-drift
 
@@ -191,7 +190,7 @@ Khi task chưa rõ lane, có thể trả lời bằng format intake ngắn sau:
 
 ## Language Rule
 
-- Tên skill giữ bằng tiếng Anh theo convention của Codex.
+- Tên skill giữ bằng tiếng Anh theo convention chung.
 - Body, workflow và SOP viết bằng tiếng Việt.
 - Chỉ dùng tiếng Anh khi không có từ Việt tương đương tự nhiên hoặc cần giữ thuật ngữ chuẩn.
 - Với thuật ngữ quan trọng, ưu tiên kiểu **Việt ngữ (Anh ngữ)** nếu giúp rõ nghĩa hơn.

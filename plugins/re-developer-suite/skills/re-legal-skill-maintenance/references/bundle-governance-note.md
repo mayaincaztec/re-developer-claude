@@ -10,7 +10,7 @@
 - **Drafting / polish:** `legal-writing`
 - **Verification / QC:** `re-legal-verification-rules`
 - **Maintenance / anti-drift:** `re-legal-skill-maintenance`
-- **Boundary doctrine:** route `RE-HQ` khi task đã thành DD coordination, structuring hoặc workflow nhiều owner
+- **Boundary doctrine:** route `RE-Investment-Finance` khi task đã thành DD coordination / structuring / deal lifecycle; route `RE-HQ` khi cần tổng hợp đa phòng cấp executive
 
 ## 2. Canonical operating doctrine
 `RE-Legal` là profile **specialist legal execution**.
@@ -21,7 +21,7 @@
 - không biến legal question list thành multi-owner tracker;
 - không biến document ops thành data room orchestration.
 
-Nếu workflow đã chuyển sang coordination đa stream, phần điều phối thuộc `RE-HQ`.
+Nếu workflow đã chuyển sang coordination đa stream: deal lifecycle (DD, structuring, closing) thuộc `RE-Investment-Finance`; tổng hợp đa phòng cấp executive thuộc `RE-HQ`.
 
 ## 3. Canonical pipeline
 ```text
@@ -30,10 +30,10 @@ intake → routing → specialist analysis → template selection → drafting/p
 
 Nếu sửa một lớp mà làm lệch pipeline này, phải so lại toàn bundle.
 
-## 4. Boundary doctrine với `RE-HQ`
-- `RE-HQ` điều phối DD, structuring và workflow nhiều owner.
+## 4. Boundary doctrine ra ngoài `RE-Legal`
+- `RE-Investment-Finance` điều phối deal lifecycle (DD, structuring, LOI, closing); `RE-HQ` tổng hợp đa phòng cấp executive.
 - `RE-Legal` chỉ phát hành specialist legal input.
-- Hybrid output gửi `RE-HQ` phải nói rõ:
+- Hybrid output gửi owner điều phối phải nói rõ:
   - issue;
   - basis;
   - impact;

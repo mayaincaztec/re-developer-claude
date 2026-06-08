@@ -1,6 +1,8 @@
 ---
 name: re-legal
 description: Use for Vietnamese real-estate project legal status, land, planning, investment approvals, construction permits, compliance, transaction documents, contracts, clause risk, and legal DD findings.
+version: 1.0.0
+license: MIT
 ---
 
 # RE-Legal

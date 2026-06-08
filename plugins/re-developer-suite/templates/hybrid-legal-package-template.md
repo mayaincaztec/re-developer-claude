@@ -29,5 +29,5 @@
 - Phần cần counterparty / internal team trả lời thêm: ...
 
 ## 6. Khuyến nghị dùng package này
-- Dùng khi cần cấy findings legal vào DD report, IC memo, structuring memo hoặc closing tracker do `RE-HQ` lead.
+- Dùng khi cần cấy findings legal vào DD report, IC memo, structuring memo hoặc closing tracker do `RE-Investment-Finance` lead (hoặc `RE-HQ` ở tầm executive).
 - Không dùng như coordination report tổng thể.

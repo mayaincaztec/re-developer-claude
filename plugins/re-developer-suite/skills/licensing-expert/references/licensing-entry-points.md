@@ -74,7 +74,7 @@ Dùng khi `RE-HQ` đang điều phối DD tổng thể nhưng cần `RE-Legal` p
 - legal question list.
 
 ### Handoff note
-- Output này là specialist legal input cho `RE-HQ`, không phải DD coordination report tổng thể.
+- Output này là specialist legal input cho owner điều phối deal (`RE-Investment-Finance`; hoặc `RE-HQ` ở tầm executive), không phải DD coordination report tổng thể.
 - Nên ghi rõ issue / basis / impact / action / owner boundary.
 
 ## 6. Project Legal Blocker for Structuring / Transfer

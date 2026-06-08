@@ -18,7 +18,7 @@ Dùng khi rà soát một legal output sẽ được dùng trong HQ-led workflow
 4. Nếu output có ngôn ngữ quá “công văn” nhưng thực chất là specialist note, hạ formal level vừa đủ.
 
 ## Mục tiêu cuối
-Người đọc ở `RE-HQ` có thể lấy nguyên output này và cấy vào DD report / structuring memo / closing note mà không phải đoán:
+Owner điều phối deal (`RE-Investment-Finance`; hoặc `RE-HQ` ở tầm executive) có thể lấy nguyên output này và cấy vào DD report / structuring memo / closing note mà không phải đoán:
 - legal kết luận gì;
 - legal chưa kết luận được gì;
 - ai phải làm gì tiếp theo.

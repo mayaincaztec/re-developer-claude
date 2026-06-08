@@ -1,16 +1,48 @@
 ---
 name: re-project-design
-description: Use for real-estate project benchmarks, positioning implications, product and program mix, concept briefs, option comparisons, and consultant instructions.
+description: Use for real-estate project benchmarks, positioning implications, product and program mix, concept briefs, option comparisons, consultant instructions, and detailed 1/500 planning-indicator calculation and design review.
+version: 1.1.0
+license: MIT
 ---
 
 # RE-Project-Design
 
-1. Confirm business objective, site constraints, target customer and decision stage.
-2. Use market evidence and relevant benchmarks, recording why each benchmark is comparable.
-3. Translate evidence into product, program, amenity, phasing and design implications.
-4. Show options and trade-offs rather than presenting taste as fact.
-5. Flag technical questions that require licensed consultants or project engineers.
-6. Use `../../templates/design-brief.md` for formal briefs.
-7. Return material findings using the common schema and route integrated investment decisions to RE-HQ.
+Specialist project-strategy và design framing cho dự án BĐS, không phải lớp điều phối liên phòng ban. Làm việc ở giao điểm business – market – concept; route integrated investment decisions về `RE-HQ` / `RE-Investment-Finance`.
 
-Do not pretend to provide detailed architectural or engineering certification.
+## When to Use
+
+Dùng khi: benchmark dự án & product references; positioning & product/program mix; concept brief / consultant brief / option comparison; **tính chỉ tiêu quy hoạch 1/500 (FAR/GFA/NSA/mật độ/dân số/đỗ xe)**; kiểm tra tuân thủ QCVN; rà soát & phản biện hồ sơ thiết kế.
+
+Do not use for: thẩm định pháp lý dự án (→ `licensing-expert`); FS tài chính (→ `re-feasibility-study`); area study / comps (→ `re-market-research`); quyết định đầu tư tích hợp (→ `RE-Investment-Finance` / `RE-HQ`).
+
+## Engine & companion
+
+- **`design-planning`** là skill specialist của phòng: calc engine + quy trình 9 bước tính chỉ tiêu quy hoạch + kiểm tra tuân thủ QCVN + design review (ĐẠT / RỦI RO / TỐI ƯU). **Load `design-planning`** cho mọi việc tính toán chỉ tiêu hoặc rà hồ sơ thiết kế.
+- Template brief: `../../templates/design-brief.md`.
+- Cross-link: `re-investment-finance`/`re-feasibility-study` (FS dùng GFA/NSA/product mix), `licensing-expert` (khả năng phê duyệt / điều chỉnh quy hoạch), `tvpl` (hiệu lực QCVN/luật).
+
+## Workflow
+
+1. Xác nhận business objective, site constraints, target customer, decision stage.
+2. Dùng market evidence + benchmark phù hợp, ghi rõ vì sao comparable.
+3. Khi cần chỉ tiêu/khối tích → load `design-planning` (9 bước, công thức ở engine reference).
+4. Dịch evidence thành product, program, amenity, phasing, design implication.
+5. Show options & trade-offs, không trình bày sở thích như sự thật; ≥ 2 phương án.
+6. Flag câu hỏi kỹ thuật cần kỹ sư / tư vấn có chứng chỉ.
+7. Dùng `../../templates/design-brief.md` cho formal brief; trả integrated investment decisions về `RE-HQ`/`RE-Investment-Finance`.
+
+## Output shapes
+
+- Concept brief / consultant brief
+- Benchmark note
+- Product mix summary (gắn chỉ tiêu từ `design-planning`)
+- Option comparison memo (≥ 2 phương án)
+- Bảng chỉ tiêu quy hoạch + kiểm tra tuân thủ (qua `design-planning`)
+
+## Verification
+
+- [ ] Business objective / site / target / decision stage rõ
+- [ ] Benchmark có lý do comparable
+- [ ] Chỉ tiêu quy hoạch (nếu có) đã chạy qua `design-planning` + kiểm tra QCVN
+- [ ] ≥ 2 phương án + trade-offs
+- [ ] Câu hỏi kỹ thuật cần consultant đã được flag, không giả vờ certify

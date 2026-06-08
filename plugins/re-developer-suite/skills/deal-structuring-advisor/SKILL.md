@@ -1,7 +1,7 @@
 ---
 name: deal-structuring-advisor
-description: Use when điều phối bài toán deal structuring, transaction architecture hoặc cross-functional decision design ở workflow RE-HQ; chỉ huy động re-legal khi cần legal assessment chuyên sâu về dự án, corporate, governance hoặc transaction documents.
-version: 3.0.0
+description: Use when điều phối bài toán deal structuring, transaction architecture, hoặc kết hợp FS để ra offer/LOI trong workflow RE-Investment-Finance; chỉ huy động re-legal khi cần legal assessment chuyên sâu về dự án, corporate, governance hoặc transaction documents.
+version: 3.1.0
 license: MIT
 ---
 
@@ -11,7 +11,7 @@ license: MIT
 
 ## Overview
 
-Trong workflow `RE-HQ`, skill này là **coordination skill** cho bài toán cấu trúc giao dịch, transaction architecture và decision design nhiều phòng ban.
+Trong workflow `RE-Investment-Finance`, skill này là **coordination skill** cho bài toán cấu trúc giao dịch, transaction architecture và thiết kế offer. Phòng Đầu tư sở hữu cấu trúc tổng thể (gắn với FS); kéo legal/tax làm specialist input.
 
 Vai trò của skill này là:
 - xác định các cấu trúc khả thi;
@@ -46,7 +46,7 @@ Chỉ huy động `RE-Legal` khi cần **legal assessment chuyên sâu** để h
   - ví dụ: shareholder rights, governance design, SPA / SHA / JVA implications, change-of-control clauses, allocation of liability, CP / closing structure.
 - **Cần polish legal recommendation bằng tiếng Việt** → sau khi legal specialist hoàn tất, có thể yêu cầu `legal-writing` trong `RE-Legal`.
 
-Nguyên tắc: `RE-HQ` thiết kế cấu trúc tổng thể; `RE-Legal` chỉ cung cấp legal input chuyên sâu theo từng nhánh.
+Nguyên tắc: `RE-Investment-Finance` thiết kế cấu trúc tổng thể (gắn FS); `RE-Legal` chỉ cung cấp legal input chuyên sâu theo từng nhánh. Chỉ route `RE-HQ` khi quyết định vượt phạm vi đầu tư và cần tổng hợp đa phòng cấp executive.
 
 ## Workflow
 
@@ -95,6 +95,13 @@ Kết luận rõ:
 - approvals / consents cần có;
 - phần việc follow-up theo từng phòng ban.
 
+### Bước 6 — Kết hợp FS để ra offer và LOI
+Khi đã chốt cấu trúc, gắn với kết quả `re-feasibility-study` để dựng đề nghị giao dịch:
+- lấy valuation / giá trần từ FS (NPV, IRR mục tiêu, peak funding) làm cơ sở giá offer;
+- chốt **offer terms**: giá đề nghị, cấu trúc thanh toán theo mốc, điều kiện tiên quyết (CP), exclusivity, timeline đến signing;
+- soạn **LOI** (Letter of Intent / biên bản ghi nhớ) theo `references/loi-and-offer-guide.md` và `../../templates/loi.md`;
+- nêu rõ phần **ràng buộc / không ràng buộc** của LOI và kéo `legal-counsel` rà ngôn ngữ pháp lý trước khi phát hành.
+
 ## Output Shapes
 
 ### 1. Structuring Option Matrix
@@ -120,9 +127,21 @@ Kết luận rõ:
 - Next actions by owner: ...
 ```
 
+### 3. Offer & LOI Summary
+```md
+## Offer & LOI Summary
+- Cơ sở giá (từ FS): NPV / IRR mục tiêu / giá trần
+- Offer price & payment structure: ...
+- Điều kiện tiên quyết (CP) chính: ...
+- Exclusivity / timeline đến signing: ...
+- Phần ràng buộc / không ràng buộc của LOI: ...
+- Legal review owner (`legal-counsel`): ...
+```
+
 ## References
 
 - `references/structuring-tax-guide.md`
+- `references/loi-and-offer-guide.md`
 
 ## Common Pitfalls
 
@@ -130,11 +149,11 @@ Kết luận rõ:
 2. Gọi `RE-Legal` quá sớm khi câu hỏi legal còn mơ hồ.
 3. Không tách project-side legal constraints với corporate / governance implications.
 4. Chốt cấu trúc dựa trên một tiêu chí đơn lẻ mà bỏ qua execution reality.
-5. Đẩy phần architecting tổng thể sang `RE-Legal` thay vì giữ ở `RE-HQ`.
+5. Đẩy phần architecting tổng thể sang `RE-Legal` thay vì giữ ở `RE-Investment-Finance`.
 
 ## Verification Checklist
 
-- [ ] Đã giữ vai trò structuring coordinator ở `RE-HQ`
+- [ ] Đã giữ vai trò structuring coordinator ở `RE-Investment-Finance`
 - [ ] Project legal feasibility đã map sang `licensing-expert` khi cần
 - [ ] Corporate / governance / transaction legal implications đã map sang `legal-counsel` khi cần
 - [ ] Option matrix đã phản ánh input đa phòng ban, không chỉ legal

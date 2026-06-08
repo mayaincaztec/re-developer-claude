@@ -3,6 +3,7 @@
 # Khung Pháp Lý Bất Động Sản Việt Nam — Tài liệu Tham chiếu
 
 > Cập nhật theo Luật Đất đai 2024, Luật Kinh doanh BĐS 2023, Luật Nhà ở 2023
+> ⚠️ Danh sách **định hướng tĩnh**. Kiểm tra hiệu lực **động** bằng MCP `tvpl` theo `../../../references/tvpl-lookup-protocol.md` trước khi viện dẫn.
 
 ---
 

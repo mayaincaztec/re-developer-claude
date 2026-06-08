@@ -59,7 +59,7 @@ Không nhét lại SOP chi tiết nếu đã có skill bundle tương ứng như
 ### Nên giữ trong profile local
 - legal core bundle của `RE-Legal`
 - `general/concise-natural-response-style`
-- `re-hq` nếu vẫn muốn tự quản trị Codex ngay trong profile này
+- `re-hq` nếu vẫn muốn tự quản trị điều phối ngay trong profile này
 
 ### Nên đưa ra khỏi active inventory
 - non-legal categories không phục vụ legal specialist lane
@@ -71,7 +71,7 @@ Không nhét lại SOP chi tiết nếu đã có skill bundle tương ứng như
 2. Khi chỉnh toolsets qua CLI/config helper, verify lại file YAML sau đó để chắc giá trị đang là **list YAML thật**, không phải stringified JSON list.
 3. Khi dọn skill inventory, ưu tiên **move vào archive/backup** thay vì xóa hẳn.
 4. Verify lại số skill active sau khi dọn.
-5. Nhắc user mở session mới hoặc dùng `/reset` và `/reload-skills` để Codex nhận config/toolset/skill graph mới.
+5. Nhắc user mở session mới để Claude nhận config/toolset/skill graph mới.
 
 ## Verify tối thiểu
 - `platform_toolsets.cli` còn đúng baseline lean.

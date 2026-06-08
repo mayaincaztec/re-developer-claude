@@ -31,32 +31,32 @@ Do not use for:
 ## Template Map
 
 ### 1. Dùng với `licensing-expert`
-- `references/legal-status-report-template.md`
-- `references/approval-matrix-template.md`
-- `references/permit-gap-list-template.md`
-- `references/legal-question-list-template.md`
-- `references/recommendation-memo-template.md`
-- `references/blocker-memo-template.md`
-- `references/hybrid-legal-package-template.md`
+- `../../templates/legal-status-report-template.md`
+- `../../templates/approval-matrix-template.md`
+- `../../templates/permit-gap-list-template.md`
+- `../../templates/legal-question-list-template.md`
+- `../../templates/recommendation-memo-template.md`
+- `../../templates/blocker-memo-template.md`
+- `../../templates/hybrid-legal-package-template.md`
 
 ### 2. Dùng với `legal-counsel`
-- `references/contract-review-memo-template.md`
-- `references/clause-issue-list-template.md`
-- `references/legal-question-list-template.md`
-- `references/recommendation-memo-template.md`
-- `references/cp-closing-issue-note-template.md`
-- `references/hybrid-legal-package-template.md`
+- `../../templates/contract-review-memo-template.md`
+- `../../templates/clause-issue-list-template.md`
+- `../../templates/legal-question-list-template.md`
+- `../../templates/recommendation-memo-template.md`
+- `../../templates/cp-closing-issue-note-template.md`
+- `../../templates/hybrid-legal-package-template.md`
 
 ### 3. Dùng với `legal-writing`
 - dùng khi đã chốt template và cần polish câu chữ, logic chuyển đoạn, mức formal và cấu trúc kết luận.
-- với output cho HQ-led workflow, ưu tiên kết hợp thêm `references/hybrid-legal-package-template.md`, `references/blocker-memo-template.md` hoặc `references/cp-closing-issue-note-template.md` tùy stream.
+- với output cho HQ-led workflow, ưu tiên kết hợp thêm `../../templates/hybrid-legal-package-template.md`, `../../templates/blocker-memo-template.md` hoặc `../../templates/cp-closing-issue-note-template.md` tùy stream.
 - nếu cần điểm neo rất ngắn để ra bản nháp nhanh, có thể xem thêm:
-  - `references/hybrid-legal-package-short-example.md`
-  - `references/blocker-memo-short-example.md`
-  - `references/document-ops-report-short-example.md`
+  - `../../templates/hybrid-legal-package-short-example.md`
+  - `../../templates/blocker-memo-short-example.md`
+  - `../../templates/document-ops-report-short-example.md`
 
 ### 4. Dùng với `doc-renamer`
-- `references/document-ops-report-template.md`
+- `../../templates/document-ops-report-template.md`
 - dùng khi rename / inventory / classify / move file cần được chốt thành output có cấu trúc thay vì chỉ báo ngắn bằng chat.
 
 ## Selection Rule
@@ -84,7 +84,7 @@ Do not use for:
 - cần chốt hướng xử lý, option comparison hoặc go / conditional go / no-go recommendation.
 
 ### Chọn `hybrid-legal-package-template` khi:
-- output sẽ được gửi cho `RE-HQ` để nhúng vào DD, structuring, IC memo hoặc HQ-led workflow khác;
+- output sẽ được gửi cho owner điều phối deal (`RE-Investment-Finance`; hoặc `RE-HQ` ở tầm executive) để nhúng vào DD, structuring, IC memo hoặc workflow điều phối khác;
 - cần format issue → basis → impact → blocker/confirm-point → next step → owner boundary.
 
 ### Chọn `blocker-memo-template` khi:

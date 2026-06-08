@@ -19,17 +19,17 @@ DIRECTORIES = (
 )
 
 STARTER_FILES = {
-    "AGENTS.md": """# Real Estate Workspace
+    "CLAUDE.md": """# Real Estate Workspace
 
 ## Working rules
 
-- Use the installed RE Developer Suite workflows for real-estate tasks.
+- Use the installed RE Developer Suite skills for real-estate tasks.
 - Speak Vietnamese by default, refer to the user as Sếp and yourself as em.
 - Keep deal-specific facts in `deals/<deal-id>/`.
 - Keep durable internal knowledge under `knowledge/`.
 - Distinguish confirmed facts, inferences, assumptions and unresolved items.
 - Do not send private workspace content to external tools without explicit approval.
-- For cross-functional work, use RE-HQ; for specialist work, use the matching RE agent.
+- For cross-functional work, use RE-HQ; for the deal lifecycle, use RE-Investment-Finance; for specialist work, use the matching RE department skill.
 """,
     "re-workspace.yaml": """schema_version: 1
 workspace_type: real-estate-developer

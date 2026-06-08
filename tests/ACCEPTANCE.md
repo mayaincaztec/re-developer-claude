@@ -2,29 +2,27 @@
 
 ## Static
 
-- Plugin manifest passes the Codex plugin validator.
-- Marketplace resolves `./plugins/re-developer-suite`.
-- Nine skills are discovered.
-- Four agent templates parse as TOML and do not pin a model.
+- `.claude-plugin/marketplace.json` resolves `./plugins/re-developer-suite`.
+- `plugins/re-developer-suite/.claude-plugin/plugin.json` is valid and version matches the marketplace.
+- 25 skills are discovered (`scripts/check_bundle.py` passes).
+- All intra-bundle relative references resolve (`tests/test_bundle.py` passes).
 - Bundle contains no credentials, databases, logs or deal folders.
 
 ## Personal Pilot
 
-- Install the marketplace from an immutable release tag.
-- Install the plugin and start a new thread.
-- Run `setup-re-agents` check, apply and re-check.
-- Confirm all four custom agent names are available in a new thread.
-- Initialize a temporary RE workspace and confirm existing files are preserved.
-- Run one task for each department.
+- Install the marketplace from an immutable release tag, install the plugin, start a new thread.
+- Initialize a temporary RE workspace and confirm an existing `CLAUDE.md` is preserved.
+- Run one task for each department (Legal, Investment & Finance, Market Research, Project & Design).
 - Run one ambiguous routing task through RE-HQ.
-- Run a simulated DD using at least Legal, Investment & Finance and Market Research.
+- Run the deal lifecycle through RE-Investment-Finance: screening → preliminary report → FS → full report/IC → structuring + LOI → DD.
+- Confirm a legal task uses `tvpl` to verify legal-text status (or states it could not).
 - Confirm outputs distinguish confirmed, inferred, assumed and unresolved items.
 - Confirm current web sources include links and access dates.
 
 ## Company Promotion
 
 - Install the same tested tag, not `main`.
-- Repeat plugin and agent discovery checks.
+- Repeat plugin and skill discovery checks.
 - Confirm company permissions allow private marketplace installation.
 - Confirm no private workspace content is sent externally without approval.
-- Record installed plugin and agent-template version.
+- Record the installed plugin version.

@@ -56,9 +56,9 @@ Do not use for:
 2. Nếu lane đã rõ nhưng chưa rõ output → dùng `re-legal-deliverable-templates`.
 3. Nếu output là tiếng Việt quan trọng → gọi `legal-writing`.
 4. Trước khi chốt bất kỳ output chính thức nào → dùng `re-legal-verification-rules`.
-5. Nếu xuất hiện dấu hiệu coordination đa stream → route `RE-HQ`.
-   - DD coordination → `dd-coordinator` tại workflow `RE-HQ`
-   - deal structuring / transaction architecture → `deal-structuring-advisor` tại workflow `RE-HQ`
+5. Nếu xuất hiện dấu hiệu coordination đa stream → route về owner phù hợp (deal lifecycle → `RE-Investment-Finance`; tổng hợp đa phòng cấp executive → `RE-HQ`).
+   - DD coordination → `dd-coordinator` tại workflow `RE-Investment-Finance`
+   - deal structuring / transaction architecture + LOI → `deal-structuring-advisor` tại workflow `RE-Investment-Finance`
 6. Nếu task là mixed legal issue:
    - project legal drives contract / transferability → `licensing-expert` trước
    - clause / CP-closing / liability allocation drives issue → `legal-counsel` trước
@@ -84,7 +84,7 @@ Tối thiểu phải so đồng bộ các lớp sau nếu chúng có liên quan:
 - `legal-writing`;
 - `re-legal-verification-rules`;
 - specialist skill / references tương ứng như `licensing-expert`, `legal-counsel` hoặc `doc-renamer`;
-- boundary notes như `dd-coordinator` và `deal-structuring-advisor` nếu boundary với `RE-HQ` bị tác động;
+- boundary notes như `dd-coordinator` và `deal-structuring-advisor` (thuộc `RE-Investment-Finance`) nếu boundary deal-lifecycle bị tác động;
 - `re-legal-skill-maintenance` nếu thay đổi có ảnh hưởng đến graph, metadata hoặc source-sync rule.
 
 Đặc biệt với các thay đổi boundary giữa `RE-Legal` và `RE-HQ`:

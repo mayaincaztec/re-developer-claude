@@ -84,7 +84,7 @@ Dùng khi `RE-HQ` đang điều phối DD tổng thể nhưng cần `RE-Legal` p
 - recommendation memo.
 
 ### Handoff note
-- Output này là specialist legal input cho `RE-HQ`, không phải DD coordination report tổng thể.
+- Output này là specialist legal input cho owner điều phối deal (`RE-Investment-Finance`; hoặc `RE-HQ` ở tầm executive), không phải DD coordination report tổng thể.
 - Nên ghi rõ issue / clause or document / impact / action / owner boundary.
 
 ## 6. CP / Closing Mechanics Support
@@ -102,13 +102,13 @@ Dùng khi task xoay quanh conditions precedent, closing deliverables, signing-cl
 - recommendation memo.
 
 ## 7. Structuring-Driven Legal Input
-Dùng khi `RE-HQ` đang so sánh structure nhưng cần legal view hẹp về governance, liability allocation, SPA-SHA-JVA implications hoặc corporate restrictions.
+Dùng khi `RE-Investment-Finance` (deal-structuring-advisor) đang so sánh structure nhưng cần legal view hẹp về governance, liability allocation, SPA-SHA-JVA implications hoặc corporate restrictions.
 
 ### Tập trung vào
 - structure nào kéo theo legal implication gì;
 - governance / control / minority protection;
 - liability allocation và document implications;
-- phần nào là legal input, phần nào là overall structuring decision của `RE-HQ`.
+- phần nào là legal input, phần nào là overall structuring decision của `RE-Investment-Finance`.
 
 ### Deliverable gợi ý
 - recommendation memo;

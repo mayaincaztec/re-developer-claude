@@ -1,0 +1,67 @@
+---
+name: re-investment-operating-matrix
+description: Use to map a deal task to the right RE-Investment-Finance skill, specialist pulls, template, verification, and escalation — a quick selection layer for the investment deal lifecycle.
+version: 1.0.0
+license: MIT
+---
+
+# RE-Investment Operating Matrix
+
+Bảng điều hướng vận hành của `RE-Investment-Finance`. Map nhanh từ **loại việc trong deal lifecycle** sang primary skill, specialist pull, template, verification và escalation — để giảm lệch lane và không phải quyết định lại từ đầu mỗi deal.
+
+Skill này không thay phân tích. Nó là lớp chọn workflow nhanh, dùng cùng entry `re-investment-finance`.
+
+## When to Use
+
+Dùng khi: deal mới vào nhưng đã rõ đang ở giai đoạn nào; cần chọn nhanh skill + template + QC; cần so flow giữa các giai đoạn lifecycle.
+
+Do not use for: thay phân tích đầu tư; thay quyết định khi task còn quá mơ hồ (dùng entry `re-investment-finance` để chốt mục tiêu trước).
+
+## Core Matrix
+
+| Giai đoạn / loại việc | Primary skill | Specialist pull | Template / output | Verification | Escalation |
+|---|---|---|---|---|---|
+| Sàng lọc deal đầu vào | `re-investment-screening` | — (1 câu hỏi legal/market nếu cần) | `deal-screening-note` | `re-investment-verification-rules` | nếu Proceed → BC sơ bộ |
+| Báo cáo đầu tư sơ bộ | `re-preliminary-investment-report` | `licensing-expert`+`tvpl`, `re-market-research`/`vn-re-research`, `design-planning` | `preliminary-investment-report` | `re-investment-verification-rules` | nếu Go/Conditional → FS |
+| Feasibility study (FS) | `re-feasibility-study` | `design-planning` (GFA/mix), `re-market-research` (giá) | `fs-structure` + `fs-excel-build-guide` → `.xlsx` | `re-investment-verification-rules` | — |
+| Báo cáo đầy đủ / IC memo | `re-full-investment-report` | `licensing-expert`+`legal-counsel`+`tvpl`, `re-market-research` | `full-investment-report` + `investment-memo` | `re-investment-verification-rules` | nếu cần duyệt đa phòng cấp executive → `RE-HQ` |
+| Cấu trúc deal + LOI | `deal-structuring-advisor` | `legal-counsel`/`licensing-expert`, `re-feasibility-study` | `loi` + `loi-and-offer-guide` | `re-investment-verification-rules` | nếu cấu trúc cần trọng tài đa phòng → `RE-HQ` |
+| Điều phối DD | `dd-coordinator` | `RE-Legal` (`licensing-expert`/`legal-counsel`), các stream khác | `dd-executive-summary` + `finding` | `re-investment-verification-rules` | quyết định đa phòng cấp executive → `RE-HQ` |
+
+> Template nằm ở `../../templates/` trừ FS spec (`re-feasibility-study/references/`) và LOI guide (`deal-structuring-advisor/references/`).
+
+## Quick Selection Rule
+
+1. Nếu task chưa rõ giai đoạn → dùng entry `re-investment-finance` để chốt decision/deliverable trước.
+2. Chọn primary skill theo giai đoạn lifecycle (screening → sơ bộ → FS → đầy đủ/IC → structure/LOI → DD).
+3. Kéo specialist input đúng domain: pháp lý → `licensing-expert`/`legal-counsel` (+`tvpl`); thị trường → `re-market-research`/`vn-re-research`; chỉ tiêu quy hoạch/product mix → `design-planning`.
+4. Trước khi chốt bất kỳ output chính thức nào → `re-investment-verification-rules`.
+5. Chỉ route `RE-HQ` khi cần tổng hợp đa phòng cấp executive hoặc trọng tài xung đột — không phải cho từng bước lifecycle.
+
+## System Sync Rule
+
+Khi đổi boundary hoặc lifecycle của bundle Investment, phải so đồng bộ:
+- `re-investment-finance` (entry: lifecycle map + load order);
+- `re-investment-operating-matrix` (bảng này);
+- `re-investment-verification-rules`;
+- template liên quan trong `../../templates/`;
+- `../../references/routing-map.md` nếu boundary với `RE-HQ`/`RE-Legal` bị tác động.
+
+## Language Rule
+
+- Tên skill giữ bằng tiếng Anh; body và matrix viết bằng tiếng Việt; thuật ngữ quan trọng dùng kiểu **Việt ngữ (Anh ngữ)** khi cần.
+
+## Common Pitfalls
+
+1. Dùng matrix khi task còn quá mơ hồ (đáng ra chốt mục tiêu ở entry trước).
+2. Chọn đúng skill nhưng quên template hoặc verification layer.
+3. Route `RE-HQ` cho từng bước lifecycle thay vì chỉ khi cần executive synthesis.
+4. Quên kéo specialist input đúng domain (pháp lý/thị trường/quy hoạch).
+
+## Verification Checklist
+
+- [ ] Đã xác định đúng giai đoạn lifecycle
+- [ ] Đã chọn đúng primary skill + specialist pull
+- [ ] Đã chọn đúng template / output shape
+- [ ] Đã chạy `re-investment-verification-rules` trước khi chốt
+- [ ] Escalation `RE-HQ` chỉ dùng cho executive synthesis / trọng tài

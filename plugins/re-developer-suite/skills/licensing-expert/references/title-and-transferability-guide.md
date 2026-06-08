@@ -32,8 +32,8 @@ Không được đồng nhất 3 trạng thái trên.
 - legal question list nếu thiếu hồ sơ để chốt conclusion.
 
 ## 5. Handoff note cho hybrid case
-Nếu issue này phục vụ DD hoặc structuring do `RE-HQ` lead, output nên nói rõ:
+Nếu issue này phục vụ DD hoặc structuring do `RE-Investment-Finance` lead, output nên nói rõ:
 - title issue cụ thể là gì;
 - căn cứ hồ sơ nào đang support hoặc còn thiếu;
 - impact lên transferability / deal path;
-- phần việc còn cần `RE-HQ` hoặc business owner xử lý.
+- phần việc còn cần `RE-Investment-Finance` hoặc business owner xử lý.

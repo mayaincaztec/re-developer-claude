@@ -1,6 +1,6 @@
 ---
 name: re-legal-skill-maintenance
-description: Use when bảo trì thư viện skill của agent RE-Legal, đặc biệt khi thay skill hiện có bằng một source folder bên ngoài, cần backup, sync chính xác, verify artifact và quyết định có normalize theo Codex hay không.
+description: Use when bảo trì thư viện skill của agent RE-Legal, đặc biệt khi thay skill hiện có bằng một source folder bên ngoài, cần backup, sync chính xác, verify artifact và quyết định có normalize theo chuẩn skill hay không.
 version: 1.0.0
 license: MIT
 ---
@@ -13,10 +13,10 @@ Skill này dùng để bảo trì thư viện skill của agent `RE-Legal` ở l
 
 Trọng tâm là các tình huống như:
 - thay skill hiện có bằng một bản mới từ folder bên ngoài;
-- sync bản do user cung cấp vào thư viện local của Codex;
+- sync bản do user cung cấp vào thư viện local của plugin;
 - backup trước khi ghi đè;
 - verify file sau khi sync;
-- nhận diện khi bản thay thế làm mất metadata / related_skills / cấu trúc Codex đã có trước đó.
+- nhận diện khi bản thay thế làm mất metadata / related_skills / cấu trúc skill chuẩn đã có trước đó.
 
 Skill này không dùng để chỉnh nội dung pháp lý chuyên môn của từng skill; nó là skill quản trị thư viện skill.
 
@@ -38,7 +38,7 @@ Do not use for:
 Khi user **explicitly** cung cấp một replacement folder và nói đó là bản mới nhất, mặc định phải hiểu:
 1. **source folder là source of truth** cho lần thay thế đó;
 2. phải **copy đúng trước**, không auto-normalize ngay;
-3. nếu thấy bản mới làm mất metadata hoặc lệch Codex style, phải báo rõ và tách thành **bước sau tùy chọn**, không tự trộn ngay vào source của user.
+3. nếu thấy bản mới làm mất metadata hoặc lệch skill style chuẩn, phải báo rõ và tách thành **bước sau tùy chọn**, không tự trộn ngay vào source của user.
 
 ## Workflow
 
@@ -66,7 +66,7 @@ Tối thiểu phải verify:
 - source và target có khớp byte / hash không;
 - target đã thực sự phản ánh đúng source chưa.
 
-### Bước 5 — Đánh giá tác động Codex-layer
+### Bước 5 — Đánh giá tác động skill-layer
 Sau khi đã sync đúng source, rà nhanh:
 - còn frontmatter hợp lệ không;
 - có mất `skill discovery tags` / `related_skills` không;
@@ -81,7 +81,7 @@ Sau khi đã sync đúng source, rà nhanh:
 Nếu có, báo theo format:
 - **đã thay đúng source**;
 - **ảnh hưởng phụ** là gì;
-- **bước tùy chọn tiếp theo** nếu muốn re-normalize theo Codex.
+- **bước tùy chọn tiếp theo** nếu muốn re-normalize theo chuẩn skill.
 
 ### Bước 6 — Nhắc về cache / reload
 Sau khi sửa skill library:
@@ -101,7 +101,7 @@ Sau khi sửa skill library:
 ## Ảnh hưởng hệ thống
 - Mất / giữ metadata: ...
 - Có ảnh hưởng skill graph không: ...
-- Có cần normalize lại theo Codex không: ...
+- Có cần normalize lại theo chuẩn skill không: ...
 
 ## Bước tiếp theo
 - ...
@@ -110,10 +110,10 @@ Sau khi sửa skill library:
 ## Common Pitfalls
 
 1. Ghi đè skill local mà không backup.
-2. Thấy source mới “không chuẩn Codex” rồi tự rewrite luôn, làm mất ý định của user.
+2. Thấy source mới “không chuẩn skill” rồi tự rewrite luôn, làm mất ý định của user.
 3. Không verify hash/byte equivalence sau khi copy.
 4. Quên nhắc rằng skill loader trong session hiện tại có thể vẫn cache bản cũ.
-5. Không tách bạch giữa **replace đúng source** và **normalize theo Codex** như hai quyết định khác nhau.
+5. Không tách bạch giữa **replace đúng source** và **normalize theo chuẩn skill** như hai quyết định khác nhau.
 6. Chỉ sửa body nhưng quên kiểm tra frontmatter closing `---`, làm SKILL.md nhìn đúng nhưng parse lỗi.
 7. Patch operating docs nhưng không rà lại bảng Markdown, khiến header và separator lệch số cột.
 8. Để lại wording theo roadmap như `Phase 4 / 5 / 6` trong canonical skill sau khi system đã ổn định, làm tài liệu nhanh lỗi thời.
@@ -143,4 +143,4 @@ Nếu sau này có thêm mẫu sync / rollback / merge, tiếp tục bổ sung t
 - [ ] Đã rà table formatting ở README / matrix / operating docs nếu có sửa
 - [ ] Nếu README hoặc index doctrine bị patch lỗi dây chuyền, đã rewrite sạch toàn file thay vì để lại Markdown drift
 - [ ] Đã thay wording phase-based bằng state-based wording khi tài liệu đã thành canonical doctrine
-- [ ] Đã nhắc reload / reset nếu cần để Codex thấy bản mới
+- [ ] Đã nhắc reload / mở session mới nếu cần để Claude thấy bản mới

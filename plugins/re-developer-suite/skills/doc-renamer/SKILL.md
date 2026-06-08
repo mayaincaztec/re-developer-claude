@@ -13,7 +13,7 @@ Skill này dùng cho 2 nhóm việc trong `RE-Legal`:
 - **đặt tên file văn bản hành chính Việt Nam** theo logic `magic-renamer`;
 - **document operations mức cơ bản** như inventory, classify, move file có kiểm soát.
 
-Phần logic rename trong skill này được giữ theo **bản source mới nhất Sếp cung cấp** rồi bọc lại theo format Codex để dễ load, dễ bảo trì và không đứt skill graph của `RE-Legal`.
+Phần logic rename trong skill này được giữ theo **bản source mới nhất Sếp cung cấp** rồi bọc lại theo format skill chuẩn để dễ load, dễ bảo trì và không đứt skill graph của `RE-Legal`.
 
 Đây là support skill cho legal workflow, không phải skill điều phối data room đa workstream. Nếu tác vụ biến thành data room orchestration quy mô lớn, request tracking hoặc coordination nhiều team, phải route sang `RE-HQ`.
 
@@ -168,7 +168,7 @@ Nhóm áp dụng  : [Nhóm 1 – Legislative / Nhóm 2 – Draft / Nhóm 3 – S
 Nếu có điều gì không rõ ràng hoặc thiếu thông tin, nêu rõ phần bị thiếu và đề xuất tên file tạm thời, đồng thời hỏi người dùng để xác nhận.
 
 ### 2. Báo cáo document ops
-Dùng `references/document-ops-report-template.md` từ `re-legal-deliverable-templates` nếu cần chốt output canonical.
+Dùng `../../templates/document-ops-report-template.md` (chọn qua skill `re-legal-deliverable-templates`) nếu cần chốt output canonical.
 
 Fallback inline format:
 ```md
@@ -192,7 +192,7 @@ Nếu có thao tác move / xóa / ghi đè trên dữ liệu thật, phải xin 
 ### Bước 2 — Lấy inventory trước khi move
 - Phải có danh sách file nguồn trước khi di chuyển.
 - Danh sách này là baseline để làm báo cáo cuối.
-- Ưu tiên dùng Codex file tools hoặc terminal có kiểm soát.
+- Ưu tiên dùng file tools hoặc terminal có kiểm soát.
 
 ### Bước 3 — Thực hiện rename / classify / move
 - Chỉ chạy sau khi đã có inventory.

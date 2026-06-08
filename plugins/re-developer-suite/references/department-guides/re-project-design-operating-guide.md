@@ -38,20 +38,16 @@ Dùng khi cần:
 Dùng khi cần:
 - checklist câu hỏi cho design/PM/consultant team
 
-## Skill loading strategy
+## Skill bundle
 
-### Start lean
-Hiện profile này chưa có imported legacy agent runtime bundle riêng, nên nên dùng:
-- charter nội bộ
-- benchmark/reference gathering
-- template brief do Sếp chuẩn hóa dần
+Entry/router là `re-project-design`; specialist skill là `design-planning` (calc engine + quy trình 9 bước tính chỉ tiêu quy hoạch + kiểm tra QCVN + design review). Template brief: `templates/design-brief.md`.
 
-### Recommended near-term skill additions
-Sau này nên tạo skill riêng cho:
-- design brief template
+Cross-link: `re-feasibility-study`/`re-preliminary-investment-report` dùng GFA/NSA/product mix; `licensing-expert` cho khả năng phê duyệt; `tvpl` cho hiệu lực QCVN.
+
+### Mở rộng sau (chưa làm)
 - benchmark pack workflow
-- product mix checklist
-- option comparison memo
+- product mix checklist nâng cao
+- option comparison memo template riêng
 
 ## Toolset guidance
 

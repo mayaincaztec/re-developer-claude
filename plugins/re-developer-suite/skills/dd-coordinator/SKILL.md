@@ -1,6 +1,6 @@
 ---
 name: dd-coordinator
-description: Use when điều phối Rà Soát Thẩm Định (Due Diligence) nhiều workstream, data room, issue tracker, clarification tracker hoặc tổng hợp DD report ở workflow RE-HQ; chỉ huy động re-legal khi cần legal findings chuyên sâu.
+description: Use when điều phối Rà Soát Thẩm Định (Due Diligence) nhiều workstream, data room, issue tracker, clarification tracker hoặc tổng hợp DD report ở workflow RE-Investment-Finance; chỉ huy động re-legal khi cần legal findings chuyên sâu.
 version: 3.0.0
 license: MIT
 ---
@@ -9,7 +9,7 @@ license: MIT
 
 ## Overview
 
-Trong workflow `RE-HQ`, skill này là **orchestration skill** cho Rà Soát Thẩm Định (Due Diligence) nhiều workstream.
+Trong workflow `RE-Investment-Finance`, skill này là **orchestration skill** cho Rà Soát Thẩm Định (Due Diligence) nhiều workstream. Phòng Đầu tư (deal team) chạy DD; chỉ route `RE-HQ` khi DD bắc cầu một quyết định đa phòng cấp executive.
 
 Vai trò của skill này là:
 - xác định scope DD và workstreams;
@@ -46,7 +46,7 @@ Chỉ huy động `RE-Legal` khi cần **nội dung đánh giá pháp lý chuyê
   - ví dụ: corporate status, shareholder arrangements, material contracts, financing documents, dispute exposure, change-of-control implications.
 - **Cần polish legal memo tiếng Việt** → sau khi specialist legal xong, có thể yêu cầu `legal-writing` trong `RE-Legal`.
 
-Nguyên tắc: `RE-HQ` điều phối; `RE-Legal` phát hành legal analysis chuyên sâu theo từng lane.
+Nguyên tắc: `RE-Investment-Finance` điều phối DD; `RE-Legal` phát hành legal analysis chuyên sâu theo từng lane.
 
 ## Workflow
 

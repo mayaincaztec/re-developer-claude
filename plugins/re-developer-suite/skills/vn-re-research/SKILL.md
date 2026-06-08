@@ -1,20 +1,17 @@
 ---
 name: vn-re-research
-description: Use when you need the imported `vn-re-research` workflow from workspace-real-estate-rd, adapted for RE Developer Suite on Codex.
-version: 1.0.0
-license: Proprietary
+description: Use for the `vn-re-research` workflow — managing a structured Vietnamese real-estate project database, scanning secondary listing prices, and producing market reports. Engine skill for the RE-Market-Research department.
+version: 1.1.0
+license: MIT
 ---
 
 # Imported Skill: vn-re-research
 
 ## Migration Note
 
-This skill was imported from the legacy agent runtime workspace `workspace-real-estate-rd` into Codex.
-The original domain procedure is preserved below, but runtime-specific instructions were normalized for Codex.
-Any historical runtime references should be treated as source context only; use Codex-native tools and current environment rules first.
-Use Codex-native tools, paths, and workflow conventions when executing this skill.
-
-## Original Imported Content
+This skill was originally built for a legacy agent runtime workspace `workspace-real-estate-rd` and ported to the RE Developer Suite plugin.
+The domain procedure is preserved, but runtime-specific instructions are normalized for Claude Code / Cowork.
+For web browsing use the Claude in Chrome tools (`mcp__Claude_in_Chrome__*`) when available, falling back to WebFetch / WebSearch. Use current environment tools, paths, and workflow conventions when executing this skill.
 
 # VN Real Estate R&D Agent
 
@@ -52,18 +49,18 @@ Kích hoạt khi user nhắc đến:
 
 Dùng theo thứ tự ưu tiên:
 
-### Cách 1 — Dùng công cụ browser hiện có của Codex (BẮT BUỘC khi duyệt web/BĐS)
-Khi cần duyệt web trực tiếp trong task research BĐS — đặc biệt với `batdongsan.com.vn`, web search mở kết quả, trang CĐT/sàn phân phối, hoặc listing giá — **luôn dùng công cụ browser hiện có của Codex**:
+### Cách 1 — Dùng Claude in Chrome (ưu tiên khi duyệt web/BĐS)
+Khi cần duyệt web trực tiếp trong task research BĐS — đặc biệt với `batdongsan.com.vn`, web search mở kết quả, trang CĐT/sàn phân phối, hoặc listing giá — **ưu tiên dùng Claude in Chrome** (`mcp__Claude_in_Chrome__*`):
 
 ```
-Mở URL bằng công cụ browser hiện có của Codex: https://batdongsan.com.vn/ban-can-ho-chung-cu-[ten-du-an]
+Mở URL bằng Claude in Chrome: https://batdongsan.com.vn/ban-can-ho-chung-cu-[ten-du-an]
 Đọc nội dung trang hoặc chụp ảnh màn hình khi DOM không đủ dữ liệu
 # hoặc Đọc nội dung trang hoặc chụp ảnh màn hình khi DOM không đủ dữ liệu nếu DOM thiếu/ẩn thông tin
 ```
 
-Lý do: browser tự động có thể bị Cloudflare/anti-bot, trong khi Codex browser dùng Chrome thật đang chạy nên ổn định hơn cho batdongsan và các site BĐS VN. **Không dùng snippet để thay thế khi Codex browser đọc được listing.**
+Lý do: WebFetch thuần có thể bị Cloudflare/anti-bot, trong khi Claude in Chrome dùng Chrome thật đang chạy nên ổn định hơn cho batdongsan và các site BĐS VN. **Không dùng snippet để thay thế khi Claude in Chrome đọc được listing.**
 
-> 🛠️ **Nếu Codex browser không attach được:** báo ngắn gọn cho Sếp biết cần mở tab/nhấn extension nếu có yêu cầu thủ công. Chỉ fallback sang snippet khi không truy cập được hoặc task yêu cầu làm nhanh.
+> 🛠️ **Nếu extension Claude in Chrome chưa kết nối:** báo ngắn gọn cho Sếp biết cần mở tab/cài extension. Chỉ fallback sang snippet khi không truy cập được hoặc task yêu cầu làm nhanh.
 > **Không dùng headless isolated cho batch** vì tốn RAM/CPU và dễ bị anti-bot; chỉ dùng cho task đơn lẻ khi Sếp đồng ý.
 
 Đọc thông tin: giá, diện tích, số phòng ngủ, ngày đăng, số lượng tin, title dự án. Tổng hợp thành min/max/trung bình và ghi rõ số mẫu tin đã đọc.
@@ -71,7 +68,7 @@ Lý do: browser tự động có thể bị Cloudflare/anti-bot, trong khi Codex
 Dùng khi: cần giá thứ cấp chi tiết (nhiều mẫu tin), bảng giá mới nhất từ CĐT, hình ảnh mặt bằng, hoặc xác minh dữ liệu từ search.
 
 ### Cách 2 — Google Search snippet (fallback/estimate nhanh)
-Web search với query `site:batdongsan.com.vn [tên dự án]` hoặc `[tên dự án] giá bán [năm]`. Google trả về title/description có chứa giá và diện tích. Chỉ dùng làm **estimate ban đầu** khi Codex browser không truy cập được, bị quota/thời gian, hoặc cần shortlist dự án trước khi mở listing.
+Web search với query `site:batdongsan.com.vn [tên dự án]` hoặc `[tên dự án] giá bán [năm]`. Google trả về title/description có chứa giá và diện tích. Chỉ dùng làm **estimate ban đầu** khi Claude in Chrome không truy cập được, bị quota/thời gian, hoặc cần shortlist dự án trước khi mở listing.
 
 ```
 search("site:batdongsan.com.vn fiato airport city")
@@ -98,7 +95,7 @@ Nhiều CĐT có trang chủ riêng và các sàn phân phối (datxanh.homes, b
 3. Nếu là dự án mới: đặt tên file `[ten-thuong-mai-viet-khong-dau-gach-ngang].md`  
    Ví dụ: `the-global-city.md`, `meyhomes-capital.md`
 4. Đọc template tại `_config/TEMPLATES/PROJECT_TEMPLATE.md` trong vault
-5. Thu thập dữ liệu theo thứ tự: website CĐT/chủ nguồn chính thức → **Codex browser (`Codex browser`) để mở trực tiếp trang dự án/listing BĐS** → web search snippet chỉ làm fallback/shortlist. Với batdongsan.com.vn, luôn thử Codex browser trước khi ghi giá; nếu chỉ dùng snippet phải ghi rõ là `estimate từ snippet` và đánh dấu cần refresh.
+5. Thu thập dữ liệu theo thứ tự: website CĐT/chủ nguồn chính thức → **Claude in Chrome để mở trực tiếp trang dự án/listing BĐS** → web search snippet chỉ làm fallback/shortlist. Với batdongsan.com.vn, luôn thử Claude in Chrome trước khi ghi giá; nếu chỉ dùng snippet phải ghi rõ là `estimate từ snippet` và đánh dấu cần refresh.
 6. Nếu là dự án mới: điền YAML frontmatter + nội dung theo template
 7. Nếu là dự án cũ: chỉ bổ sung/cập nhật các trường còn thiếu hoặc đã lỗi thời, không overwrite dữ liệu cũ nếu chưa có nguồn tốt hơn
 8. **Chỉ điền trường nào có nguồn rõ ràng** — để trống (`null` / `""`) nếu chưa tìm được
@@ -113,7 +110,7 @@ Nhiều CĐT có trang chủ riêng và các sàn phân phối (datxanh.homes, b
 
 1. Đọc danh sách file trong `projects/[TINH]/` (hoặc toàn bộ) — **chỉ đọc frontmatter, không đọc full body**
 2. Filter những file có `trang_thai: dang-mo-ban`
-3. **Xử lý từng batch 5 dự án:** dùng Codex browser (`Codex browser`) navigate đến trang BDS → snapshot/screenshot → lấy min/max/trung bình. Nếu Relay không truy cập được hoặc Sếp yêu cầu làm nhanh, mới dùng Google search snippet để ước tính và ghi rõ là estimate.
+3. **Xử lý từng batch 5 dự án:** dùng Claude in Chrome navigate đến trang BDS → snapshot/screenshot → lấy min/max/trung bình. Nếu không truy cập được hoặc Sếp yêu cầu làm nhanh, mới dùng Google search snippet để ước tính và ghi rõ là estimate.
 4. Update YAML: `gia_tb_chung_cu`, `gia_min_chung_cu`, `gia_max_chung_cu`, `ngay_cap_nhat_gia`, `ngay_cap_nhat`
 5. Nếu thay đổi >5%: thêm dòng vào bảng "Lịch sử Cập nhật" của file
 6. Báo cáo sau mỗi batch: số dự án đã xong, số còn lại, biến động đáng chú ý — đợi lệnh tiếp
@@ -163,7 +160,7 @@ Luôn thông báo đang ở bước nào và đợi Sếp confirm trước khi s
 | **Đơn vị** | Chung cư = triệu VND/m²; Nhà phố/BT = tỷ VND/căn + triệu/m² đất |
 | **Tiếng Việt** | Giao tiếp và ghi chú bằng tiếng Việt |
 | **Source ghi rõ** | Luôn ghi `nguon_gia` và `nguon_thong_tin` |
-| **BDS anti-bot** | batdongsan.com.vn chặn DOM access — dùng screenshot, không dùng `read_content()`/`attach()` |
+| **BDS anti-bot** | batdongsan.com.vn chặn DOM access — ưu tiên screenshot qua Claude in Chrome khi DOM không trả đủ dữ liệu |
 
 ## Phân khúc chuẩn (tham chiếu HCM)
 

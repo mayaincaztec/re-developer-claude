@@ -43,6 +43,9 @@ Không trộn nhận định pháp lý với hướng xử lý hành chính theo
 ### 4. Kiểm tra routing lần cuối
 Nếu đến cuối mới lộ ra task thực chất là coordination đa stream, phải nói rõ phần nào thuộc `RE-Legal`, phần nào đáng ra phải route `RE-HQ`.
 
+### 5. Kiểm chứng hiệu lực văn bản (tvpl)
+Nếu output có viện dẫn văn bản pháp luật, phải đã đối chiếu tình trạng hiệu lực qua MCP `tvpl` (xem `../../references/tvpl-lookup-protocol.md`) hoặc gắn caveat **"chưa kiểm chứng hiệu lực"**. Không để output dẫn một văn bản có thể đã bị thay thế mà không có dấu kiểm chứng hoặc caveat. Điều này đặc biệt quan trọng với Legal Status Report, Approval Matrix và Recommendation Memo.
+
 ## Deliverable-Specific Rules
 
 ### A. Legal Status Report
@@ -110,7 +113,7 @@ Phải kiểm tra:
 
 ## Escalation Triggers
 
-Phải cân nhắc route `RE-HQ` hoặc ít nhất ghi chú rõ ranh giới scope khi có các dấu hiệu sau:
+Phải cân nhắc route ra ngoài `RE-Legal` (deal lifecycle → `RE-Investment-Finance`; tổng hợp đa phòng cấp executive → `RE-HQ`) hoặc ít nhất ghi chú rõ ranh giới scope khi có các dấu hiệu sau:
 - output đòi hỏi tracker nhiều owner;
 - cần điều phối response từ nhiều phòng ban;
 - legal chỉ là một module trong deal workflow tổng thể;
@@ -134,6 +137,7 @@ Nếu một trong các điểm trên lệch, chưa nên coi refactor là hoàn t
 - Điểm đã đủ cơ sở: ...
 - Điểm còn qualified / cần caveat: ...
 - Missing facts / missing docs: ...
+- Hiệu lực văn bản đã kiểm chứng qua tvpl: có / chưa (caveat)
 - Có cần route `RE-HQ` không: ...
 ```
 

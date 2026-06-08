@@ -18,7 +18,7 @@ Dùng skill này khi trọng tâm công việc là:
 - viết dispute note, breach note hoặc strategic legal memo;
 - phân tích legal implications của các điều khoản trong tài liệu giao dịch bất động sản và M&A.
 
-Skill này phục vụ **specialist legal execution**. Nếu task chuyển thành điều phối deal nhiều stream, structuring nhiều bộ phận, hoặc DD coordination tổng thể, phải route sang `RE-HQ`.
+Skill này phục vụ **specialist legal execution**. Nếu task chuyển thành điều phối deal nhiều stream, structuring nhiều bộ phận, hoặc DD coordination tổng thể, phải route sang `RE-Investment-Finance` (deal lifecycle owner); chỉ tổng hợp đa phòng cấp executive mới thuộc `RE-HQ`.
 
 ## When to Use
 
@@ -109,6 +109,8 @@ Tối thiểu làm rõ:
 - giai đoạn đàm phán;
 - pháp luật điều chỉnh nếu đã biết;
 - audience của output là management, legal team hay cả hai.
+
+Khi điều khoản dẫn chiếu hoặc phụ thuộc một văn bản luật cụ thể (governing law, điều kiện luật định, statutory remedy), **kiểm chứng văn bản đó qua MCP `tvpl`** theo `../../references/tvpl-lookup-protocol.md` (`check_hieu_luc` + `get_dieu`) trước khi kết luận về legal effect.
 
 ### Bước 3 — Đọc tài liệu theo Quote-First Protocol
 Khi review hợp đồng:
@@ -216,7 +218,7 @@ Phải kéo `licensing-expert` nếu điều khoản phụ thuộc các vấn đ
 ...
 ```
 
-## Khi nào phải route sang `RE-HQ`
+## Khi nào phải route ra ngoài `RE-Legal`
 
 Phải coi task đã vượt scope `RE-Legal` khi:
 - không còn là contract review thuần mà thành overall deal coordination;
@@ -224,7 +226,7 @@ Phải coi task đã vượt scope `RE-Legal` khi:
 - cần kéo nhiều bộ phận cùng ra decision về structure, approvals, finance, tax hoặc execution timeline;
 - legal chỉ là một module trong chương trình điều phối lớn hơn.
 
-Trong case đó, `RE-Legal` vẫn có thể làm contract memo hoặc legal note, nhưng coordination thuộc `RE-HQ`.
+Trong case đó, `RE-Legal` vẫn làm contract memo / legal note, nhưng **coordination deal lifecycle (DD, structuring, closing) thuộc `RE-Investment-Finance`**; chỉ tổng hợp đa phòng cấp executive mới thuộc `RE-HQ`.
 
 ## Language Rule
 
@@ -258,7 +260,7 @@ Ngoài ra, dùng thêm:
 3. Trộn legal risk với negotiating preference.
 4. Chỉ nói điều khoản bất lợi nhưng không đề xuất fallback.
 5. Bỏ qua ảnh hưởng của pháp lý dự án lên điều khoản giao dịch.
-6. Ôm luôn phần structuring / DD coordination thay vì route `RE-HQ`.
+6. Ôm luôn phần structuring / DD coordination thay vì route `RE-Investment-Finance`.
 
 ## Verification Checklist
 
@@ -267,6 +269,7 @@ Ngoài ra, dùng thêm:
 - [ ] Đã phân loại mức ưu tiên của issue
 - [ ] Đã đưa fallback hoặc hướng sửa cho các điểm quan trọng
 - [ ] Đã kiểm tra xem issue có phụ thuộc pháp lý dự án hay không
+- [ ] Văn bản luật dẫn chiếu đã được kiểm chứng qua `tvpl` (hoặc nêu rõ chưa kiểm chứng được)
 - [ ] Đã cân nhắc gọi `licensing-expert` nếu có project/regulatory dependency
 - [ ] Đã route `RE-HQ` nếu task đã chuyển thành coordination đa stream
 - [ ] Đã gọi `legal-writing` nếu output cuối là memo / notice / recommendation tiếng Việt quan trọng

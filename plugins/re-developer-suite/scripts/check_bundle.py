@@ -5,7 +5,6 @@ from __future__ import annotations
 
 import json
 import sys
-import tomllib
 from pathlib import Path
 
 
@@ -17,7 +16,7 @@ def main() -> int:
     root = Path(__file__).resolve().parent.parent
     errors = 0
 
-    manifest = json.loads((root / ".codex-plugin" / "plugin.json").read_text("utf-8"))
+    manifest = json.loads((root / ".claude-plugin" / "plugin.json").read_text("utf-8"))
     if manifest.get("name") != root.name:
         fail("plugin folder and manifest name differ")
         errors += 1
@@ -25,11 +24,10 @@ def main() -> int:
     skills = sorted((root / "skills").glob("*/SKILL.md"))
     expected_skills = {
         "re-hq",
-        "setup-re-agents",
         "initialize-re-workspace",
         "dd-coordinator",
-        "deal-structuring",
         "deal-structuring-advisor",
+        "design-planning",
         "doc-renamer",
         "legal-counsel",
         "legal-writing",
@@ -41,6 +39,12 @@ def main() -> int:
         "re-legal-skill-maintenance",
         "re-legal-verification-rules",
         "re-investment-finance",
+        "re-investment-operating-matrix",
+        "re-investment-screening",
+        "re-preliminary-investment-report",
+        "re-feasibility-study",
+        "re-full-investment-report",
+        "re-investment-verification-rules",
         "re-market-research",
         "re-project-design",
         "vn-re-research",
@@ -59,16 +63,6 @@ def main() -> int:
             if forbidden in lowered:
                 fail(f"legacy runtime reference in {path}: {forbidden}")
                 errors += 1
-
-    for path in sorted((root / "agent-templates").glob("*.toml")):
-        data = tomllib.loads(path.read_text("utf-8"))
-        for key in ("name", "description", "developer_instructions"):
-            if not data.get(key):
-                fail(f"{path} missing {key}")
-                errors += 1
-        if "model" in data:
-            fail(f"{path} pins a model instead of inheriting")
-            errors += 1
 
     forbidden_suffixes = {".db", ".lock", ".log", ".env"}
     forbidden_names = {
@@ -94,7 +88,7 @@ def main() -> int:
     if errors:
         print(f"Bundle check failed with {errors} error(s).", file=sys.stderr)
         return 1
-    print(f"Bundle check passed: {len(skills)} skills, 4 agent templates.")
+    print(f"Bundle check passed: {len(skills)} skills.")
     return 0
 
 

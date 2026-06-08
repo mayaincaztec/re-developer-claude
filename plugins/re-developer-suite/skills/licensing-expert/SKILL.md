@@ -49,13 +49,16 @@ Do not use for:
 ## Nguyên tắc bắt buộc
 
 ### 1. Kiểm tra hiệu lực pháp lý trước khi viện dẫn
-Trước khi kết luận, phải kiểm tra theo thứ tự:
-1. văn bản gốc và văn bản sửa đổi / bổ sung / thay thế;
-2. cổng pháp luật chính thức, công báo, cổng bộ / ngành / địa phương;
-3. thủ tục hành chính được công bố chính thức;
-4. văn bản địa phương còn hiệu lực, đúng tỉnh / thành phố.
+Trước mọi kết luận material có viện dẫn văn bản, **dùng MCP `tvpl` để kiểm chứng động** theo `../../references/tvpl-lookup-protocol.md`:
+1. `search_van_ban` → `check_hieu_luc` để xác nhận tình trạng + văn bản thay thế;
+2. `get_dieu` để trích **nguyên văn** điều khoản làm căn cứ (không paraphrase rồi kết luận mạnh);
+3. `get_luoc_do` / `so_sanh_dieu` khi cần lần theo dẫn chiếu hoặc đối chiếu luật cũ ↔ mới.
 
-Không dùng văn bản đã hết hiệu lực làm căn cứ kết luận mà không nói rõ giới hạn.
+Bổ sung kiểm tra ngoài tvpl khi cần: cổng pháp luật chính thức / công báo / cổng bộ–ngành–địa phương; thủ tục hành chính công bố chính thức; **văn bản địa phương** đúng tỉnh/thành (tvpl có thể không đủ cho cấp địa phương — nêu rõ giới hạn).
+
+`references/vn-legal-texts-2025.md` và `vn-realestate-legal-framework.md` chỉ là danh sách **tĩnh** định hướng — phải đối chiếu hiệu lực động bằng tvpl trước khi viện dẫn.
+
+Không dùng văn bản đã hết hiệu lực làm căn cứ mà không nói rõ giới hạn. Nếu chưa tra được qua tvpl, ghi rõ **"chưa kiểm chứng hiệu lực"** thay vì giả định còn hiệu lực.
 
 ### 2. Xác định địa phương trước khi phân tích thủ tục
 Với câu hỏi về thủ tục, thẩm quyền, văn bản địa phương hoặc thực tiễn xử lý hồ sơ, phải xác định dự án thuộc tỉnh / thành phố nào. Nếu user chưa nêu, đây là missing fact quan trọng phải đánh dấu.
@@ -243,7 +246,7 @@ Phải coi task đã vượt scope `RE-Legal` khi có một hoặc nhiều dấu
 - bài toán chuyển từ legal review sang overall transaction coordination;
 - cần phối hợp sâu với investment, finance, tax, project hoặc các phòng ban khác để ra decision tổng thể.
 
-Trong trường hợp đó, `RE-Legal` chỉ nên phát hành phần legal analysis, còn coordination thuộc `RE-HQ`.
+Trong trường hợp đó, `RE-Legal` chỉ nên phát hành phần legal analysis. Coordination deal lifecycle (DD, structuring, data room của một thương vụ) thuộc `RE-Investment-Finance`; tổng hợp đa phòng cấp executive thuộc `RE-HQ`.
 
 ## Language Rule
 
@@ -282,7 +285,7 @@ Ngoài ra, dùng thêm:
 
 - [ ] Đã xác định đúng deliverable
 - [ ] Đã xác định địa phương hoặc đánh dấu đây là missing fact trọng yếu
-- [ ] Đã kiểm tra hiệu lực văn bản / logic chuyển tiếp ở mức cần thiết
+- [ ] Đã kiểm tra hiệu lực văn bản qua `tvpl` (hoặc nêu rõ chưa kiểm chứng được) và logic chuyển tiếp ở mức cần thiết
 - [ ] Đã rà đủ các lớp pháp lý liên quan
 - [ ] Đã tách Fact / Legal Basis / Assessment / Action
 - [ ] Đã nêu severity, missing docs và next step cho các issue chính

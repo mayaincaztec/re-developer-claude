@@ -2,7 +2,7 @@
 
 # Hybrid Specialist Input Drafting Mode
 
-Dùng khi `legal-writing` cần polish một output mà **`RE-HQ` sẽ nhúng vào workflow lớn hơn** như DD report, structuring memo, IC note hoặc closing pack.
+Dùng khi `legal-writing` cần polish một output mà **owner điều phối deal (`RE-Investment-Finance`; hoặc `RE-HQ` ở tầm executive) sẽ nhúng vào workflow lớn hơn** như DD report, structuring memo, IC note hoặc closing pack.
 
 ## Mục tiêu
 - Viết gọn, sắc, không biến thành báo cáo coordination.

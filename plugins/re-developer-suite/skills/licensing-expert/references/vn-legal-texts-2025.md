@@ -3,7 +3,7 @@
 # Văn bản Pháp luật Nền tảng BĐS Việt Nam — Cập nhật 2025
 
 > Tài liệu tham chiếu cho Licensing Expert — Imported Reference
-> ⚠️ Danh sách chỉ mang tính định hướng. Luôn kiểm tra tình trạng hiệu lực trước khi viện dẫn.
+> ⚠️ Danh sách chỉ mang tính **định hướng tĩnh**. Kiểm tra hiệu lực **động** bằng MCP `tvpl` theo `../../../references/tvpl-lookup-protocol.md` trước khi viện dẫn.
 
 ---
 

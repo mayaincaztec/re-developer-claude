@@ -69,22 +69,25 @@ intake → routing → specialist analysis → template selection → drafting/p
 
 ---
 
-## 3. Routing boundary với `RE-HQ`
+## 3. Routing boundary ra ngoài `RE-Legal`
 
 ### Giữ trong `RE-Legal` khi
 - trọng tâm là legal analysis một stream;
 - output cuối là memo / issue list / report / recommendation từ góc legal specialist;
 - document ops chỉ là support step mức cơ bản.
 
+### Route `RE-Investment-Finance` khi (deal lifecycle owner)
+- task là DD coordination (`dd-coordinator`);
+- task là deal structuring / transaction architecture / LOI (`deal-structuring-advisor`);
+- cần issue tracker nhiều owner / data room orchestration của một thương vụ;
+- legal chỉ là một stream trong deal workflow tổng thể.
+
 ### Route `RE-HQ` khi
-- task là DD coordination;
-- task là structuring nhiều phòng ban;
-- cần issue tracker nhiều owner;
-- cần data room orchestration lớn;
-- legal chỉ là một stream trong workflow điều phối tổng thể.
+- cần tổng hợp đa phòng (legal + investment + market + design) ở tầm quyết định executive;
+- cần trọng tài khi các phòng xung đột.
 
 ### Case hybrid
-- `RE-HQ` điều phối tổng thể;
+- owner điều phối là `RE-Investment-Finance` (deal lifecycle) hoặc `RE-HQ` (executive synthesis);
 - `RE-Legal` chỉ phát hành specialist legal input;
 - output tối thiểu nên trả lời được: issue, basis, impact, blocker-or-confirm point, next step và owner boundary.
 

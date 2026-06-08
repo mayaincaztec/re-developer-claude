@@ -54,11 +54,11 @@ Do not use for:
 - **Standalone legal deliverable mode**
   - dùng cho memo, report, công văn, recommendation note hoặc issue list mà `RE-Legal` phát hành như deliverable độc lập cho Sếp.
 - **HQ-specialist-input mode**
-  - dùng khi output sẽ được `RE-HQ` nhúng vào DD report, structuring memo, IC note hoặc closing workflow;
+  - dùng khi output sẽ được owner điều phối deal (`RE-Investment-Finance`; hoặc `RE-HQ` nếu là tổng hợp executive) nhúng vào DD report, structuring memo, IC note hoặc closing workflow;
   - mode này phải ưu tiên format ngắn, rõ owner boundary và tránh giọng coordination.
 
 ### 5. Không dùng skill này để ôm coordination
-Nếu công việc đã chuyển thành điều phối Rà Soát Thẩm Định (Due Diligence), data room orchestration hoặc structuring nhiều phòng ban, skill này chỉ nên polish deliverable legal; phần coordination thuộc `RE-HQ`.
+Nếu công việc đã chuyển thành điều phối Rà Soát Thẩm Định (Due Diligence), data room orchestration hoặc structuring nhiều phòng ban, skill này chỉ nên polish deliverable legal; phần coordination thuộc `RE-Investment-Finance` (deal lifecycle) hoặc `RE-HQ` (executive synthesis).
 
 ## Workflow
 
@@ -82,7 +82,7 @@ Xem thêm: `references/department-application.md` để áp dụng skill này th
 ## Language Rule
 
 Đây là rule chuẩn của `RE-Legal` ở phase hiện tại:
-- tên skill giữ bằng tiếng Anh theo convention Codex;
+- tên skill giữ bằng tiếng Anh theo convention chung;
 - toàn bộ body, workflow và SOP viết bằng tiếng Việt;
 - tiếng Anh chỉ dùng khi không có từ tiếng Việt tương đương tự nhiên hoặc cần giữ thuật ngữ chuyên ngành;
 - với thuật ngữ quan trọng, ưu tiên kiểu **Việt ngữ (Anh ngữ)**, ví dụ: Rà Soát Thẩm Định (Due Diligence), Điều Kiện Tiên Quyết (Conditions Precedent), Điều Khoản Bồi Thường (Indemnity).
@@ -101,7 +101,7 @@ Quy tắc bền vững của skill này là:
 
 Khi trao đổi với Sếp trong chat về draft / review legal, không trả lời kiểu quá cụt hoặc chỉ nêu kết luận một dòng nếu bản chất câu hỏi đang cần giải thích.
 
-Mặc định nên trình bày theo phong cách gần với Codex / Claude Code:
+Mặc định nên trình bày theo phong cách gần với Claude Code:
 - mở bằng kết luận ngắn;
 - theo sau là 1–3 đoạn hoặc bullet giải thích vì sao;
 - dùng bullet khi cần scan nhanh, nhưng tránh biến mọi câu trả lời thành checklist khô cứng;

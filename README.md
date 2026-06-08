@@ -38,24 +38,29 @@ Sau khi cài, mở thread mới và gọi các skill, ví dụ:
 .claude-plugin/marketplace.json          # marketplace ở gốc repo
 plugins/re-developer-suite/
   .claude-plugin/plugin.json             # manifest plugin
-  skills/                                # 20 skills (SKILL.md) — Claude tự quét
+  skills/                                # 25 skills (SKILL.md) — Claude tự quét
   references/                            # tài liệu tham chiếu
   templates/                            # template deliverable
-  agent-templates/  scripts/  tests/     # tiện ích bổ sung
+  scripts/  tests/                       # tiện ích bổ sung
 ```
 
 ## Skills
 
-20 skills: dd-coordinator, deal-structuring-advisor, deal-structuring, doc-renamer,
-initialize-re-workspace, legal-counsel, legal-writing, licensing-expert, re-hq,
-re-investment-finance, re-legal, re-legal-deliverable-templates, re-legal-intake-router,
-re-legal-operating-matrix, re-legal-skill-maintenance, re-legal-verification-rules,
-re-market-research, re-project-design, setup-re-agents, vn-re-research.
+25 skills: dd-coordinator, deal-structuring-advisor, design-planning, doc-renamer,
+initialize-re-workspace, legal-counsel, legal-writing, licensing-expert,
+re-feasibility-study, re-full-investment-report, re-hq, re-investment-finance,
+re-investment-operating-matrix, re-investment-screening, re-investment-verification-rules,
+re-legal, re-legal-deliverable-templates, re-legal-intake-router, re-legal-operating-matrix,
+re-legal-skill-maintenance, re-legal-verification-rules, re-market-research,
+re-preliminary-investment-report, re-project-design, vn-re-research.
+
+Phòng Đầu tư (`re-investment-finance`) sở hữu toàn bộ deal lifecycle: screening →
+báo cáo sơ bộ → FS → báo cáo đầy đủ/IC → deal structuring + LOI → DD coordination.
 
 ## Ghi chú
 
-- `agent-templates/*.toml` và `scripts/*.py` là tiện ích từ bản Codex; Claude không
-  tự chạy chúng — giữ lại để tham chiếu, có thể lược bỏ sau.
+- `scripts/check_bundle.py` (kiểm tra cấu trúc) và `scripts/initialize_workspace.py`
+  (tạo data workspace với `CLAUDE.md`) là tiện ích Python tùy chọn; Claude không tự chạy.
 - Để chạy kiểm thử bundle (tuỳ chọn, Python 3.11+):
   ```
   python plugins/re-developer-suite/scripts/check_bundle.py

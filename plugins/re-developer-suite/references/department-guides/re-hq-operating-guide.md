@@ -17,27 +17,7 @@ Nhiệm vụ chính:
 
 ## Routing policy
 
-### Route sang `RE-Legal` khi có:
-- title / ownership / legal DD
-- permits / approvals / compliance
-- zoning / land use / planning issue
-- contract review / clause risk / transaction structure legal risk
-
-### Route sang `RE-Market-Research` khi có:
-- comps / pricing / supply-demand
-- area study / competitor scan
-- pipeline / launch / market movement
-- market thesis từ dữ liệu công khai
-
-### Route sang `RE-Investment-Finance` khi có:
-- screening / underwriting / scenario
-- recommendation / IC memo / risk-return
-- assumption challenge / downside case
-
-### Route sang `RE-Project-Design` khi có:
-- concept brief / benchmark project
-- program mix / positioning implication
-- consultant brief / design option framing
+Routing doctrine (department scope, route triggers, cơ chế điều phối trên Claude, escalation) là **single source of truth** ở `../routing-map.md`. Không lặp lại bảng routing ở đây để tránh lệch.
 
 ## Skill loading strategy
 

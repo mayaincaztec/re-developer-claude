@@ -1,7 +1,7 @@
 # Cross-Profile Routing Playbook
 
 ## Purpose
-Tài liệu này chuẩn hóa cách `RE-HQ` và các specialist profiles phối hợp với nhau trong hệ Codex của Sếp.
+Tài liệu này chuẩn hóa cách `RE-HQ` và các specialist profiles phối hợp với nhau trong hệ thống của Sếp.
 
 ## Golden rules
 1. Profile là boundary dài hạn cho memory/skills/workflow.
@@ -12,40 +12,7 @@ Tài liệu này chuẩn hóa cách `RE-HQ` và các specialist profiles phối 
 
 ## Canonical routing map
 
-### `RE-HQ`
-Dùng làm cổng chính khi:
-- task liên phòng ban
-- task còn mơ hồ
-- cần final recommendation
-- cần tổng hợp legal + market + finance + design
-
-### `RE-Legal`
-Dùng khi task nghiêng về:
-- legal DD
-- title / zoning / approvals
-- contract / clause / legal risk
-- structure legal lens
-
-### `RE-Market-Research`
-Dùng khi task nghiêng về:
-- market snapshot
-- comps / competitor scan
-- area study
-- trend monitoring
-
-### `RE-Investment-Finance`
-Dùng khi task nghiêng về:
-- screening
-- underwriting
-- scenario analysis
-- recommendation / IC memo
-
-### `RE-Project-Design`
-Dùng khi task nghiêng về:
-- benchmark projects
-- product mix
-- concept framing
-- consultant brief
+Bảng routing chi tiết (department scope, route triggers theo từng phòng, cơ chế điều phối trên Claude, escalation) nằm ở `../routing-map.md` — single source of truth. File này chỉ giữ các nguyên tắc phối hợp và handoff bên dưới.
 
 ## Standard handoff packet
 Khi giao từ profile này sang profile khác, packet tối thiểu nên gồm:

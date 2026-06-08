@@ -42,20 +42,18 @@ Dùng khi cần:
 Dùng khi cần:
 - gom legal + market + design thành kết luận đầu tư
 
-## Skill loading strategy
+## Skill bundle (deal lifecycle owner)
 
-### Start lean
-Hiện profile này chưa có imported legacy agent runtime bundle chuyên investment-finance, nên nên bắt đầu với:
-- internal charter
-- templates do Sếp chuẩn hóa dần
-- memory về logic đánh giá deal của Sếp
+Profile này sở hữu toàn bộ deal lifecycle. Entry/router là `re-investment-finance`; bundle gồm:
+- `re-investment-screening` — sàng lọc deal đầu vào (go/pass)
+- `re-preliminary-investment-report` — báo cáo đầu tư sơ bộ (5 phần)
+- `re-feasibility-study` — FS (spec + Excel generator)
+- `re-full-investment-report` — báo cáo đầy đủ + IC memo
+- `deal-structuring-advisor` — cấu trúc deal + LOI (moved từ RE-HQ)
+- `dd-coordinator` — điều phối DD (moved từ RE-HQ)
+- `re-investment-verification-rules` — QC trước khi chốt
 
-### Recommended near-term skill additions
-Sau này nên tạo skill riêng cho:
-- screening memo
-- underwriting assumption framework
-- IC memo format
-- downside challenge checklist
+Kéo specialist input: `licensing-expert`/`legal-counsel` (+`tvpl`) cho pháp lý; `re-market-research`/`vn-re-research` cho thị trường; `design-planning` cho chỉ tiêu quy hoạch/product mix.
 
 ## Toolset guidance
 
