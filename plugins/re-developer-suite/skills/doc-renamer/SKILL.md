@@ -1,6 +1,6 @@
 ---
 name: doc-renamer
-description: Use when đổi tên file văn bản hành chính Việt Nam theo logic magic-renamer, chuẩn hóa tên file, hoặc xử lý document operations mức cơ bản trong agent RE-Legal.
+description: Use to rename Vietnamese administrative document files with magic-renamer logic, standardize file names, or handle basic document operations (inventory, classify, move) in RE-Legal.
 version: 2.2.0
 license: MIT
 ---
@@ -35,10 +35,8 @@ Không dùng cho:
 
 ## Định tuyến
 
-- Dùng cùng `re-legal-intake-router` nếu chưa rõ đây chỉ là document ops nhẹ hay đã thành bài toán coordination.
-- Dùng cùng `re-legal-deliverable-templates` nếu cần chốt output bằng `document-ops-report-template`.
-- Nếu sau một đợt sync source mới mà logic rename / output shape / related skills thay đổi, rà thêm `re-legal-skill-maintenance` để tránh drift.
-- Nếu sau intake thấy tác vụ là data room orchestration, request list management hoặc tài liệu phải chạy qua nhiều team, route sang `RE-HQ`.
+- Dùng cùng `re-legal-operations` nếu chưa rõ đây chỉ là document ops nhẹ hay đã thành bài toán coordination, hoặc cần chốt output bằng `document-ops-report-template`.
+- Nếu sau intake thấy tác vụ là data room orchestration của một thương vụ, request list management hoặc tài liệu phải chạy qua nhiều team, route `RE-Investment-Finance` (deal lifecycle) hoặc `RE-HQ` (executive synthesis).
 - Skill này không thay thế `licensing-expert` hoặc `legal-counsel`; nó chỉ chuẩn bị đầu vào tài liệu hoặc trả lời bài toán naming / filing.
 
 ## Quy trình
@@ -168,7 +166,7 @@ Nhóm áp dụng  : [Nhóm 1 – Legislative / Nhóm 2 – Draft / Nhóm 3 – S
 Nếu có điều gì không rõ ràng hoặc thiếu thông tin, nêu rõ phần bị thiếu và đề xuất tên file tạm thời, đồng thời hỏi người dùng để xác nhận.
 
 ### 2. Báo cáo document ops
-Dùng `../../templates/document-ops-report-template.md` (chọn qua skill `re-legal-deliverable-templates`) nếu cần chốt output canonical.
+Dùng `../../templates/document-ops-report-template.md` (chọn qua skill `re-legal-operations`) nếu cần chốt output canonical.
 
 Fallback inline format:
 ```md

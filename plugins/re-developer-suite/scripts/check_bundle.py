@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -33,10 +34,7 @@ def main() -> int:
         "legal-writing",
         "licensing-expert",
         "re-legal",
-        "re-legal-deliverable-templates",
-        "re-legal-intake-router",
-        "re-legal-operating-matrix",
-        "re-legal-skill-maintenance",
+        "re-legal-operations",
         "re-legal-verification-rules",
         "re-investment-finance",
         "re-investment-operating-matrix",
@@ -53,6 +51,17 @@ def main() -> int:
         fail("skill set does not match expected v1 bundle")
         errors += 1
 
+    # English headers that the authoring guide requires to be Vietnamese in skill bodies.
+    forbidden_headers = {
+        "overview",
+        "when to use",
+        "workflow",
+        "output shapes",
+        "common pitfalls",
+        "common mistakes",
+        "verification checklist",
+    }
+    vietnamese_chars = re.compile(r"[À-ÿĀ-ſẠ-ỹƠơƯưĐđ]")
     for path in skills:
         text = path.read_text("utf-8")
         if not text.startswith("---\n") or "\nname:" not in text or "\ndescription:" not in text:
@@ -63,6 +72,16 @@ def main() -> int:
             if forbidden in lowered:
                 fail(f"legacy runtime reference in {path}: {forbidden}")
                 errors += 1
+        description = re.search(r"^description:\s*(.+)$", text, re.MULTILINE)
+        if description and len(vietnamese_chars.findall(description.group(1))) > 5:
+            fail(f"description must be mostly English (trigger language; short Vietnamese glosses OK) in {path}")
+            errors += 1
+        for line in text.splitlines():
+            if line.startswith("#"):
+                header = line.lstrip("#").strip().lower()
+                if header in forbidden_headers:
+                    fail(f"English section header '{line.strip()}' in {path} — use Vietnamese per skill-authoring-guide")
+                    errors += 1
 
     forbidden_suffixes = {".db", ".lock", ".log", ".env"}
     forbidden_names = {

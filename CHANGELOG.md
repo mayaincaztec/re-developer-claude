@@ -1,5 +1,27 @@
 # Changelog
 
+## 0.7.0 - 2026-06-11
+
+### Legal bundle consolidation (25 → 22 skills)
+- Merged the three overlapping RE-Legal meta layers (`re-legal-intake-router`, `re-legal-operating-matrix`, `re-legal-deliverable-templates`) into a single operations layer `re-legal-operations` (intake → matrix → template map). Routing now lives in one place per department; updated every referencing skill and guide.
+- Removed `re-legal-skill-maintenance` (legacy-runtime maintenance utility); the still-relevant content (backup-before-sync, verify-after-sync, anti-drift checklist, quarterly static-knowledge re-verification cadence) moved into `references/skill-authoring-guide.md` as maintainer docs. Deleted the redundant `department-guides/re-legal-library-readme.md` (third copy of the matrix).
+- Fixed routing drift: `licensing-expert` and the legal operating guide no longer route DD coordination / multi-stream work to RE-HQ — deal-lifecycle coordination routes to RE-Investment-Finance per `routing-map.md`; RE-HQ only for executive synthesis.
+
+### Deal dossier & workspace layout
+- New `templates/deal-dossier.md` — living per-deal state file (`deals/<deal-id>/_dossier.md`): lifecycle status, assumption register, findings, decisions, open questions, session log. All deal-lifecycle skills (screening, preliminary, FS, full/IC, structuring, DD) now read it at session start and update it at session end.
+- New `references/workspace-layout.md` — single source of truth for the data-workspace structure and output naming; `initialize_workspace.py` CLAUDE.md starter now points to it.
+
+### Commands & agents
+- New `commands/`: `/re-screen`, `/re-fs`, `/re-dd`, `/re-status` for deterministic entry into the deal workflows.
+- New `agents/`: four department agents (`re-legal`, `re-market-research`, `re-project-design`, `re-investment-finance`) with scoped tools for parallel workstreams via the Agent tool; wired into `routing-map.md`.
+
+### Quality & domain hygiene
+- Verification trace rule in `operating-contract.md`: official deliverables must end with the "Kiểm tra trước khi chốt" block (or log it in the deal dossier); wired into both verification skills.
+- English-description rule enforced: rewrote 8 mixed-language skill descriptions to English (Vietnamese glosses allowed); `check_bundle.py` now lints descriptions and forbidden English section headers, and `tests` run it as a test case.
+- Static-knowledge dating: renamed `vn-legal-texts-2025.md` → `vn-legal-texts.md` and `agencies-and-authority-2025.md` → `agencies-and-authority.md`; added explicit `as-of` lines to these and `structuring-tax-guide.md`, tied to the quarterly re-verification cadence in the authoring guide.
+- README: corrected structure diagram (tests live at repo root), documented the deliberate scope boundary (post-investment phases out of scope for now).
+- Deferred per owner request: `vn-re-research` content update (incl. post-merger province taxonomy) and the VN finance-norms reference.
+
 ## 0.6.0 - 2026-06-08
 
 - Merged superior content from the user's standalone skills into the plugin (dropping legacy "OpenClaw" branding, keeping tvpl/routing): `licensing-expert` gains `references/agencies-and-authority-2025.md` (post-merger agencies, 2-level local government from 01/07/2025, citation order) and a 4-level risk scale (🔴🟠🟡🟢) in the legal-status report template; `legal-counsel` gains `references/negotiation-and-dispute-playbook.md` (issue tiers, 3-round negotiation, dispute-resolution comparison, statute of limitations, arbitration).

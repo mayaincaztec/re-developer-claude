@@ -1,6 +1,6 @@
 ---
 name: legal-writing
-description: Use when soạn hoặc rà soát công văn pháp lý, báo cáo pháp lý và các deliverable tiếng Việt cho licensing expert hoặc legal counsel workflows trong agent RE-Legal.
+description: Use to draft or review Vietnamese legal documents in RE-Legal — cong van (official letters), legal reports, memos, and other formal deliverables for licensing-expert or legal-counsel workflows, including AI-trace cleanup and professional Vietnamese legal style.
 version: 1.2.0
 license: MIT
 ---
@@ -46,7 +46,7 @@ Không dùng cho:
 ### 2. Dùng cùng `legal-counsel` khi:
 - tài liệu là contract risk memo, negotiation memo, dispute brief, clause analysis, breach note hoặc transaction recommendation.
 
-### 3. Dùng cùng `re-legal-intake-router` khi:
+### 3. Dùng cùng `re-legal-operations` khi:
 - đầu bài chưa rõ deliverable;
 - cần xác định output có nên giữ trong `RE-Legal` hay đã thành bài toán coordination phải route `RE-HQ`.
 

@@ -1,6 +1,6 @@
 ---
 name: dd-coordinator
-description: Use when điều phối Rà Soát Thẩm Định (Due Diligence) nhiều workstream, data room, issue tracker, clarification tracker hoặc tổng hợp DD report ở workflow RE-Investment-Finance; chỉ huy động re-legal khi cần legal findings chuyên sâu.
+description: Use to coordinate multi-workstream due diligence (DD) in RE-Investment-Finance — DD scope, document request list, data room tracker, clarification log, issue tracker, and the consolidated DD findings report; pulls RE-Legal specialists only for deep legal findings.
 version: 3.0.0
 license: MIT
 ---
@@ -124,6 +124,10 @@ Kết luận rõ:
 - Other workstream owners: ...
 - Next actions: ...
 ```
+
+## Deal dossier
+
+Đọc `deals/<deal-id>/_dossier.md` khi bắt đầu (giai đoạn, findings, câu hỏi mở từ các bước trước); trong quá trình DD, ghi findings trọng yếu và issue còn treo vào dossier; khi chốt DD, cập nhật recommendation go/conditional/no-go và deal-breakers.
 
 ## References
 

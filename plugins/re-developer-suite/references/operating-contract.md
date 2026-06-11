@@ -39,6 +39,10 @@ Never upgrade an inference or assumption into a confirmed fact.
 - Market listing data is indicative, not an executed transaction price.
 - Do not send private workspace contents to external tools unless the user explicitly authorizes it.
 
+## Verification trace (dấu vết kiểm tra)
+
+Mọi deliverable chính thức phải đi qua verification layer của phòng tương ứng (`re-legal-verification-rules` / `re-investment-verification-rules`) **và đính block "Kiểm tra trước khi chốt" vào cuối deliverable** (hoặc ghi vào deal dossier nếu deliverable thuộc một deal). Không có block này thì deliverable được coi là bản nháp chưa QC. Block tối thiểu ghi: deliverable, các điểm đã đủ cơ sở, caveat còn treo, tình trạng kiểm chứng tvpl (nếu có viện dẫn pháp lý), và kết luận routing.
+
 ## Escalation
 
 Return work to RE-HQ when the decision requires multiple departments, a multi-owner tracker, transaction architecture, or an integrated recommendation.

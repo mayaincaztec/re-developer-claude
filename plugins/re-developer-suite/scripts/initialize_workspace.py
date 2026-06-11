@@ -25,7 +25,8 @@ STARTER_FILES = {
 
 - Use the installed RE Developer Suite skills for real-estate tasks.
 - Speak Vietnamese by default, refer to the user as Sếp and yourself as em.
-- Keep deal-specific facts in `deals/<deal-id>/`.
+- Keep deal-specific facts in `deals/<deal-id>/` following the suite's workspace-layout reference.
+- Each deal keeps a living state file at `deals/<deal-id>/_dossier.md` (template: `deal-dossier.md` in the plugin templates). Deal-lifecycle skills read it at the start of a session and update it at the end.
 - Keep durable internal knowledge under `knowledge/`.
 - Distinguish confirmed facts, inferences, assumptions and unresolved items.
 - Do not send private workspace content to external tools without explicit approval.

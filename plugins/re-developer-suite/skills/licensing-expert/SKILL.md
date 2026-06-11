@@ -1,6 +1,6 @@
 ---
 name: licensing-expert
-description: Use when xử lý pháp lý dự án bất động sản, approval path, permits, compliance, legal status review hoặc issue analysis liên quan đất đai, đầu tư, quy hoạch, xây dựng, môi trường, PCCC và điều kiện kinh doanh bất động sản trong agent RE-Legal.
+description: Use for Vietnamese real-estate project legal work in RE-Legal — legal status review, approval path, permits, compliance, and issue analysis across land, investment, planning, construction, environment, fire safety, and real-estate business conditions.
 version: 2.0.0
 license: MIT
 ---
@@ -19,7 +19,7 @@ Dùng skill này khi trọng tâm công việc là:
 - rà điều kiện triển khai, mở bán, huy động vốn, chuyển nhượng dự án;
 - đánh giá legal red flags theo chuỗi đất đai → quy hoạch → đầu tư → xây dựng → môi trường → PCCC → hạ tầng → nhà ở / kinh doanh bất động sản.
 
-Skill này phục vụ **specialist legal execution**, không phải lớp điều phối liên phòng ban. Nếu task chuyển thành điều phối Rà Soát Thẩm Định (Due Diligence), issue tracker nhiều stream, hoặc approval strategy nhiều phòng ban, phải route sang `RE-HQ`.
+Skill này phục vụ **specialist legal execution**, không phải lớp điều phối liên phòng ban. Nếu task chuyển thành điều phối Rà Soát Thẩm Định (Due Diligence) hoặc issue tracker nhiều stream của một thương vụ, route `RE-Investment-Finance`; nếu cần tổng hợp đa phòng cấp executive, route `RE-HQ`.
 
 ## Khi nào dùng
 
@@ -40,11 +40,10 @@ Không dùng cho:
 
 ## Skill đi kèm
 
-- Dùng cùng `re-legal-deliverable-templates` để chọn đúng khung output như legal status report, approval matrix, permit gap list hoặc recommendation memo.
+- Dùng cùng `re-legal-operations` khi đầu bài chưa rõ scope, cần chọn khung output (legal status report, approval matrix, permit gap list, recommendation memo…) hoặc có dấu hiệu vượt khỏi `RE-Legal`.
 - Dùng cùng `re-legal-verification-rules` ở cuối để kiểm tra logic kết luận, mức caveat và dấu hiệu vượt scope.
 - Dùng cùng `legal-writing` khi đầu ra là memo, report, approval matrix hoặc recommendation bằng tiếng Việt.
 - Dùng cùng `legal-counsel` khi issue pháp lý dự án ảnh hưởng trực tiếp đến hợp đồng, giao dịch hoặc điều kiện chuyển nhượng.
-- Dùng cùng `re-legal-intake-router` khi đầu bài chưa rõ scope hoặc có dấu hiệu vượt khỏi `RE-Legal`.
 
 ## Nguyên tắc bắt buộc
 
@@ -56,12 +55,12 @@ Trước mọi kết luận material có viện dẫn văn bản, **dùng MCP `t
 
 Bổ sung kiểm tra ngoài tvpl khi cần: cổng pháp luật chính thức / công báo / cổng bộ–ngành–địa phương; thủ tục hành chính công bố chính thức; **văn bản địa phương** đúng tỉnh/thành (tvpl có thể không đủ cho cấp địa phương — nêu rõ giới hạn).
 
-`references/vn-legal-texts-2025.md` và `vn-realestate-legal-framework.md` chỉ là danh sách **tĩnh** định hướng — phải đối chiếu hiệu lực động bằng tvpl trước khi viện dẫn.
+`references/vn-legal-texts.md` và `vn-realestate-legal-framework.md` chỉ là danh sách **tĩnh** định hướng — phải đối chiếu hiệu lực động bằng tvpl trước khi viện dẫn.
 
 Không dùng văn bản đã hết hiệu lực làm căn cứ mà không nói rõ giới hạn. Nếu chưa tra được qua tvpl, ghi rõ **"chưa kiểm chứng hiệu lực"** thay vì giả định còn hiệu lực.
 
 ### 2. Xác định địa phương và cơ quan thẩm quyền hiện hành
-Với câu hỏi về thủ tục, thẩm quyền, văn bản địa phương hoặc thực tiễn xử lý hồ sơ, phải xác định dự án thuộc tỉnh / thành phố nào. Nếu user chưa nêu, đây là missing fact quan trọng phải đánh dấu. Khi nêu cơ quan thẩm quyền, dùng tên **sau sáp nhập 2025** và lưu ý mô hình **chính quyền 2 cấp** (xem `references/agencies-and-authority-2025.md`); viện dẫn cấp huyện chỉ cho sự kiện quá khứ.
+Với câu hỏi về thủ tục, thẩm quyền, văn bản địa phương hoặc thực tiễn xử lý hồ sơ, phải xác định dự án thuộc tỉnh / thành phố nào. Nếu user chưa nêu, đây là missing fact quan trọng phải đánh dấu. Khi nêu cơ quan thẩm quyền, dùng tên **sau sáp nhập 2025** và lưu ý mô hình **chính quyền 2 cấp** (xem `references/agencies-and-authority.md`); viện dẫn cấp huyện chỉ cho sự kiện quá khứ.
 
 ### 3. Không đồng nhất các trạng thái pháp lý khác nhau
 Không được đánh đồng:
@@ -94,7 +93,7 @@ Chốt đầu ra trước khi đi sâu. Các deliverable thường gặp:
 - go / conditional go / no-go note;
 - question list cần xác minh thêm.
 
-Nếu cần format rõ ngay từ đầu, gọi `re-legal-deliverable-templates` để chọn template phù hợp trước khi phân tích sâu.
+Nếu cần format rõ ngay từ đầu, dùng bản đồ template trong `re-legal-operations` để chọn template phù hợp trước khi phân tích sâu.
 
 ### Bước 2 — Khoanh scope pháp lý chính
 Xác định dự án đang cần xem ở lớp nào:
@@ -237,7 +236,7 @@ Mỗi issue nên đi theo cấu trúc:
 - ...
 ```
 
-## Khi nào phải route sang `RE-HQ`
+## Khi nào phải route ra ngoài `RE-Legal`
 
 Phải coi task đã vượt scope `RE-Legal` khi có một hoặc nhiều dấu hiệu sau:
 - cần điều phối nhiều workstream song song;
@@ -246,7 +245,7 @@ Phải coi task đã vượt scope `RE-Legal` khi có một hoặc nhiều dấu
 - bài toán chuyển từ legal review sang overall transaction coordination;
 - cần phối hợp sâu với investment, finance, tax, project hoặc các phòng ban khác để ra decision tổng thể.
 
-Trong trường hợp đó, `RE-Legal` chỉ nên phát hành phần legal analysis. Coordination deal lifecycle (DD, structuring, data room của một thương vụ) thuộc `RE-Investment-Finance`; tổng hợp đa phòng cấp executive thuộc `RE-HQ`.
+Trong trường hợp đó, `RE-Legal` chỉ nên phát hành phần legal analysis. Coordination deal lifecycle (DD, structuring, data room của một thương vụ) → `RE-Investment-Finance` (`dd-coordinator` / `deal-structuring-advisor`); tổng hợp đa phòng cấp executive → `RE-HQ`.
 
 ## Quy tắc ngôn ngữ
 
@@ -261,7 +260,7 @@ Dùng khi cần đào sâu nguồn nền:
 - `references/licensing-entry-points.md`
 - `references/project-stage-playbook.md`
 - `references/title-and-transferability-guide.md`
-- `references/agencies-and-authority-2025.md` — cơ quan & thẩm quyền sau sáp nhập 2025, chính quyền 2 cấp, quy tắc trích dẫn
+- `references/agencies-and-authority.md` — cơ quan & thẩm quyền sau sáp nhập 2025, chính quyền 2 cấp, quy tắc trích dẫn
 
 Đặc biệt trong operating model hiện tại, reference này không chỉ để chọn mode legal status / approval path, mà còn để map các hybrid requests từ `RE-HQ` như:
 - DD legal findings — project stream;
@@ -290,5 +289,5 @@ Ngoài ra, dùng thêm:
 - [ ] Đã rà đủ các lớp pháp lý liên quan
 - [ ] Đã tách Fact / Legal Basis / Assessment / Action
 - [ ] Đã nêu severity, missing docs và next step cho các issue chính
-- [ ] Đã cân nhắc route `RE-HQ` nếu task chuyển thành coordination đa stream
+- [ ] Đã cân nhắc route `RE-Investment-Finance` (coordination đa stream) hoặc `RE-HQ` (executive synthesis) nếu task vượt scope
 - [ ] Đã gọi `legal-writing` nếu output cuối là memo / report tiếng Việt quan trọng

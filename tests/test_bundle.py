@@ -64,6 +64,15 @@ class BundleTests(unittest.TestCase):
                     broken.append(f"{md.relative_to(ROOT)} -> {token}")
         self.assertEqual(broken, [], "broken internal references:\n" + "\n".join(broken))
 
+    def test_check_bundle_passes(self) -> None:
+        script = PLUGIN / "scripts" / "check_bundle.py"
+        result = subprocess.run(
+            [sys.executable, str(script)],
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(result.returncode, 0, result.stderr)
+
     def test_workspace_initializer_preserves_existing_claude_md(self) -> None:
         script = PLUGIN / "scripts" / "initialize_workspace.py"
         with tempfile.TemporaryDirectory() as temp:

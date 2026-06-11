@@ -1,6 +1,6 @@
 ---
 name: deal-structuring-advisor
-description: Use when điều phối bài toán deal structuring, transaction architecture, hoặc kết hợp FS để ra offer/LOI trong workflow RE-Investment-Finance; chỉ huy động re-legal khi cần legal assessment chuyên sâu về dự án, corporate, governance hoặc transaction documents.
+description: Use for deal structuring and transaction architecture in RE-Investment-Finance — compare share/asset/JV/SPV structures, coordinate legal-tax-finance inputs, and combine FS results into an offer and LOI; pulls RE-Legal specialists only for deep legal assessment.
 version: 3.1.0
 license: MIT
 ---
@@ -137,6 +137,10 @@ Khi đã chốt cấu trúc, gắn với kết quả `re-feasibility-study` đ�
 - Phần ràng buộc / không ràng buộc của LOI: ...
 - Legal review owner (`legal-counsel`): ...
 ```
+
+## Deal dossier
+
+Đọc `deals/<deal-id>/_dossier.md` khi bắt đầu (kết quả FS, findings pháp lý, quyết định đã chốt); khi chốt structuring/LOI, cập nhật dossier: cấu trúc ưu tiên, offer terms chính và việc còn treo. LOI lưu tại `deals/<deal-id>/correspondence/` theo `../../references/workspace-layout.md`.
 
 ## References
 

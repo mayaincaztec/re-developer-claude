@@ -31,9 +31,9 @@ RE-HQ owns executive integrated deliverables and arbitrates cross-department con
 Trên runtime này, 5 "phòng ban" là **skills cùng cấp**, không phải agent riêng. RE-HQ (và RE-Investment-Finance với deal lifecycle) điều phối bằng một trong hai cách:
 
 1. **Sequential skill loading** (mặc định) — load tuần tự skill phòng ban / sub-skill cần dùng, tự tổng hợp kết quả.
-2. **Subagents qua `Agent` tool** — chỉ khi Sếp yêu cầu chạy song song / nhiều phòng ban cùng lúc; mỗi subagent nhận handoff packet trong `operating-contract.md`.
+2. **Subagents qua `Agent` tool** — chỉ khi Sếp yêu cầu chạy song song / nhiều phòng ban cùng lúc. Plugin định nghĩa sẵn 4 agent phòng ban trong `agents/`: `re-legal`, `re-market-research`, `re-project-design`, `re-investment-finance` — spawn đúng agent theo workstream; mỗi subagent nhận handoff packet trong `operating-contract.md` và trả distilled findings theo finding schema.
 
-Không cần "cài agent" — các phòng ban là skills, Claude tự quét khi cài plugin.
+Không cần bước cài đặt riêng — skills và agents được Claude tự quét khi cài plugin. Ngoài ra có các slash command vào thẳng workflow: `/re-screen`, `/re-fs`, `/re-dd`, `/re-status`.
 
 ## Escalation
 

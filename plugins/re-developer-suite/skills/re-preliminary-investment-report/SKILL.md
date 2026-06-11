@@ -41,6 +41,8 @@ Quick math, chưa cần model đầy đủ:
 
 Dùng template `../../templates/preliminary-investment-report.md`. Qua `re-investment-verification-rules` trước khi chốt.
 
+Đọc `deals/<deal-id>/_dossier.md` khi bắt đầu (kết quả screening, câu hỏi mở); khi chốt, cập nhật dossier: trạng thái giai đoạn, kết luận go/conditional/no-go, assumption mới và findings trọng yếu.
+
 ## Nguyên tắc
 
 - Phân biệt fact / inference / assumption (finding schema trong `../../references/operating-contract.md`).

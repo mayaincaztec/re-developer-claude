@@ -46,6 +46,8 @@ Nếu quyết định thực chất cần tổng hợp đa phòng cấp executiv
 
 ## Mẫu kiểm tra nhanh
 
+Với deliverable chính thức, **đính block này vào cuối deliverable** và ghi tóm tắt vào `_dossier.md` của deal — xem mục Verification trace trong `../../references/operating-contract.md`. Thiếu block = bản nháp chưa QC.
+
 ```md
 ## Kiểm tra trước khi chốt (Investment)
 - Deliverable: ...

@@ -1,6 +1,6 @@
 ---
 name: re-legal-verification-rules
-description: Use when cần kiểm tra đầu ra pháp lý của re-legal trước khi chốt, đặc biệt với legal status memo, approval path, permit gap analysis, contract review, clause issue list, recommendation memo hoặc question list.
+description: Use to quality-control RE-Legal outputs before finalizing — legal status memos, approval paths, permit gap analyses, contract reviews, clause issue lists, recommendation memos, and question lists. Checks over-claiming, missing caveats, tvpl verification, and scope drift.
 version: 1.0.0
 license: MIT
 ---
@@ -122,14 +122,16 @@ Phải cân nhắc route ra ngoài `RE-Legal` (deal lifecycle → `RE-Investment
 ## Quy tắc rà hardening
 
 Khi vừa sửa skill graph hoặc refactor workflow, phải rà thêm:
-- `skill relationship graph` có còn phản ánh graph hiện tại không;
-- README, intake-router và operating-matrix có còn nói cùng một load order không;
-- template layer có theo kịp output shape mới không;
-- boundary note với `RE-HQ` có bị mâu thuẫn ở đâu không.
+- entry `re-legal` và `re-legal-operations` có còn nói cùng một load order và cùng một matrix không;
+- template map trong `re-legal-operations` có theo kịp output shape mới không;
+- boundary note với `RE-HQ` / `RE-Investment-Finance` có bị mâu thuẫn ở đâu không;
+- `routing-map.md` có cần cập nhật không.
 
 Nếu một trong các điểm trên lệch, chưa nên coi refactor là hoàn tất.
 
 ## Mẫu kiểm tra nhanh
+
+Với deliverable chính thức, **đính block này vào cuối deliverable** (hoặc ghi vào deal dossier nếu thuộc một deal) — xem mục Verification trace trong `../../references/operating-contract.md`. Thiếu block = bản nháp chưa QC.
 
 ```md
 ## Kiểm tra trước khi chốt
@@ -162,7 +164,7 @@ Nếu một trong các điểm trên lệch, chưa nên coi refactor là hoàn t
 2. Không kiểm tra xem output có đang over-claim không.
 3. Bỏ sót routing check cuối cùng.
 4. Dùng cùng một checklist cho mọi loại deliverable.
-5. Sau khi refactor skill graph, không rà lại metadata `related_skills`, template pointers và verification handoff nên hệ thống nhìn đúng nhưng load order thực tế bị lệch.
+5. Sau khi refactor skill graph, không rà lại template pointers và verification handoff nên hệ thống nhìn đúng nhưng load order thực tế bị lệch.
 6. Với output gửi `RE-HQ`, chỉ tóm tắt findings mà không nói rõ owner boundary nên dễ bị hiểu nhầm là `RE-Legal` đang ôm coordination.
 7. Để legal question list / missing-docs note phình thành multi-owner tracker, làm lệch vai specialist legal execution.
 

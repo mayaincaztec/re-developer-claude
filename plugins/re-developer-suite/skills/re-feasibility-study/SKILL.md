@@ -44,6 +44,7 @@ Qua `re-investment-verification-rules`: không bịa số, phân biệt calculat
 ## Output
 
 - File `.xlsx` (7 sheet) + 1 trang tóm tắt return (NPV, IRR dự án & vốn chủ, payback, margin, peak funding) + 2–3 dòng kết luận khả thi.
+- Lưu file theo `../../references/workspace-layout.md` (`deals/<deal-id>/analysis/FS_<TenDuAn>_<YYYYMMDD>.xlsx`); cập nhật `_dossier.md`: trạng thái FS, return chính và assumption register đã chốt.
 
 ## Nguyên tắc
 

@@ -49,7 +49,7 @@ Không dùng cho: underwriting / IRR (→ `RE-Investment-Finance`); legal status
 - [ ] Giá MBS (sơ cấp CĐT) không bị trộn với giá thứ cấp thị trường
 - [ ] Nếu task đã thành tổng hợp đa phòng ban, đã route `RE-HQ`
 
-## Common pitfalls
+## Lỗi thường gặp
 
 1. Trộn giá rao bán với giá giao dịch thực.
 2. Lấy 1–2 listing làm kết luận toàn thị trường.

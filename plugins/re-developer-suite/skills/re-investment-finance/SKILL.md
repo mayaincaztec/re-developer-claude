@@ -44,6 +44,7 @@ Investment chốt assumption và kết luận đầu tư; specialist chỉ phát
 4. Phân biệt **calculated output / management assumption / external evidence** — không trộn.
 5. Gắn market, legal, design findings vào revenue / cost / timing / financing / exit.
 6. Mọi output đi qua `re-investment-verification-rules` trước khi chốt.
+7. **Deal dossier**: mỗi deal có file trạng thái `deals/<deal-id>/_dossier.md` trong data workspace (template `../../templates/deal-dossier.md`, layout `../../references/workspace-layout.md`). Đọc dossier khi bắt đầu phiên làm việc trên deal; cập nhật trạng thái giai đoạn, assumption chốt, findings và nhật ký khi kết thúc. Chưa có thì tạo từ template.
 
 ## Thứ tự nạp
 

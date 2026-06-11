@@ -2,8 +2,8 @@
 
 # Hướng dẫn Cấu trúc & Thuế Giao dịch BĐS Việt Nam
 
-> Tài liệu tham chiếu cho Deal Structuring Advisor — Imported Reference
-> Cập nhật: Luật Đất đai 2024, Luật KDBĐS 2023, Thông tư 80/2021/TT-BTC, Hiệp định thuế
+> **as-of: 2025** — mọi thuế suất / ngưỡng trong tài liệu phải kiểm chứng lại tại ngày sử dụng; cập nhật dòng này sau mỗi đợt rà định kỳ (xem mục Bảo trì trong `../../../references/skill-authoring-guide.md`).
+> Cơ sở: Luật Đất đai 2024, Luật KDBĐS 2023, Thông tư 80/2021/TT-BTC, Hiệp định thuế
 
 ---
 

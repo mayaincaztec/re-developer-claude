@@ -1,8 +1,8 @@
 > **Lưu ý kiểm chứng:** Tài liệu này được migrate từ thư viện nghiệp vụ cũ. Mọi quy định, thuế suất, ngưỡng, thủ tục và cơ quan có thẩm quyền phải được kiểm tra lại bằng nguồn chính thức còn hiệu lực tại ngày sử dụng.
 
-# Văn bản Pháp luật Nền tảng BĐS Việt Nam — Cập nhật 2025
+# Văn bản Pháp luật Nền tảng BĐS Việt Nam
 
-> Tài liệu tham chiếu cho Licensing Expert — Imported Reference
+> **as-of: 2025** — ngày xác minh gần nhất của danh sách này; cập nhật dòng này sau mỗi đợt rà hiệu lực định kỳ (xem mục Bảo trì trong `../../../references/skill-authoring-guide.md`).
 > ⚠️ Danh sách chỉ mang tính **định hướng tĩnh**. Kiểm tra hiệu lực **động** bằng MCP `tvpl` theo `../../../references/tvpl-lookup-protocol.md` trước khi viện dẫn.
 
 ---

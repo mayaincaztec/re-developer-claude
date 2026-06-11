@@ -31,6 +31,7 @@ Mở rộng 5 phần của báo cáo sơ bộ, chuyên sâu hơn và gắn số 
 
 ## Nguyên tắc
 
+- Đọc `deals/<deal-id>/_dossier.md` khi bắt đầu; khi chốt, cập nhật trạng thái giai đoạn, recommendation và conditions vào dossier.
 - Mọi con số tài chính tie-out với FS; phân biệt calculated / assumption / external.
 - Recommendation phải dựa trên căn cứ đủ mạnh; nếu facts còn thiếu, qualify đúng mức.
 - Không trộn legal/market specialist conclusion với phán đoán đầu tư — ghi rõ owner từng phần.

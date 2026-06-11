@@ -1,6 +1,6 @@
 ---
 name: legal-counsel
-description: Use when rà soát hợp đồng, clause risk, negotiation position, drafting support, dispute note hoặc transaction legal memo trong agent RE-Legal.
+description: Use for contract and transaction legal work in RE-Legal — contract review, clause risk, negotiation positions, drafting support, dispute notes, and transaction legal memos for Vietnamese real-estate and M&A documents.
 version: 2.0.0
 license: MIT
 ---
@@ -39,11 +39,10 @@ Không dùng cho:
 
 ## Skill đi kèm
 
-- Dùng cùng `re-legal-deliverable-templates` để chọn nhanh format như contract review memo, clause issue list, legal question list hoặc recommendation memo.
+- Dùng cùng `re-legal-operations` khi đầu bài mới vào chưa rõ lane, hoặc cần chọn nhanh format như contract review memo, clause issue list, legal question list hoặc recommendation memo.
 - Dùng cùng `re-legal-verification-rules` ở cuối để kiểm tra quote support, mức ưu tiên, fallback và ranh giới scope.
 - Dùng cùng `legal-writing` khi đầu ra là memo, report, notice, recommendation hoặc tài liệu tiếng Việt cần polish.
 - Dùng cùng `licensing-expert` khi issue hợp đồng phụ thuộc điều kiện pháp lý dự án, tình trạng dự án, permits, chuyển nhượng dự án hoặc regulatory feasibility.
-- Dùng cùng `re-legal-intake-router` khi đầu bài mới vào chưa rõ là contract-only hay mixed legal/project issue.
 
 ## Chế độ chính
 
@@ -102,7 +101,7 @@ Chốt rõ user muốn gì:
 - draft từ đầu;
 - dispute advisory.
 
-Nếu cần format rõ ngay từ đầu, gọi `re-legal-deliverable-templates` để chọn template phù hợp trước khi đi sâu vào analysis.
+Nếu cần format rõ ngay từ đầu, dùng bản đồ template trong `re-legal-operations` để chọn template phù hợp trước khi đi sâu vào analysis.
 
 ### Bước 2 — Xác định bối cảnh giao dịch
 Tối thiểu làm rõ:
