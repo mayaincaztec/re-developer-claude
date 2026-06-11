@@ -1,0 +1,150 @@
+---
+name: re-inv-dd-coordinator
+description: Use to coordinate multi-workstream due diligence (DD) in RE-Investment-Finance — DD scope, document request list, data room tracker, clarification log, issue tracker, and the consolidated DD findings report; pulls RE-Legal specialists only for deep legal findings.
+version: 3.0.0
+license: MIT
+---
+
+# DD Coordinator
+
+## Tổng quan
+
+Trong workflow `RE-Investment-Finance`, skill này là **orchestration skill** cho Rà Soát Thẩm Định (Due Diligence) nhiều workstream. Phòng Đầu tư (deal team) chạy DD; chỉ route `RE-HQ` khi DD bắc cầu một quyết định đa phòng cấp executive.
+
+Vai trò của skill này là:
+- xác định scope DD và workstreams;
+- dựng DRL, data room tracker, clarification log, issue tracker và DD timeline;
+- điều phối đầu vào từ các nhóm legal, financial, tax, technical, commercial và vận hành;
+- tổng hợp findings thành DD report và recommendation cho cấp điều phối.
+
+Skill này **không tự làm sâu toàn bộ legal analysis**. Khi cần findings pháp lý chuyên sâu, phải huy động specialist phù hợp ở agent `RE-Legal`.
+
+## Khi nào dùng
+
+Dùng skill này khi:
+- cần điều phối DD nhiều workstream;
+- cần DRL hoặc data room tracker;
+- cần clarification tracker với seller / counterparty;
+- cần issue list nhiều owner;
+- cần DD findings report hoặc executive summary tổng hợp;
+- legal chỉ là một stream trong chương trình DD tổng thể.
+
+Không dùng cho:
+- legal status review một stream;
+- clause review hoặc contract memo một stream;
+- approval path analysis độc lập;
+- document ops nhẹ không cần multi-team coordination.
+
+## Quy tắc kéo chuyên môn
+
+Chỉ huy động `RE-Legal` khi cần **nội dung đánh giá pháp lý chuyên sâu**.
+
+### Map legal request sang specialist ở `RE-Legal`
+- **Key Findings DD về pháp lý dự án** → gọi `re-legal-licensing`
+  - ví dụ: đất đai, quy hoạch, đầu tư, xây dựng, môi trường, PCCC, điều kiện mở bán, chuyển nhượng dự án, permit gaps.
+- **Key Findings DD về pháp lý công ty / corporate legal / transaction documents** → gọi `re-legal-counsel`
+  - ví dụ: corporate status, shareholder arrangements, material contracts, financing documents, dispute exposure, change-of-control implications.
+- **Cần polish legal memo tiếng Việt** → sau khi specialist legal xong, có thể yêu cầu `re-legal-writing` trong `RE-Legal`.
+
+Nguyên tắc: `RE-Investment-Finance` điều phối DD; `RE-Legal` phát hành legal analysis chuyên sâu theo từng lane.
+
+## Quy trình
+
+### Bước 1 — Xác định scope DD
+Chốt tối thiểu:
+- loại giao dịch: share deal / asset deal / JV / minority investment;
+- đối tượng: dự án, công ty, nhóm tài sản hay platform;
+- workstreams cần mở;
+- timeline và mốc quyết định;
+- stakeholders / owners theo từng workstream.
+
+### Bước 2 — Dựng control layer
+Thiết lập các lớp điều phối phù hợp:
+- DRL;
+- data room tracker;
+- clarification tracker;
+- issue tracker;
+- DD timeline / milestone view.
+
+Không yêu cầu mọi task đều phải có đủ tất cả lớp; chọn theo quy mô deal.
+
+### Bước 3 — Phân luồng yêu cầu theo workstream
+Tách rõ:
+- legal;
+- financial / tax;
+- technical / construction;
+- commercial / market;
+- operations / HR / compliance khác nếu có.
+
+Với legal stream, chỉ gửi brief chuyên sâu sang `RE-Legal` khi câu hỏi đã được xác định đủ cụ thể.
+
+### Bước 4 — Huy động legal stream từ `RE-Legal` khi cần
+Khi legal findings là một phần của DD report:
+- gửi yêu cầu **pháp lý dự án** sang `re-legal-licensing`;
+- gửi yêu cầu **pháp lý công ty / corporate legal / transaction documents** sang `re-legal-counsel`;
+- không yêu cầu `RE-Legal` điều phối toàn bộ DD.
+
+### Bước 5 — Tổng hợp findings đa phòng ban
+Chuẩn hóa output về cùng cấu trúc:
+- issue;
+- severity;
+- evidence / source;
+- business impact;
+- recommendation / mitigation;
+- owner / next step.
+
+### Bước 6 — Chốt DD recommendation
+Kết luận rõ:
+- go / conditional go / no-go;
+- key deal breakers;
+- key conditions precedent / remedial actions;
+- missing items còn treo;
+- action owners sau DD.
+
+## Dạng đầu ra
+
+### 1. DD Coordination Snapshot
+```md
+## DD Coordination Snapshot
+- Deal / Asset: ...
+- Workstreams mở: ...
+- Trạng thái data room: ...
+- Critical missing items: ...
+- Legal stream cần huy động từ `RE-Legal`: ...
+- Key blockers / next steps: ...
+```
+
+### 2. DD Findings Summary
+```md
+## DD Findings Summary
+- Overall recommendation: Go / Conditional Go / No-Go
+- Deal breakers: ...
+- Major issues: ...
+- Legal findings owner: `RE-Legal` / specialist tương ứng
+- Other workstream owners: ...
+- Next actions: ...
+```
+
+## Deal dossier
+
+Đọc `deals/<deal-id>/_dossier.md` khi bắt đầu (giai đoạn, findings, câu hỏi mở từ các bước trước); trong quá trình DD, ghi findings trọng yếu và issue còn treo vào dossier; khi chốt DD, cập nhật recommendation go/conditional/no-go và deal-breakers.
+
+## References
+
+- `references/dd-document-request-templates.md`
+
+## Lỗi thường gặp
+
+1. Biến `re-inv-dd-coordinator` thành legal specialist thay vì coordinator.
+2. Kéo `RE-Legal` vào điều phối tổng thể thay vì chỉ yêu cầu legal findings chuyên sâu.
+3. Gửi brief legal quá mơ hồ, làm specialist phải tự đoán scope.
+4. Trộn findings giữa các workstream mà không gắn owner rõ ràng.
+5. Chốt recommendation khi critical missing items vẫn chưa được flag.
+
+## Checklist kiểm tra
+
+- [ ] Đã tách rõ coordination layer với specialist legal layer
+- [ ] Legal project findings đã map sang `re-legal-licensing` khi cần
+- [ ] Legal corporate / transaction findings đã map sang `re-legal-counsel` khi cần
+- [ ] DD report đã gắn owner / next step theo từng issue
+- [ ] Không đẩy vai điều phối tổng thể sang `RE-Legal`

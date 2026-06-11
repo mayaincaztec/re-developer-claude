@@ -25,7 +25,7 @@ license: MIT
 
 ## Cấu trúc body khuyến nghị
 
-`Overview` → `When to Use` + `Do not use for` → `Workflow` (các bước) → `Output shapes` → `Common Pitfalls` → `Verification Checklist`. Tham khảo `licensing-expert`, `re-feasibility-study` làm mẫu.
+`Overview` → `When to Use` + `Do not use for` → `Workflow` (các bước) → `Output shapes` → `Common Pitfalls` → `Verification Checklist`. Tham khảo `re-legal-licensing`, `re-inv-feasibility-study` làm mẫu.
 
 ## Templates vs references — khi nào dùng cái nào
 
@@ -56,9 +56,9 @@ Quy tắc nhanh: *output giao đi → `templates/`; tài liệu để skill làm
 
 ## Naming convention
 
-- Entry phòng ban: `re-<dept>` (vd `re-legal`, `re-investment-finance`).
-- Hạ tầng phòng ban: `re-<dept>-<role>` (vd `re-legal-operations`, `re-investment-verification-rules`).
-- Workflow/specialist dùng chung hoặc đặc thù: tên trần mô tả (vd `licensing-expert`, `dd-coordinator`, `design-planning`).
+- Entry phòng ban: `re-<dept>` (vd `re-legal`, `re-inv`).
+- Hạ tầng phòng ban: `re-<dept>-<role>` (vd `re-legal-operations`, `re-inv-verification-rules`).
+- Workflow/specialist dùng chung hoặc đặc thù: tên trần mô tả (vd `re-legal-licensing`, `re-inv-dd-coordinator`, `re-project-design-planning`).
 - **Grandfather:** tên skill là định danh ổn định (nhiều nơi tham chiếu). Không đổi tên chỉ vì mỹ quan — Claude trigger theo `description`, không theo tên. Áp convention cho skill **mới**; đổi tên skill cũ chỉ khi thật cần và phải cập nhật mọi tham chiếu + chạy lại test.
 
 ## Khi thêm / xóa một skill
@@ -88,4 +88,4 @@ Mục này dành cho người bảo trì suite (không phải skill runtime).
 - [ ] Boundary `RE-Legal` / `RE-Investment-Finance` / `RE-HQ` nhất quán với `routing-map.md`
 - [ ] CHANGELOG + version (`plugin.json` và `marketplace.json` khớp nhau)
 
-**Chu kỳ rà kiến thức tĩnh (mỗi quý hoặc khi có luật mới):** chạy tvpl `check_hieu_luc` cho danh mục trong `licensing-expert/references/vn-legal-texts.md`; rà các bảng số liệu có `as-of` (thuế trong `structuring-tax-guide.md`, cơ quan thẩm quyền trong `agencies-and-authority.md`) và cập nhật ngày `as-of` sau khi xác nhận.
+**Chu kỳ rà kiến thức tĩnh (mỗi quý hoặc khi có luật mới):** chạy tvpl `check_hieu_luc` cho danh mục trong `re-legal-licensing/references/vn-legal-texts.md`; rà các bảng số liệu có `as-of` (thuế trong `structuring-tax-guide.md`, cơ quan thẩm quyền trong `agencies-and-authority.md`) và cập nhật ngày `as-of` sau khi xác nhận.

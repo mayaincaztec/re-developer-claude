@@ -2,7 +2,7 @@
 
 # Blocker Memo Template
 
-> Dùng chủ yếu với `licensing-expert` khi một legal blocker của dự án đang chặn DD conclusion, structuring path hoặc project transfer / commercialization step.
+> Dùng chủ yếu với `re-legal-licensing` khi một legal blocker của dự án đang chặn DD conclusion, structuring path hoặc project transfer / commercialization step.
 
 ## 1. Blocker được hỏi
 - Vấn đề cần xác định: ...

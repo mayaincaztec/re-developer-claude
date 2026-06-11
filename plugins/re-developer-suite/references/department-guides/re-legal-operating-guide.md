@@ -24,18 +24,18 @@ Route ra ngoài khi task đã thành coordination (xem `../routing-map.md` — s
 - `re-legal-operations` → khi task chưa rõ lane, cần chọn skill/template/QC, hoặc có dấu hiệu vượt scope
 
 ### Specialist lanes
-- `licensing-expert` → project legal / permits / compliance / title / approval path
-- `legal-counsel` → contracts / transaction docs / clause risk / CP-closing legal issues
-- `doc-renamer` → document ops nhẹ, rename, inventory, classify cơ bản
+- `re-legal-licensing` → project legal / permits / compliance / title / approval path
+- `re-legal-counsel` → contracts / transaction docs / clause risk / CP-closing legal issues
+- `re-legal-doc-renamer` → document ops nhẹ, rename, inventory, classify cơ bản
 
 ### Companion layers
-- `legal-writing` → khi cần polish output pháp lý tiếng Việt
+- `re-legal-writing` → khi cần polish output pháp lý tiếng Việt
 - `re-legal-verification-rules` → QC trước khi chốt
 
 ## Lean load order
 1. Chỉ load `re-legal-operations` nếu task chưa rõ lane hoặc có dấu hiệu vượt scope.
-2. Sau đó load **1 specialist chính**: `licensing-expert`, `legal-counsel` hoặc `doc-renamer`.
-3. Chỉ load companion skill nếu task thật sự cần (`legal-writing`, `re-legal-verification-rules`).
+2. Sau đó load **1 specialist chính**: `re-legal-licensing`, `re-legal-counsel` hoặc `re-legal-doc-renamer`.
+3. Chỉ load companion skill nếu task thật sự cần (`re-legal-writing`, `re-legal-verification-rules`).
 4. Tránh kéo nhiều skill cùng lúc nếu chưa cần; ưu tiên load theo tầng.
 5. Nếu intake cho thấy task là coordination đa stream, route `RE-Investment-Finance` (deal lifecycle) hoặc `RE-HQ` (executive synthesis) thay vì tiếp tục nạp skill trong `RE-Legal`.
 

@@ -27,7 +27,7 @@ Dùng skill này khi:
 Không dùng cho:
 - thay thế specialist analysis ban đầu;
 - quyết định routing lane từ đầu;
-- thay thế việc polish tiếng Việt của `legal-writing`.
+- thay thế việc polish tiếng Việt của `re-legal-writing`.
 
 ## Quy tắc chung
 

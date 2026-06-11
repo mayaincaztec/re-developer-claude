@@ -18,7 +18,7 @@ RE-HQ owns executive integrated deliverables and arbitrates cross-department con
 
 **→ RE-Legal** khi có: title / ownership / legal DD; permits / approvals / compliance; zoning / land use / planning; contract review / clause risk / transaction-structure legal risk.
 
-**→ RE-Market-Research** khi có: comps / pricing / supply-demand; area study / competitor scan; pipeline / launch / market movement; market thesis từ dữ liệu công khai. Database dự án VN, scan giá thứ cấp và báo cáo thị trường dùng skill `vn-re-research`.
+**→ RE-Market-Research** khi có: comps / pricing / supply-demand; area study / competitor scan; pipeline / launch / market movement; market thesis từ dữ liệu công khai. Database dự án VN, scan giá thứ cấp và báo cáo thị trường dùng skill `re-rnd`.
 
 **→ RE-Investment-Finance** khi có: screening deal đầu vào; báo cáo đầu tư (sơ bộ / đầy đủ); feasibility study (FS); underwriting / scenario / risk-return; IC memo / recommendation; **deal structuring + LOI**; **điều phối DD**. Đây là phòng sở hữu toàn bộ deal lifecycle, kéo Legal/Market làm input.
 
@@ -31,7 +31,7 @@ RE-HQ owns executive integrated deliverables and arbitrates cross-department con
 Trên runtime này, 5 "phòng ban" là **skills cùng cấp**, không phải agent riêng. RE-HQ (và RE-Investment-Finance với deal lifecycle) điều phối bằng một trong hai cách:
 
 1. **Sequential skill loading** (mặc định) — load tuần tự skill phòng ban / sub-skill cần dùng, tự tổng hợp kết quả.
-2. **Subagents qua `Agent` tool** — chỉ khi Sếp yêu cầu chạy song song / nhiều phòng ban cùng lúc. Plugin định nghĩa sẵn 4 agent phòng ban trong `agents/`: `re-legal`, `re-market-research`, `re-project-design`, `re-investment-finance` — spawn đúng agent theo workstream; mỗi subagent nhận handoff packet trong `operating-contract.md` và trả distilled findings theo finding schema.
+2. **Subagents qua `Agent` tool** — chỉ khi Sếp yêu cầu chạy song song / nhiều phòng ban cùng lúc. Plugin định nghĩa sẵn 4 agent phòng ban trong `agents/`: `re-legal`, `re-rnd`, `re-project`, `re-inv` — spawn đúng agent theo workstream; mỗi subagent nhận handoff packet trong `operating-contract.md` và trả distilled findings theo finding schema.
 
 Không cần bước cài đặt riêng — skills và agents được Claude tự quét khi cài plugin. Ngoài ra có các slash command vào thẳng workflow: `/re-screen`, `/re-fs`, `/re-dd`, `/re-status`.
 
@@ -42,4 +42,4 @@ Khi một specialist thấy task vượt domain của mình:
 2. đề xuất route tiếp theo;
 3. giữ lại phần kết luận trong domain của mình và trả phần điều phối về owner phù hợp.
 
-DD coordination → `dd-coordinator`; deal structuring / transaction architecture + LOI → `deal-structuring-advisor`. **Cả hai là workflow của RE-Investment-Finance** (deal lifecycle owner), kéo RE-Legal cho legal findings. Chỉ route RE-HQ khi cần quyết định đa phòng cấp executive.
+DD coordination → `re-inv-dd-coordinator`; deal structuring / transaction architecture + LOI → `re-inv-deal-structuring`. **Cả hai là workflow của RE-Investment-Finance** (deal lifecycle owner), kéo RE-Legal cho legal findings. Chỉ route RE-HQ khi cần quyết định đa phòng cấp executive.

@@ -6,7 +6,7 @@
 - **Blocker:** Chưa thấy căn cứ rõ cho việc dự án đã hoàn tất điều kiện pháp lý then chốt để mở bán.
 - **Why it matters:** Nếu điều kiện mở bán chưa khép, việc commercial launch hoặc investor messaging có rủi ro overstatement.
 - **Current support:** Hồ sơ đã cung cấp chưa đủ để xác nhận tình trạng approvals và điều kiện thực tế tại thời điểm review.
-- **Immediate action:** Bổ sung hồ sơ chứng minh điều kiện mở bán và rà lại theo `licensing-expert`.
+- **Immediate action:** Bổ sung hồ sơ chứng minh điều kiện mở bán và rà lại theo `re-legal-licensing`.
 - **Owner boundary:** `RE-Legal` xác định mức legal blocker; việc thu xếp hồ sơ và điều phối cập nhật thuộc business / `RE-HQ`.
 
 ## Lỗi thường gặp

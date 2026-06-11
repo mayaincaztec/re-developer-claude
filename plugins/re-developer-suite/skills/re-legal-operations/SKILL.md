@@ -23,15 +23,15 @@ Không dùng cho: phân tích pháp lý sâu sau khi lane đã rõ (vào thẳng
 
 Phân loại task vào một trong 4 nhóm:
 
-- **Pháp lý dự án**: title, đất đai, quy hoạch, đầu tư, xây dựng, môi trường, PCCC, mở bán, chuyển nhượng dự án, approval path → `licensing-expert`
-- **Hợp đồng / giao dịch**: NDA, LOI, SPA, SHA, clause risk, negotiation note, dispute note, drafting support → `legal-counsel`
-- **Document ops**: rename, inventory, classify, move file quy mô nhỏ/vừa → `doc-renamer`
+- **Pháp lý dự án**: title, đất đai, quy hoạch, đầu tư, xây dựng, môi trường, PCCC, mở bán, chuyển nhượng dự án, approval path → `re-legal-licensing`
+- **Hợp đồng / giao dịch**: NDA, LOI, SPA, SHA, clause risk, negotiation note, dispute note, drafting support → `re-legal-counsel`
+- **Document ops**: rename, inventory, classify, move file quy mô nhỏ/vừa → `re-legal-doc-renamer`
 - **Coordination / đa stream**: → route ra ngoài `RE-Legal` (xem dưới)
 
 **Route ra ngoài `RE-Legal`** ngay khi thấy các dấu hiệu: nhiều workstream song song, nhiều owner, cần tracker / status management, cần phối hợp tiến độ ngoài legal:
 
-- DD coordination → `RE-Investment-Finance` (`dd-coordinator`);
-- deal structuring / transaction architecture / LOI → `RE-Investment-Finance` (`deal-structuring-advisor`);
+- DD coordination → `RE-Investment-Finance` (`re-inv-dd-coordinator`);
+- deal structuring / transaction architecture / LOI → `RE-Investment-Finance` (`re-inv-deal-structuring`);
 - issue tracker nhiều workstream / data room orchestration của một thương vụ → `RE-Investment-Finance`;
 - tổng hợp đa phòng (legal + investment + market + design) ở **tầm quyết định executive** → `RE-HQ`.
 
@@ -43,30 +43,30 @@ Doctrine đầy đủ: `../../references/routing-map.md`. Case hybrid: owner đi
 
 | Loại việc | Primary skill | Companion | Template / output | Verification | Escalation trigger |
 |---|---|---|---|---|---|
-| Legal status review | `licensing-expert` | `legal-writing` | `legal-status-report-template` | `re-legal-verification-rules` | task thành DD coordination / multi-owner tracker |
-| Approval path / thủ tục | `licensing-expert` | `legal-writing` | `approval-matrix-template` | `re-legal-verification-rules` | approval strategy phụ thuộc coordination nhiều phòng |
-| Permit / compliance gap | `licensing-expert` | `legal-writing` | `permit-gap-list-template` | `re-legal-verification-rules` | gap remediation cần cross-functional program |
-| Điều kiện mở bán / chuyển nhượng / huy động vốn | `licensing-expert` | `legal-writing` | `recommendation-memo-template` hoặc `permit-gap-list-template` | `re-legal-verification-rules` | kết luận phụ thuộc structuring / DD tổng thể |
-| NDA / LOI / Term Sheet review | `legal-counsel` | `legal-writing` | `clause-issue-list-template` hoặc `contract-review-memo-template` | `re-legal-verification-rules` | review thành overall deal coordination |
-| SPA / SHA / JVA / project transfer review | `legal-counsel` | `licensing-expert`, `legal-writing` | `contract-review-memo-template` | `re-legal-verification-rules` | drafting/signing phụ thuộc DD / structuring đa stream |
-| Clause scan nhanh | `legal-counsel` | — hoặc `legal-writing` | `clause-issue-list-template` | `re-legal-verification-rules` | issue thật ra là project legal blocker |
-| Recommendation legal note | `licensing-expert` hoặc `legal-counsel` | `legal-writing` | `recommendation-memo-template` | `re-legal-verification-rules` | recommendation cần deal decision framework tổng thể |
-| Legal question list / missing docs | `licensing-expert` hoặc `legal-counsel` | — hoặc `legal-writing` | `legal-question-list-template` | `re-legal-verification-rules` | question list đã thành request tracker nhiều owner |
-| Rename / inventory / classify / move nhẹ | `doc-renamer` | — | `document-ops-report-template` | `re-legal-verification-rules` nếu cần chốt | thành data room orchestration / multi-team flow |
-| Hybrid legal input — project stream | `licensing-expert` | `legal-writing` hoặc — | `hybrid-legal-package-template` / `blocker-memo-template` / `legal-question-list-template` | `re-legal-verification-rules` | package phình thành multi-owner tracker / DD coordination |
-| Hybrid legal input — corporate / transaction stream | `legal-counsel` | `legal-writing` hoặc — | `hybrid-legal-package-template` / `cp-closing-issue-note-template` / `legal-question-list-template` | `re-legal-verification-rules` | package phình thành closing coordination / structuring framework |
+| Legal status review | `re-legal-licensing` | `re-legal-writing` | `legal-status-report-template` | `re-legal-verification-rules` | task thành DD coordination / multi-owner tracker |
+| Approval path / thủ tục | `re-legal-licensing` | `re-legal-writing` | `approval-matrix-template` | `re-legal-verification-rules` | approval strategy phụ thuộc coordination nhiều phòng |
+| Permit / compliance gap | `re-legal-licensing` | `re-legal-writing` | `permit-gap-list-template` | `re-legal-verification-rules` | gap remediation cần cross-functional program |
+| Điều kiện mở bán / chuyển nhượng / huy động vốn | `re-legal-licensing` | `re-legal-writing` | `recommendation-memo-template` hoặc `permit-gap-list-template` | `re-legal-verification-rules` | kết luận phụ thuộc structuring / DD tổng thể |
+| NDA / LOI / Term Sheet review | `re-legal-counsel` | `re-legal-writing` | `clause-issue-list-template` hoặc `contract-review-memo-template` | `re-legal-verification-rules` | review thành overall deal coordination |
+| SPA / SHA / JVA / project transfer review | `re-legal-counsel` | `re-legal-licensing`, `re-legal-writing` | `contract-review-memo-template` | `re-legal-verification-rules` | drafting/signing phụ thuộc DD / structuring đa stream |
+| Clause scan nhanh | `re-legal-counsel` | — hoặc `re-legal-writing` | `clause-issue-list-template` | `re-legal-verification-rules` | issue thật ra là project legal blocker |
+| Recommendation legal note | `re-legal-licensing` hoặc `re-legal-counsel` | `re-legal-writing` | `recommendation-memo-template` | `re-legal-verification-rules` | recommendation cần deal decision framework tổng thể |
+| Legal question list / missing docs | `re-legal-licensing` hoặc `re-legal-counsel` | — hoặc `re-legal-writing` | `legal-question-list-template` | `re-legal-verification-rules` | question list đã thành request tracker nhiều owner |
+| Rename / inventory / classify / move nhẹ | `re-legal-doc-renamer` | — | `document-ops-report-template` | `re-legal-verification-rules` nếu cần chốt | thành data room orchestration / multi-team flow |
+| Hybrid legal input — project stream | `re-legal-licensing` | `re-legal-writing` hoặc — | `hybrid-legal-package-template` / `blocker-memo-template` / `legal-question-list-template` | `re-legal-verification-rules` | package phình thành multi-owner tracker / DD coordination |
+| Hybrid legal input — corporate / transaction stream | `re-legal-counsel` | `re-legal-writing` hoặc — | `hybrid-legal-package-template` / `cp-closing-issue-note-template` / `legal-question-list-template` | `re-legal-verification-rules` | package phình thành closing coordination / structuring framework |
 
 Template nằm ở `../../templates/`.
 
 ## Bước 3 — Sequencing khi task là mixed legal issue
 
-- **Project legal drives contract** → vào `licensing-expert` trước: khi câu hỏi hợp đồng phụ thuộc điều kiện chuyển nhượng dự án, title, permit status, approval path, điều kiện mở bán hoặc regulatory feasibility.
-- **Document clause drives issue spotting** → vào `legal-counsel` trước: khi đầu bài xoay quanh clause wording, CP / closing mechanics, indemnity, liability allocation, termination hoặc negotiation position.
+- **Project legal drives contract** → vào `re-legal-licensing` trước: khi câu hỏi hợp đồng phụ thuộc điều kiện chuyển nhượng dự án, title, permit status, approval path, điều kiện mở bán hoặc regulatory feasibility.
+- **Document clause drives issue spotting** → vào `re-legal-counsel` trước: khi đầu bài xoay quanh clause wording, CP / closing mechanics, indemnity, liability allocation, termination hoặc negotiation position.
 - **Cần 2 legal views song song** → chốt rõ primary lane (chịu trách nhiệm kết luận chính) + secondary lane (chỉ phát hành integration note / issue note hỗ trợ).
 
 ## Bước 4 — Companion skill
 
-- Gọi `legal-writing` khi đầu ra là memo / report / legal letter / recommendation tiếng Việt quan trọng, cần polish lập luận và wording. Không cần khi Sếp chỉ cần raw issue bullets, inventory/rename, hoặc working notes tạm.
+- Gọi `re-legal-writing` khi đầu ra là memo / report / legal letter / recommendation tiếng Việt quan trọng, cần polish lập luận và wording. Không cần khi Sếp chỉ cần raw issue bullets, inventory/rename, hoặc working notes tạm.
 - Gọi `re-legal-verification-rules` trước khi chốt mọi deliverable chính thức.
 
 ## Quy tắc chọn template
@@ -117,13 +117,13 @@ Khi đổi boundary hoặc workflow của bundle `RE-Legal`, so đồng bộ: en
 3. Load nhiều skill cùng lúc dù task chỉ có một lane rõ ràng.
 4. Chọn đúng skill nhưng quên template hoặc verification layer.
 5. Dùng report template cho câu hỏi chỉ cần issue list ngắn.
-6. Không gọi `legal-writing` cho memo/report tiếng Việt quan trọng.
+6. Không gọi `re-legal-writing` cho memo/report tiếng Việt quan trọng.
 
 ## Checklist kiểm tra
 
 - [ ] Đã xác định lane và deliverable cuối
 - [ ] Đã kiểm tra dấu hiệu vượt scope (coordination → `RE-Investment-Finance`; executive synthesis → `RE-HQ`)
 - [ ] Đã chọn đúng primary skill + template / output shape
-- [ ] Đã cân nhắc `legal-writing` cho đầu ra tiếng Việt quan trọng
+- [ ] Đã cân nhắc `re-legal-writing` cho đầu ra tiếng Việt quan trọng
 - [ ] Đã chạy `re-legal-verification-rules` trước khi chốt
 - [ ] Nếu hybrid, đã nêu rõ owner boundary

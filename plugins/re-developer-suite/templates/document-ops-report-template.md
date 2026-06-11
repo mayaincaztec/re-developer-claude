@@ -2,7 +2,7 @@
 
 # Document Ops Report Template
 
-> Dùng cho `doc-renamer` khi cần chốt output rename / inventory / classify / move file ở mức support workflow, nhưng chưa thành data room orchestration.
+> Dùng cho `re-legal-doc-renamer` khi cần chốt output rename / inventory / classify / move file ở mức support workflow, nhưng chưa thành data room orchestration.
 
 ## 1. Scope xử lý
 - Mục tiêu: ...

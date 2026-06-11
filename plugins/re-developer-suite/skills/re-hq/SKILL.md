@@ -22,7 +22,7 @@ On Claude, the five departments are skills, not separate agents. Coordinate in o
 
 Do not perform specialist work deeply when the relevant department can own it. Do not expose private workspace information to external services without approval.
 
-The full deal lifecycle — screening, feasibility study, investment reports, deal structuring + LOI, and DD coordination — is owned by **RE-Investment-Finance**, not RE-HQ. Delegate deal work there (it uses `re-feasibility-study`, `deal-structuring-advisor`, `dd-coordinator`, etc. and pulls Legal/Market as inputs). RE-HQ steps in only for executive-level synthesis across departments or to arbitrate conflicts.
+The full deal lifecycle — screening, feasibility study, investment reports, deal structuring + LOI, and DD coordination — is owned by **RE-Investment-Finance**, not RE-HQ. Delegate deal work there (it uses `re-inv-feasibility-study`, `re-inv-deal-structuring`, `re-inv-dd-coordinator`, etc. and pulls Legal/Market as inputs). RE-HQ steps in only for executive-level synthesis across departments or to arbitrate conflicts.
 
 ## Checklist phân xử xung đột
 

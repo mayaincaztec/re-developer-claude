@@ -7,7 +7,7 @@
 ## 1. Thông tin package
 - Workflow tổng thể: DD / structuring / CP-closing / other
 - Legal stream: project legal / corporate-transaction legal
-- Specialist owner: `licensing-expert` / `legal-counsel`
+- Specialist owner: `re-legal-licensing` / `re-legal-counsel`
 - Mục tiêu sử dụng: issue escalation / decision support / clarification / blocker note
 
 ## 2. Kết luận ngắn

@@ -6,11 +6,11 @@ Bộ workflow tiếng Việt cho mô hình vận hành của một Chủ đầu 
 ## Bao gồm
 
 - RE-HQ — điều phối, tổng hợp đa phòng cấp executive, trọng tài xung đột
-- RE-Legal — pháp lý (licensing-expert, legal-counsel, legal-writing, re-legal-operations…)
+- RE-Legal — pháp lý (re-legal-licensing, re-legal-counsel, re-legal-writing, re-legal-operations…)
 - RE-Investment-Finance — sở hữu toàn bộ deal lifecycle
-- RE-Market-Research — nghiên cứu thị trường (engine `vn-re-research`)
-- RE-Project-Design — thiết kế, chỉ tiêu quy hoạch 1/500 (`design-planning`)
-- 4 agents phòng ban (`agents/`) cho chế độ chạy song song + 4 slash commands (`commands/`)
+- RE-Market-Research — nghiên cứu thị trường (engine `re-rnd`)
+- RE-Project-Design — thiết kế, chỉ tiêu quy hoạch 1/500 (`re-project-design-planning`)
+- 4 agents phòng ban (`agents/`: re-legal, re-rnd, re-inv, re-project) cho chế độ chạy song song + 4 slash commands (`commands/`)
 
 Plugin chỉ chứa workflow và template. Hồ sơ deal, tri thức nội bộ, credentials
 và output sinh ra lưu ở một data workspace riêng (xem
@@ -38,7 +38,7 @@ Sau khi cài, mở thread mới và gọi skill hoặc command, ví dụ:
 .claude-plugin/marketplace.json          # marketplace ở gốc repo
 plugins/re-developer-suite/
   .claude-plugin/plugin.json             # manifest plugin
-  skills/                                # 22 skills (SKILL.md) — Claude tự quét
+  skills/                                # 21 skills (SKILL.md) — Claude tự quét
   agents/                                # 4 agent phòng ban (chạy song song qua Agent tool)
   commands/                              # 4 slash commands (/re-screen, /re-fs, /re-dd, /re-status)
   references/                            # tài liệu tham chiếu (routing-map, operating-contract,
@@ -50,14 +50,18 @@ tests/                                   # kiểm thử bundle (gốc repo)
 
 ## Skills
 
-22 skills: dd-coordinator, deal-structuring-advisor, design-planning, doc-renamer,
-initialize-re-workspace, legal-counsel, legal-writing, licensing-expert,
-re-feasibility-study, re-full-investment-report, re-hq, re-investment-finance,
-re-investment-operating-matrix, re-investment-screening, re-investment-verification-rules,
-re-legal, re-legal-operations, re-legal-verification-rules, re-market-research,
-re-preliminary-investment-report, re-project-design, vn-re-research.
+21 skills, đặt tên theo prefix phòng ban (entry mỗi phòng trùng tên agent):
 
-Phòng Đầu tư (`re-investment-finance`) sở hữu toàn bộ deal lifecycle: screening →
+- **HQ & chung:** re-hq, initialize-re-workspace
+- **RE-Inv (Đầu tư):** re-inv (entry), re-inv-screening, re-inv-preliminary-report,
+  re-inv-feasibility-study, re-inv-full-report, re-inv-deal-structuring,
+  re-inv-dd-coordinator, re-inv-operating-matrix, re-inv-verification-rules
+- **RE-Legal (Pháp lý):** re-legal (entry), re-legal-operations, re-legal-licensing,
+  re-legal-counsel, re-legal-writing, re-legal-doc-renamer, re-legal-verification-rules
+- **RE-RnD (Thị trường):** re-rnd (entry + engine database vault Obsidian)
+- **RE-Project (Thiết kế):** re-project (entry), re-project-design-planning
+
+Phòng Đầu tư (`re-inv`) sở hữu toàn bộ deal lifecycle: screening →
 báo cáo sơ bộ → FS → báo cáo đầy đủ/IC → deal structuring + LOI → DD coordination.
 Trạng thái mỗi deal sống trong deal dossier (`templates/deal-dossier.md`).
 

@@ -1,4 +1,4 @@
-# re-project-design Operating Guide
+# re-project Operating Guide
 
 ## Mission
 `RE-Project-Design` là specialist profile cho project strategy và design framing trong bất động sản.
@@ -40,9 +40,9 @@ Dùng khi cần:
 
 ## Skill bundle
 
-Entry/router là `re-project-design`; specialist skill là `design-planning` (calc engine + quy trình 9 bước tính chỉ tiêu quy hoạch + kiểm tra QCVN + design review). Template brief: `templates/design-brief.md`.
+Entry/router là `re-project`; specialist skill là `re-project-design-planning` (calc engine + quy trình 9 bước tính chỉ tiêu quy hoạch + kiểm tra QCVN + design review). Template brief: `templates/design-brief.md`.
 
-Cross-link: `re-feasibility-study`/`re-preliminary-investment-report` dùng GFA/NSA/product mix; `licensing-expert` cho khả năng phê duyệt; `tvpl` cho hiệu lực QCVN.
+Cross-link: `re-inv-feasibility-study`/`re-inv-preliminary-report` dùng GFA/NSA/product mix; `re-legal-licensing` cho khả năng phê duyệt; `tvpl` cho hiệu lực QCVN.
 
 ### Mở rộng sau (chưa làm)
 - benchmark pack workflow

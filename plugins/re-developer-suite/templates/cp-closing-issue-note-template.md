@@ -2,7 +2,7 @@
 
 # CP-Closing Issue Note Template
 
-> Dùng chủ yếu với `legal-counsel` khi cần phát hành note ngắn về conditions precedent, closing deliverables, signing-closing gap hoặc legal dependency đang ảnh hưởng việc đóng giao dịch.
+> Dùng chủ yếu với `re-legal-counsel` khi cần phát hành note ngắn về conditions precedent, closing deliverables, signing-closing gap hoặc legal dependency đang ảnh hưởng việc đóng giao dịch.
 
 ## 1. Vấn đề cần chốt
 - Tài liệu / clause / CP item: ...
@@ -17,7 +17,7 @@
 | ... | ... | ... | ... | ... | ... |
 
 ## 4. Dependency cần xác nhận thêm
-- Có cần kéo `licensing-expert` không: ...
+- Có cần kéo `re-legal-licensing` không: ...
 - Có cần approval / consent / waiver / release nào khác không: ...
 
 ## 5. Next step

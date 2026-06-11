@@ -32,11 +32,11 @@
 | FS model | `deals/<deal-id>/analysis/` | `FS_<TenDuAn>_<YYYYMMDD>.xlsx` |
 | Legal memo / issue list / hybrid package | `deals/<deal-id>/legal/` | `<YYYYMMDD>_<loại>.md` |
 | LOI / offer | `deals/<deal-id>/correspondence/` | `<YYYYMMDD>_LOI_<deal-id>.md` |
-| Báo cáo thị trường định kỳ (ngoài deal) | `outputs/` hoặc cấu trúc riêng của `vn-re-research` | theo skill tương ứng |
+| Báo cáo thị trường định kỳ (ngoài deal) | `outputs/` hoặc cấu trúc riêng của `re-rnd` | theo skill tương ứng |
 
 ## Quy tắc
 
 1. **Mọi skill deal-lifecycle đọc `_dossier.md` khi bắt đầu, cập nhật khi kết thúc** (trạng thái giai đoạn, assumption mới chốt, findings, nhật ký phiên).
 2. Không lưu dữ liệu deal, credentials hoặc tri thức nội bộ vào thư mục plugin.
-3. Database dự án thị trường của `vn-re-research` là một **vault Obsidian riêng** (đường dẫn khai báo ở key `market_research_vault` trong `re-workspace.yaml`); cấu trúc vault theo `../skills/vn-re-research/references/vault-layout.md`.
+3. Database dự án thị trường của `re-rnd` là một **vault Obsidian riêng** (đường dẫn khai báo ở key `market_research_vault` trong `re-workspace.yaml`); cấu trúc vault theo `../skills/re-rnd/references/vault-layout.md`.
 4. Không gửi nội dung workspace ra dịch vụ ngoài nếu Sếp chưa duyệt (xem `operating-contract.md`).

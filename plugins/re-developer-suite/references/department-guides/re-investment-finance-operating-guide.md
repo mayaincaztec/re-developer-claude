@@ -1,4 +1,4 @@
-# re-investment-finance Operating Guide
+# re-inv Operating Guide
 
 ## Mission
 `RE-Investment-Finance` là specialist profile cho investment thinking và finance framing trong bất động sản.
@@ -44,16 +44,16 @@ Dùng khi cần:
 
 ## Skill bundle (deal lifecycle owner)
 
-Profile này sở hữu toàn bộ deal lifecycle. Entry/router là `re-investment-finance`; bundle gồm:
-- `re-investment-screening` — sàng lọc deal đầu vào (go/pass)
-- `re-preliminary-investment-report` — báo cáo đầu tư sơ bộ (5 phần)
-- `re-feasibility-study` — FS (spec + Excel generator)
-- `re-full-investment-report` — báo cáo đầy đủ + IC memo
-- `deal-structuring-advisor` — cấu trúc deal + LOI (moved từ RE-HQ)
-- `dd-coordinator` — điều phối DD (moved từ RE-HQ)
-- `re-investment-verification-rules` — QC trước khi chốt
+Profile này sở hữu toàn bộ deal lifecycle. Entry/router là `re-inv`; bundle gồm:
+- `re-inv-screening` — sàng lọc deal đầu vào (go/pass)
+- `re-inv-preliminary-report` — báo cáo đầu tư sơ bộ (5 phần)
+- `re-inv-feasibility-study` — FS (spec + Excel generator)
+- `re-inv-full-report` — báo cáo đầy đủ + IC memo
+- `re-inv-deal-structuring` — cấu trúc deal + LOI (moved từ RE-HQ)
+- `re-inv-dd-coordinator` — điều phối DD (moved từ RE-HQ)
+- `re-inv-verification-rules` — QC trước khi chốt
 
-Kéo specialist input: `licensing-expert`/`legal-counsel` (+`tvpl`) cho pháp lý; `re-market-research`/`vn-re-research` cho thị trường; `design-planning` cho chỉ tiêu quy hoạch/product mix.
+Kéo specialist input: `re-legal-licensing`/`re-legal-counsel` (+`tvpl`) cho pháp lý; `re-rnd` cho thị trường; `re-project-design-planning` cho chỉ tiêu quy hoạch/product mix.
 
 ## Toolset guidance
 

@@ -1,6 +1,6 @@
 # Letter of Intent (LOI) / Biên bản Ghi nhớ — [Tên dự án]
 
-> ⚠️ Phân biệt rõ điều khoản RÀNG BUỘC và KHÔNG RÀNG BUỘC. Kéo legal-counsel rà trước khi phát hành.
+> ⚠️ Phân biệt rõ điều khoản RÀNG BUỘC và KHÔNG RÀNG BUỘC. Kéo re-legal-counsel rà trước khi phát hành.
 
 ## Các bên
 - Bên đề nghị (Buyer/Investor):
@@ -27,4 +27,4 @@
 - Thời hạn / điều kiện chấm dứt LOI:
 
 ## Legal review
-- legal-counsel đã rà ngôn ngữ ràng buộc / exclusivity / CP: ☐
+- re-legal-counsel đã rà ngôn ngữ ràng buộc / exclusivity / CP: ☐

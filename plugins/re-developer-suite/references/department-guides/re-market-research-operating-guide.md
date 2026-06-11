@@ -1,4 +1,4 @@
-# re-market-research Operating Guide
+# re-rnd Operating Guide
 
 ## Mission
 `RE-Market-Research` là specialist profile cho nghiên cứu thị trường bất động sản.
@@ -16,7 +16,7 @@ Nhiệm vụ chính:
 
 ## Internal specialist routing
 
-### Dùng `vn-re-research` khi:
+### Dùng `re-rnd` khi:
 - research BĐS Việt Nam từ nguồn mở
 - cần synthesize nhiều nguồn thành note usable
 - cần area/segment thesis có cấu trúc
@@ -36,10 +36,10 @@ Nhiệm vụ chính:
 Load from profile-local imported market-research bundle.
 
 ### Suggested starting skills
-- `vn-re-research`
+- `re-rnd`
 
 ### Load order recommendation
-1. load `vn-re-research` for the primary workflow
+1. load `re-rnd` for the primary workflow
 2. add external research skills only if the task expands beyond the current bundle
 3. avoid broad context skills unless rebuilt with a clear operational purpose
 

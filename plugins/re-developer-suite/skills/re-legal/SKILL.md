@@ -23,8 +23,8 @@ Never equate an application filed with an approval granted, or one project appro
 Load detailed skills progressively:
 
 - `re-legal-operations` for triage, the operating matrix, and deliverable-template selection.
-- `licensing-expert` for project legal status, approvals and permits.
-- `legal-counsel` for contracts and transaction documents.
-- `legal-writing` for Vietnamese legal drafting and review.
+- `re-legal-licensing` for project legal status, approvals and permits.
+- `re-legal-counsel` for contracts and transaction documents.
+- `re-legal-writing` for Vietnamese legal drafting and review.
 - `re-legal-verification-rules` for final quality control.
-- `doc-renamer` for legal document operations.
+- `re-legal-doc-renamer` for legal document operations.

@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.9.0 - 2026-06-11
+
+### Department-prefix renaming (22 → 21 skills)
+- Renamed all skills to carry their department prefix; each department entry skill now matches its agent name: `re-rnd` (market research / R&D), `re-inv` (investment), `re-legal` (unchanged), `re-project` (project & design). `re-hq` and `initialize-re-workspace` stay unprefixed (shared).
+- `vn-re-research` → `re-rnd`; the thin `re-market-research` entry merged into it (department role, source rules, output checklist absorbed) — owner picked `re-rnd` over the requested `re-r&d` because `&` violates the Claude Code skill-name spec.
+- Investment: `re-investment-finance` → `re-inv`; `re-investment-screening` → `re-inv-screening`; `re-preliminary-investment-report` → `re-inv-preliminary-report`; `re-feasibility-study` → `re-inv-feasibility-study`; `re-full-investment-report` → `re-inv-full-report`; `deal-structuring-advisor` → `re-inv-deal-structuring`; `dd-coordinator` → `re-inv-dd-coordinator`; operating-matrix and verification-rules follow the prefix.
+- Legal: `licensing-expert` → `re-legal-licensing`; `legal-counsel` → `re-legal-counsel`; `legal-writing` → `re-legal-writing`; `doc-renamer` → `re-legal-doc-renamer`.
+- Project & design: `re-project-design` → `re-project`; `design-planning` → `re-project-design-planning`.
+- Agents renamed to match: `re-rnd`, `re-inv`, `re-project` (re-legal unchanged). All cross-references updated across skills, references, templates, agents, commands, scripts, README; naming convention codified in `skill-authoring-guide.md`; link-integrity and bundle tests green.
+
 ## 0.8.0 - 2026-06-11
 
 ### vn-re-research overhaul (market-research engine)

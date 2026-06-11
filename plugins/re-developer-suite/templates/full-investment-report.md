@@ -4,9 +4,9 @@
 
 ## 1. Thông tin chung & cấu trúc giao dịch
 - (đầy đủ) thông tin dự án, bên bán, mục tiêu
-- Phương án cấu trúc đề xuất (link deal-structuring-advisor):
+- Phương án cấu trúc đề xuất (link re-inv-deal-structuring):
 
-## 2. Pháp lý dự án & giao dịch  *(licensing-expert + legal-counsel + tvpl)*
+## 2. Pháp lý dự án & giao dịch  *(re-legal-licensing + re-legal-counsel + tvpl)*
 - Pháp lý dự án (đất / đầu tư / quy hoạch / mở bán / chuyển nhượng):
 - Pháp lý giao dịch (SPA/SHA/JVA, CP, change-of-control):
 - Blocker / CP / missing docs:

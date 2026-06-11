@@ -1,6 +1,6 @@
 # TVPL Lookup Protocol — Tra cứu & kiểm chứng văn bản pháp luật
 
-> **Single source of truth** cho cách dùng MCP `tvpl` (Thư Viện Pháp Luật) trong bundle pháp lý. Các skill `licensing-expert`, `legal-counsel`, `re-legal-verification-rules` trỏ về file này thay vì lặp lại quy trình.
+> **Single source of truth** cho cách dùng MCP `tvpl` (Thư Viện Pháp Luật) trong bundle pháp lý. Các skill `re-legal-licensing`, `re-legal-counsel`, `re-legal-verification-rules` trỏ về file này thay vì lặp lại quy trình.
 
 ## Vì sao có protocol này
 
@@ -26,7 +26,7 @@
 - Trước **mọi kết luận pháp lý material** có viện dẫn văn bản.
 - Khi trích dẫn một **Điều/Khoản** cụ thể làm căn cứ.
 - Khi nghi văn bản đã bị **sửa đổi / thay thế / hết hiệu lực** (đặc biệt các luật BĐS đổi nhiều 2023–2025).
-- Khi danh sách **tĩnh** trong `licensing-expert` (`vn-legal-texts.md`, `vn-realestate-legal-framework.md`) là nguồn duy nhất — phải đối chiếu động bằng tvpl.
+- Khi danh sách **tĩnh** trong `re-legal-licensing` (`vn-legal-texts.md`, `vn-realestate-legal-framework.md`) là nguồn duy nhất — phải đối chiếu động bằng tvpl.
 
 ## Trình tự chuẩn theo tình huống
 
