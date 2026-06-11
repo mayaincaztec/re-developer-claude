@@ -1,186 +1,122 @@
 ---
 name: vn-re-research
-description: Use for the `vn-re-research` workflow — managing a structured Vietnamese real-estate project database, scanning secondary listing prices, and producing market reports. Engine skill for the RE-Market-Research department.
-version: 1.1.0
+description: Use for the Vietnamese real-estate market-research engine — maintain the structured project database (Obsidian vault), scan secondary listing prices with the correct unit of analysis, run data-quality field audits, and produce market reports. Engine skill for the RE-Market-Research department.
+version: 2.0.0
 license: MIT
 ---
 
-# Imported Skill: vn-re-research
+# VN RE Research — engine nghiên cứu thị trường BĐS
 
-## Migration Note
+## Tổng quan
 
-This skill was originally built for a legacy agent runtime workspace `workspace-real-estate-rd` and ported to the RE Developer Suite plugin.
-The domain procedure is preserved, but runtime-specific instructions are normalized for Claude Code / Cowork.
-For web browsing use the Claude in Chrome tools (`mcp__Claude_in_Chrome__*`) when available, falling back to WebFetch / WebSearch. Use current environment tools, paths, and workflow conventions when executing this skill.
+Engine vận hành của phòng `re-market-research`: quản lý cơ sở dữ liệu dự án BĐS có cấu trúc trong một vault Obsidian, cập nhật giá thị trường, kiểm soát chất lượng dữ liệu và sinh báo cáo. Skill này chứa **SOP và nguyên tắc**; dữ liệu và cấu hình data-format sống trong vault.
 
-# VN Real Estate R&D Agent
+Tài liệu kèm (đọc đúng phần cần, không nạp cả 4 cùng lúc):
 
-## Mục đích
+- `references/vault-layout.md` — cấu trúc vault, naming, vùng thị trường, nguyên tắc đồng bộ vault ↔ skill.
+- `references/project-data-spec.md` — spec frontmatter, taxonomy, `do_chinh_xac`, field priority.
+- `references/pricing-protocol.md` — **bắt buộc đọc trước mọi thao tác giá**: đơn vị phân tích, 4 loại giá, anchor vs average.
+- `references/report-catalog.md` — chọn loại báo cáo + template + vị trí lưu.
 
-Bạn là chuyên viên nghiên cứu & phân tích thị trường bất động sản Việt Nam. Bạn quản lý một cơ sở dữ liệu dự án BĐS có cấu trúc dưới dạng workspace dữ liệu, và thực hiện các tác vụ R&D theo yêu cầu.
+## Workspace
 
-## Workspace Location
+Đường dẫn vault khai báo trong `re-workspace.yaml` (key `market_research_vault`) hoặc do Sếp cung cấp. Nếu chưa có, hỏi: *"Vault VN-RE-Research đang ở đường dẫn nào?"* và ghi lại vào `re-workspace.yaml`. Template dự án, query Dataview và taxonomy nằm trong `_config/` của vault — **vault là source of truth cho data format**; skill này là source of truth cho SOP.
 
-Trước khi thực hiện bất kỳ task nào liên quan đến đọc/ghi file, hãy xác định đường dẫn vault từ file config:
-`re-workspace.yaml`
+## Khi nào dùng
 
-Nếu chưa có config, hỏi user: *"workspace dữ liệu VN-RE-Research của bạn đang ở đường dẫn nào?"* rồi ghi nhớ vào knowledge/departments/market-research/.
+Dùng khi Sếp cần: thêm/research/cập nhật dự án BĐS; cập nhật giá thị trường; so sánh/phân tích/báo cáo thị trường; weekly/monthly scan; rà chất lượng dữ liệu (field audit); thay đổi taxonomy/schema hàng loạt; hỏi về dự án cụ thể trong database.
 
-## Khi nào kích hoạt skill này
+Không dùng cho: underwriting/IRR (→ `re-investment-finance`); pháp lý dự án (→ `RE-Legal`); product mix/concept (→ `re-project-design`).
 
-Kích hoạt khi user nhắc đến:
-- Thêm / research / cập nhật dự án BĐS
-- Cập nhật giá thị trường, giá bán
-- So sánh, phân tích thị trường BĐS
-- Tạo báo cáo BĐS
-- Weekly scan / monthly report
-- Hỏi về dự án cụ thể trong database
+## Nguồn dữ liệu & cách lấy
 
-## Nguồn dữ liệu ưu tiên
+Thứ tự ưu tiên nguồn: (1) website CĐT chính thức; (2) batdongsan.com.vn — giá thứ cấp; (3) cafeland.vn, homedy.com, meeyland.com; (4) văn bản quy hoạch/pháp lý nhà nước.
 
-1. Website CĐT chính thức
-2. batdongsan.com.vn — giá thứ cấp (listing thực tế)
-3. cafeland.vn, homedy.com, meeyland.com
-4. Văn bản quy hoạch / pháp lý nhà nước
+> ⚠️ batdongsan.com.vn và hầu hết site BĐS VN chặn HTTP tool. **Ưu tiên Claude in Chrome** (`mcp__Claude_in_Chrome__*`) — Chrome thật nên vượt anti-bot ổn định; đọc DOM, chụp màn hình khi DOM thiếu. Google search snippet (`site:batdongsan.com.vn <tên dự án>`) chỉ là **fallback/estimate** — phải ghi rõ `estimate từ snippet` và đánh dấu cần refresh. Nếu extension chưa kết nối, báo Sếp; không dùng headless cho batch.
 
-## Chiến lược lấy dữ liệu
-
-> ⚠️ **batdongsan.com.vn và hầu hết site BĐS VN không thể fetch trực tiếp bằng HTTP tool** — server của chúng chặn request từ bot/agent.
-
-Dùng theo thứ tự ưu tiên:
-
-### Cách 1 — Dùng Claude in Chrome (ưu tiên khi duyệt web/BĐS)
-Khi cần duyệt web trực tiếp trong task research BĐS — đặc biệt với `batdongsan.com.vn`, web search mở kết quả, trang CĐT/sàn phân phối, hoặc listing giá — **ưu tiên dùng Claude in Chrome** (`mcp__Claude_in_Chrome__*`):
-
-```
-Mở URL bằng Claude in Chrome: https://batdongsan.com.vn/ban-can-ho-chung-cu-[ten-du-an]
-Đọc nội dung trang hoặc chụp ảnh màn hình khi DOM không đủ dữ liệu
-# hoặc Đọc nội dung trang hoặc chụp ảnh màn hình khi DOM không đủ dữ liệu nếu DOM thiếu/ẩn thông tin
-```
-
-Lý do: WebFetch thuần có thể bị Cloudflare/anti-bot, trong khi Claude in Chrome dùng Chrome thật đang chạy nên ổn định hơn cho batdongsan và các site BĐS VN. **Không dùng snippet để thay thế khi Claude in Chrome đọc được listing.**
-
-> 🛠️ **Nếu extension Claude in Chrome chưa kết nối:** báo ngắn gọn cho Sếp biết cần mở tab/cài extension. Chỉ fallback sang snippet khi không truy cập được hoặc task yêu cầu làm nhanh.
-> **Không dùng headless isolated cho batch** vì tốn RAM/CPU và dễ bị anti-bot; chỉ dùng cho task đơn lẻ khi Sếp đồng ý.
-
-Đọc thông tin: giá, diện tích, số phòng ngủ, ngày đăng, số lượng tin, title dự án. Tổng hợp thành min/max/trung bình và ghi rõ số mẫu tin đã đọc.
-
-Dùng khi: cần giá thứ cấp chi tiết (nhiều mẫu tin), bảng giá mới nhất từ CĐT, hình ảnh mặt bằng, hoặc xác minh dữ liệu từ search.
-
-### Cách 2 — Google Search snippet (fallback/estimate nhanh)
-Web search với query `site:batdongsan.com.vn [tên dự án]` hoặc `[tên dự án] giá bán [năm]`. Google trả về title/description có chứa giá và diện tích. Chỉ dùng làm **estimate ban đầu** khi Claude in Chrome không truy cập được, bị quota/thời gian, hoặc cần shortlist dự án trước khi mở listing.
-
-```
-search("site:batdongsan.com.vn fiato airport city")
-search("Gem Sky World Long Thành giá bán 2026 thứ cấp")
-```
-
-Dùng khi: cần nhanh, chỉ cần estimate, không cần danh sách đầy đủ.
-
-### Cách 3 — Website CĐT / sàn phân phối
-Nhiều CĐT có trang chủ riêng và các sàn phân phối (datxanh.homes, bds.com.vn, v.v.) đôi khi fetch được. Thử trước khi dùng Google.
-
-**Luôn ghi rõ nguồn và cách lấy dữ liệu vào trường `nguon_gia` trong file markdown.**
+Khi đọc listing: ghi giá, diện tích, số PN, ngày đăng, số lượng tin; tổng hợp min/max/trung bình **theo đúng đơn vị phân tích** (xem `pricing-protocol.md`) và ghi rõ số mẫu tin.
 
 ## Protocols
 
-### PROTOCOL 1 — Thêm dự án mới / bổ sung thông tin dự án cũ
+### P1 — Thêm dự án mới / bổ sung dự án cũ
 
-**Trigger:** *"Thêm dự án [tên]"*, *"Research dự án [tên]"*, *"Bổ sung thông tin dự án [tên]"*
+**Trigger:** "Thêm/Research/Bổ sung dự án [tên]". ⚠️ **Batch tối đa 2 dự án/lần** — báo tiến độ và đợi Sếp confirm trước batch tiếp.
 
-> ⚠️ **BATCH LIMIT: Xử lý tối đa 2 dự án/lần chạy.** Nếu user giao nhiều hơn 2 dự án cho Protocol 1, chỉ làm 2 dự án đầu tiên rồi báo tiến độ, tóm tắt những gì đã bổ sung, và đợi Sếp confirm trước khi chạy batch tiếp. Mục tiêu là tránh overload browser/context.
+1. Xác định dự án mới hay đã có file (search vault trước).
+2. Path: `projects/<TINH>/<quan-huyen>/<ten-khong-dau-gach-ngang>.md` (cụm đặc biệt thêm 1 cấp — xem `vault-layout.md`).
+3. Đọc template `_config/TEMPLATES/PROJECT_TEMPLATE.md` của vault; điền theo `project-data-spec.md`.
+4. **Bắt buộc cố gắng có:** `toa_do` (phục vụ bản đồ), 3 trường taxonomy (`residential_form`, `project_format`, `market_label`), `chu_dau_tu`, `trang_thai`.
+5. Chỉ điền trường có nguồn rõ; thiếu thì để `null`/`""` + ghi lý do trong body — **không ép số**.
+6. Giá: theo `pricing-protocol.md` (đơn vị phân tích trước, `gia_tb_*` sau cùng).
+7. Set/cập nhật `do_chinh_xac` theo ngưỡng trong `project-data-spec.md`; dự án cũ không overwrite dữ liệu cũ nếu chưa có nguồn tốt hơn.
 
-1. Xác định đây là **dự án mới** hay **dự án đã có file** trong database
-2. Nếu là dự án mới: xác định `tinh_thanh` → chọn folder đúng: `projects/HCM/`, `projects/DNA/`, `projects/LAN/`, `projects/BDU/`, `projects/VTU/`
-3. Nếu là dự án mới: đặt tên file `[ten-thuong-mai-viet-khong-dau-gach-ngang].md`  
-   Ví dụ: `the-global-city.md`, `meyhomes-capital.md`
-4. Đọc template tại `_config/TEMPLATES/PROJECT_TEMPLATE.md` trong vault
-5. Thu thập dữ liệu theo thứ tự: website CĐT/chủ nguồn chính thức → **Claude in Chrome để mở trực tiếp trang dự án/listing BĐS** → web search snippet chỉ làm fallback/shortlist. Với batdongsan.com.vn, luôn thử Claude in Chrome trước khi ghi giá; nếu chỉ dùng snippet phải ghi rõ là `estimate từ snippet` và đánh dấu cần refresh.
-6. Nếu là dự án mới: điền YAML frontmatter + nội dung theo template
-7. Nếu là dự án cũ: chỉ bổ sung/cập nhật các trường còn thiếu hoặc đã lỗi thời, không overwrite dữ liệu cũ nếu chưa có nguồn tốt hơn
-8. **Chỉ điền trường nào có nguồn rõ ràng** — để trống (`null` / `""`) nếu chưa tìm được
-9. Set hoặc cập nhật `do_chinh_xac`: `cao` (≥70% trường), `trung-binh` (40–70%), `thap` (<40%)
-10. Nếu là dự án mới: tạo file tại `[workspace_root]/projects/[TINH]/[ten-file].md`; nếu là dự án cũ: cập nhật file hiện hữu tại đúng path của dự án
+### P2 — Cập nhật giá thị trường
 
-### PROTOCOL 2 — Cập nhật giá thị trường
+**Trigger:** "Cập nhật giá [khu vực/dự án]", weekly scan. ⚠️ **Batch tối đa 5 dự án/lần.**
 
-**Trigger:** *"Cập nhật giá [khu vực/dự án]"*, weekly scan
+1. **Đọc `pricing-protocol.md` trước.** Bước đầu của mỗi dự án là chốt **đơn vị phân tích** (phase / block / dòng sản phẩm / loại lô) — không phải mở listing.
+2. Lấy danh sách dự án: chỉ đọc frontmatter, filter `trang_thai: dang-mo-ban`, ưu tiên dự án stale (giá >90 ngày — query `05-stale-data`).
+3. Mỗi dự án: Claude in Chrome → listing → ghi giá theo đơn vị phân tích, kèm loại giá + DT tham chiếu + nguồn + ngày + số mẫu.
+4. Cập nhật bảng giá trong **body** (mục 5A–5E) trước; chỉ fill `gia_tb_*`/`gia_min/max` frontmatter khi đủ chắc để đại diện — nếu không, dùng anchor price và ghi lý do.
+5. Cập nhật `nguon_gia`, `ngay_cap_nhat_gia`, `ngay_cap_nhat`; biến động >5% → thêm dòng "Lịch sử Cập nhật".
+6. Sau mỗi batch: báo số dự án xong/còn lại + biến động đáng chú ý, đợi lệnh tiếp.
 
-> ⚠️ **BATCH LIMIT: Xử lý tối đa 5 dự án/lần chạy.** Sau mỗi batch 5 dự án, báo cáo tiến độ và dừng — đợi Sếp confirm trước khi chạy batch tiếp. Đọc quá nhiều file một lúc gây timeout (context overflow).
+### P3 — Tạo báo cáo
 
-1. Đọc danh sách file trong `projects/[TINH]/` (hoặc toàn bộ) — **chỉ đọc frontmatter, không đọc full body**
-2. Filter những file có `trang_thai: dang-mo-ban`
-3. **Xử lý từng batch 5 dự án:** dùng Claude in Chrome navigate đến trang BDS → snapshot/screenshot → lấy min/max/trung bình. Nếu không truy cập được hoặc Sếp yêu cầu làm nhanh, mới dùng Google search snippet để ước tính và ghi rõ là estimate.
-4. Update YAML: `gia_tb_chung_cu`, `gia_min_chung_cu`, `gia_max_chung_cu`, `ngay_cap_nhat_gia`, `ngay_cap_nhat`
-5. Nếu thay đổi >5%: thêm dòng vào bảng "Lịch sử Cập nhật" của file
-6. Báo cáo sau mỗi batch: số dự án đã xong, số còn lại, biến động đáng chú ý — đợi lệnh tiếp
+**Trigger:** "Báo cáo thị trường…", "So sánh giá…", "Xếp hạng…", "Playbook…".
 
-### PROTOCOL 3 — Tạo báo cáo
+1. Chọn loại báo cáo + template + vị trí lưu theo `references/report-catalog.md`.
+2. Dữ liệu lấy từ database (frontmatter + body); thiếu thì chạy P2 cho phần thiếu trước (hỏi Sếp nếu vượt batch).
+3. Mỗi data point trong báo cáo: nguồn + ngày + price basis + confidence (theo quy trình của `re-market-research`).
 
-**Trigger:** *"Báo cáo thị trường [khu vực] tháng [X]"*, *"So sánh giá [A] vs [B]"*
+### P4 — Weekly / Monthly scan
 
-Output path: `[workspace_root]/reports/[market-analysis|comparisons]/[YYYY]/[YYYY-MM-DD]_[ten-bao-cao].md`
+**Trigger:** "Weekly scan", "Báo cáo tháng". ⚠️ Không chạy cả scan trong 1 phiên — chia bước, mỗi bước báo cáo và đợi confirm:
 
-Cấu trúc báo cáo:
-```
-# [Tiêu đề]
-> Ngày: YYYY-MM-DD | Yêu cầu: [mô tả]
+1. **Inventory** — liệt kê dự án theo tỉnh + trạng thái (chỉ đếm, không đọc body).
+2. **Stale check** — chạy query `05-stale-data`; lên danh sách batch P2 ưu tiên.
+3. **Cập nhật giá** — nhiều phiên P2, 5 dự án/batch.
+4. **Pipeline** — dự án `chuan-bi-mo-ban` có MBS chưa; dự án mới trong khu vực theo dõi.
+5. **Tổng hợp** — weekly note hoặc monthly report theo template trong `report-catalog.md`.
 
-## Tóm tắt (Executive Summary)
-## Dữ liệu & Phân tích
-## Bảng so sánh
-## Nhận định xu hướng
-## Khuyến nghị đầu tư
-## Nguồn dữ liệu
-```
+### P5 — Field audit (rà chất lượng dữ liệu)
 
-### PROTOCOL 4 — Weekly Scan
+**Trigger:** "Rà dữ liệu [khu vực]", sau mỗi đợt chuẩn hóa template/taxonomy, hoặc định kỳ tháng.
 
-**Trigger:** *"Weekly scan"*, *"Cập nhật tuần này"*
+1. Quét frontmatter một batch (1 quận/cụm mỗi lần): lập **ma trận field thiếu** theo 3 use case — bản đồ (`toa_do`), benchmark pháp lý/quy mô (`chu_dau_tu`, `tong_dt_dat`, `quy_hoach_1_2000`), benchmark giá (`gia_don_vi_*`, `gia_tb_*`).
+2. Phân 3 nhóm: **fill an toàn** (có nguồn công khai sạch) / **chưa nên ép fill** (dữ liệu phân hóa, theo pricing-protocol) / **cần nguồn mạnh hơn**.
+3. Fill nhóm an toàn; sync frontmatter → body; cập nhật `do_chinh_xac`.
+4. Xuất field-audit report (template trong `report-catalog.md`) kèm Priority A/B cho lần sau.
 
-> ⚠️ **BATCH LIMIT: Không chạy toàn bộ scan trong 1 session.** Chia thành các bước nhỏ, mỗi bước 1 task:
+### P6 — Taxonomy & schema ops
 
-**Bước 1 — Inventory** (1 session): Liệt kê toàn bộ dự án theo tỉnh + trang thái. Báo cáo tổng số, không đọc nội dung file.
+**Trigger:** đổi giá trị taxonomy, thêm/sửa field hàng loạt, migrate phân loại.
 
-**Bước 2 — Cập nhật giá** (nhiều session, 5 dự án/batch): Theo PROTOCOL 2. Ưu tiên dự án chưa cập nhật >30 ngày.
-
-**Bước 3 — Kiểm tra pipeline** (1 session): Dự án `chuan-bi-mo-ban` → có MBS chưa? Tìm dự án mới khu vực theo dõi.
-
-**Bước 4 — Tổng hợp** (1 session): Viết tóm tắt biến động tuần → lưu vào `reports/market-analysis/[YYYY]/weekly/`
-
-Luôn thông báo đang ở bước nào và đợi Sếp confirm trước khi sang bước tiếp.
+1. **Không sửa thẳng hàng loạt.** Tạo manifest JSON trong `_config/taxonomy/` (mẫu: `DNA_taxonomy_mapping_manifest_*.json`): scope, rules, từng file + proposed values + confidence + rationale.
+2. Sếp review manifest → mới apply; apply xong ghi kết quả vào manifest (applied date).
+3. Đổi schema (thêm field) phải cập nhật đồng bộ: `PROJECT_TEMPLATE.md` (vault), `project-data-spec.md` (skill), QUERIES liên quan.
 
 ## Quy tắc bắt buộc
 
 | Quy tắc | Chi tiết |
 |---------|---------|
-| **No hallucination** | Không điền thông tin suy đoán. Để trống + note nếu không tìm được |
-| **Ngày cập nhật** | Luôn update `ngay_cap_nhat: "YYYY-MM-DD"` mỗi lần chỉnh file |
-| **Giá MBS ≠ Giá TT** | `gia_mo_ban_*` = sơ cấp CĐT công bố; `gia_tb_*` = thứ cấp thị trường |
-| **Đơn vị** | Chung cư = triệu VND/m²; Nhà phố/BT = tỷ VND/căn + triệu/m² đất |
+| **No hallucination** | Không điền suy đoán; để trống + note nếu không tìm được |
+| **Đơn vị phân tích trước, giá sau** | Theo `pricing-protocol.md`; không fill average giả |
+| **Giá MBS ≠ giá TT** | `gia_mo_ban_*` = sơ cấp CĐT; `gia_tb_*` = thứ cấp thị trường |
+| **Đơn vị** | Chung cư: triệu/m²; nhà phố/BT/đất nền: tỷ/căn-lô + triệu/m² đất |
+| **Nguồn ghi rõ** | Luôn ghi `nguon_gia`, `nguon_thong_tin`, ngày |
+| **Ngày cập nhật** | Update `ngay_cap_nhat` mỗi lần chạm file |
+| **Vùng thị trường ≠ hành chính** | Mã HCM/DNA/… là vùng thị trường; trích dẫn hành chính dùng đơn vị sau sáp nhập 2025 (xem `vault-layout.md` + geo-mapping trong vault) |
 | **Tiếng Việt** | Giao tiếp và ghi chú bằng tiếng Việt |
-| **Source ghi rõ** | Luôn ghi `nguon_gia` và `nguon_thong_tin` |
-| **BDS anti-bot** | batdongsan.com.vn chặn DOM access — ưu tiên screenshot qua Claude in Chrome khi DOM không trả đủ dữ liệu |
-
-## Phân khúc chuẩn (tham chiếu HCM)
-
-| Phân khúc | Giá CC | Giá NP (tr/m² đất) |
-|-----------|--------|---------------------|
-| affordable | <35 tr/m² | <80 |
-| mid-end | 35–70 tr/m² | 80–150 |
-| high-end | 70–120 tr/m² | 150–250 |
-| luxury | 120–200 tr/m² | 250–400 |
-| ultra-luxury | >200 tr/m² | >400 |
-
-*Tỉnh vệ tinh: điều chỉnh giảm ~10–20% so với chuẩn HCM*
 
 ## Lệnh mẫu
 
 ```
 "Thêm dự án Akari City tại Bình Tân, HCM vào database"
-"Cập nhật giá thị trường chung cư Bình Dương"  
-"So sánh giá low-rise Long An vs Bình Dương Q2/2026"
-"Báo cáo tổng quan thị trường HCM tháng 4/2026"
-"Weekly scan — cập nhật giá tuần này"
-"Tìm tất cả dự án mixed-use đang mở bán giá dưới 80 tr/m²"
+"Cập nhật giá chung cư khu Thủ Đức"
+"Xếp hạng dự án đất nền Nhơn Trạch"
+"Báo cáo tổng quan thị trường HCM tháng 6/2026"
+"Weekly scan"
+"Rà dữ liệu cụm Long Thành"
+"Lập pricing playbook cho cụm Grand Park"
 ```

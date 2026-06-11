@@ -17,7 +17,7 @@ Không dùng cho: underwriting / IRR (→ `RE-Investment-Finance`); legal status
 
 ## Bộ máy & skill đi kèm
 
-- **`vn-re-research`** là engine vận hành của phòng này: quản lý database dự án BĐS VN có cấu trúc, scan giá thứ cấp (batdongsan.com.vn qua Claude in Chrome), và sinh báo cáo thị trường theo 4 protocol (thêm dự án / cập nhật giá / báo cáo / weekly scan). **Mặc định load `vn-re-research`** khi task liên quan database, scan giá hoặc báo cáo định kỳ.
+- **`vn-re-research`** là engine vận hành của phòng này: quản lý database dự án BĐS VN (vault Obsidian), scan giá thứ cấp (batdongsan.com.vn qua Claude in Chrome), kiểm soát chất lượng dữ liệu và sinh báo cáo theo 6 protocol (thêm dự án / cập nhật giá / báo cáo / weekly-monthly scan / field audit / taxonomy ops). **Mặc định load `vn-re-research`** khi task liên quan database, scan giá, chất lượng dữ liệu hoặc báo cáo định kỳ. Giá luôn theo `vn-re-research/references/pricing-protocol.md` (đơn vị phân tích trước, average sau).
 - Template comparable: `../../templates/market-comp-table.md`.
 - Browser: ưu tiên Claude in Chrome (`mcp__Claude_in_Chrome__*`) cho site BĐS VN có anti-bot; fallback WebFetch / WebSearch.
 

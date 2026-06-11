@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.8.0 - 2026-06-11
+
+### vn-re-research overhaul (market-research engine)
+- Rewrote `vn-re-research` (v2.0.0): dropped the legacy OpenClaw migration header, English trigger description, Vietnamese headers; SKILL.md now holds only SOP — 6 protocols: P1 add/update project, P2 price update, P3 reports, P4 weekly/monthly scan, P5 field audit (new, codified from vault practice), P6 taxonomy/schema ops via review-first manifests (new).
+- Split domain knowledge into 4 references: `vault-layout.md` (vault data contract incl. district/cluster folder convention and vault↔skill sync rules), `project-data-spec.md` (frontmatter rules, taxonomy v2, do_chinh_xac thresholds, field priorities, segment table with as-of), `pricing-protocol.md` (unit-of-analysis ladder, 4 price types, anchor-vs-average — generalized from the Nhon Trach pricing playbook), `report-catalog.md`.
+- P2 rewritten to follow the pricing protocol: choose unit of analysis first, body tables (5A–5E) hold the detail, frontmatter `gia_tb_*` only when a common baseline is valid.
+- Added 8 market-research report templates under `templates/market-research/`: market-snapshot, area-study, price-comparison-ranking, weekly-scan, monthly-market-report, pricing-playbook, field-audit, phase-sheet.
+- Wired the vault path into `re-workspace.yaml` (`market_research_vault` key, seeded by the initializer); updated `workspace-layout.md` and `re-market-research` accordingly.
+- Vault-side cleanup (outside repo): added `_config/taxonomy/geo-mapping.md` (market zones vs post-merger 2025 admin units), `_config/QUERIES/05-stale-data.md` (90-day price staleness + missing-MBS queries), reorganized `reports/` (playbooks/, field-audits/, phase-sheets/), template v2.3 (`don_vi_hanh_chinh_2025` field, fixed BRVT/VTU code mismatch), repointed `AGENT_SKILL.md` to the plugin, removed `.openclawignore`.
+- Deferred per owner request: section E expansion scopes (supply pipeline, launch monitoring, rental/yield, developer profiling…).
+
 ## 0.7.0 - 2026-06-11
 
 ### Legal bundle consolidation (25 → 22 skills)

@@ -43,6 +43,9 @@ paths:
   department_knowledge: knowledge/departments
   local_templates: templates-local
   outputs: outputs
+# Obsidian vault of the vn-re-research market database (kept outside this workspace).
+# Fill in the absolute path; the vn-re-research skill reads this key.
+market_research_vault: ""
 """,
 }
 

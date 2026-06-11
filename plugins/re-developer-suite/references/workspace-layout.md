@@ -38,5 +38,5 @@
 
 1. **Mọi skill deal-lifecycle đọc `_dossier.md` khi bắt đầu, cập nhật khi kết thúc** (trạng thái giai đoạn, assumption mới chốt, findings, nhật ký phiên).
 2. Không lưu dữ liệu deal, credentials hoặc tri thức nội bộ vào thư mục plugin.
-3. Database dự án thị trường (`projects/`, `reports/` của `vn-re-research`) có quy ước riêng do skill đó định nghĩa — sẽ hợp nhất về layout này trong đợt cập nhật `vn-re-research` sau.
+3. Database dự án thị trường của `vn-re-research` là một **vault Obsidian riêng** (đường dẫn khai báo ở key `market_research_vault` trong `re-workspace.yaml`); cấu trúc vault theo `../skills/vn-re-research/references/vault-layout.md`.
 4. Không gửi nội dung workspace ra dịch vụ ngoài nếu Sếp chưa duyệt (xem `operating-contract.md`).
