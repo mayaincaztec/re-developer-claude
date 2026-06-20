@@ -1,4 +1,4 @@
-# RE Developer Suite — Claude Code / Cowork plugin
+# Real Estate Suite — Claude Code / Cowork plugin
 
 Bộ workflow tiếng Việt cho mô hình vận hành của một Chủ đầu tư bất động sản,
 đóng gói theo chuẩn plugin của Claude Code / Cowork.
@@ -14,14 +14,14 @@ Bộ workflow tiếng Việt cho mô hình vận hành của một Chủ đầu 
 
 Plugin chỉ chứa workflow và template. Hồ sơ deal, tri thức nội bộ, credentials
 và output sinh ra lưu ở một data workspace riêng (xem
-`plugins/re-developer-suite/references/workspace-layout.md`); mỗi deal có file
+`plugins/real-estate-suite/references/workspace-layout.md`); mỗi deal có file
 trạng thái `deals/<deal-id>/_dossier.md` để giữ ngữ cảnh xuyên session.
 
 ## Cài đặt (Claude Code / Cowork)
 
 ```
-/plugin marketplace add mayaincaztec/re-developer-claude
-/plugin install re-developer-suite
+/plugin marketplace add mayaincaztec/real-estate-suite
+/plugin install real-estate-suite
 ```
 
 Sau khi cài, mở thread mới và gọi skill hoặc command, ví dụ:
@@ -36,7 +36,7 @@ Sau khi cài, mở thread mới và gọi skill hoặc command, ví dụ:
 
 ```
 .claude-plugin/marketplace.json          # marketplace ở gốc repo
-plugins/re-developer-suite/
+plugins/real-estate-suite/
   .claude-plugin/plugin.json             # manifest plugin
   skills/                                # 21 skills (SKILL.md) — Claude tự quét
   agents/                                # 4 agent phòng ban (chạy song song qua Agent tool)
@@ -78,8 +78,8 @@ Các giai đoạn hậu đầu tư — giám sát triển khai, vận hành bán
   Python tùy chọn; Claude không tự chạy.
 - Để chạy kiểm thử bundle (tuỳ chọn, Python 3.11+):
   ```
-  python plugins/re-developer-suite/scripts/check_bundle.py
+  python plugins/real-estate-suite/scripts/check_bundle.py
   python -m unittest discover -s tests -v
   ```
-- Quy ước viết/sửa skill: `plugins/re-developer-suite/references/skill-authoring-guide.md`
+- Quy ước viết/sửa skill: `plugins/real-estate-suite/references/skill-authoring-guide.md`
   (bao gồm mục Bảo trì & anti-drift và chu kỳ rà kiến thức tĩnh theo quý).

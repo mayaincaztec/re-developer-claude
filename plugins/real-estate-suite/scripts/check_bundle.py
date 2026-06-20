@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Static checks for the RE Developer Suite bundle."""
+"""Static checks for the Real Estate Suite bundle."""
 
 from __future__ import annotations
 

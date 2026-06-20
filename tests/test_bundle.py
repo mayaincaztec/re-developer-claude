@@ -10,7 +10,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PLUGIN = ROOT / "plugins" / "re-developer-suite"
+PLUGIN = ROOT / "plugins" / "real-estate-suite"
 
 
 class BundleTests(unittest.TestCase):
@@ -19,8 +19,8 @@ class BundleTests(unittest.TestCase):
             (ROOT / ".claude-plugin" / "marketplace.json").read_text("utf-8")
         )
         entry = marketplace["plugins"][0]
-        self.assertEqual(entry["name"], "re-developer-suite")
-        self.assertEqual(entry["source"], "./plugins/re-developer-suite")
+        self.assertEqual(entry["name"], "real-estate-suite")
+        self.assertEqual(entry["source"], "./plugins/real-estate-suite")
 
     def test_no_excluded_runtime_artifacts(self) -> None:
         forbidden_suffixes = {".db", ".lock", ".log", ".env"}

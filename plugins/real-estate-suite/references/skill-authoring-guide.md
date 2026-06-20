@@ -1,4 +1,4 @@
-# Skill Authoring Guide — RE Developer Suite
+# Skill Authoring Guide — Real Estate Suite
 
 Quy ước để thêm/sửa skill trong suite một cách nhất quán. Đọc trước khi tạo skill mới hoặc refactor.
 

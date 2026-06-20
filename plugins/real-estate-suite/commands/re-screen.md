@@ -3,7 +3,7 @@ description: Sàng lọc nhanh một deal BĐS đầu vào (go / pass / watch) b
 argument-hint: [tên deal hoặc mô tả / đường dẫn teaser/CIM]
 ---
 
-Dùng skill `re-inv-screening` (RE Developer Suite) để sàng lọc deal sau: $ARGUMENTS
+Dùng skill `re-inv-screening` (Real Estate Suite) để sàng lọc deal sau: $ARGUMENTS
 
 - Nếu Sếp đưa đường dẫn file (teaser/CIM), đọc file trước.
 - Áp bộ tiêu chí screening, kết luận Proceed / Pass / Watch theo template `deal-screening-note`.

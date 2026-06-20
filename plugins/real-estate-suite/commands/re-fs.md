@@ -3,7 +3,7 @@ description: Dựng feasibility study (FS) — model Excel .xlsx với NPV/IRR/p
 argument-hint: [deal-id hoặc tên dự án]
 ---
 
-Dùng skill `re-inv-feasibility-study` (RE Developer Suite) để dựng FS cho: $ARGUMENTS
+Dùng skill `re-inv-feasibility-study` (Real Estate Suite) để dựng FS cho: $ARGUMENTS
 
 - Đọc `deals/<deal-id>/_dossier.md` trước nếu có (assumption đã chốt, kết quả báo cáo sơ bộ).
 - Chốt assumption register (source/date/owner/confidence) trước khi dựng model; kéo `re-project-design-planning` cho GFA/NSA và `re-rnd` cho đơn giá nếu thiếu.

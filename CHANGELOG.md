@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.12.0 - 2026-06-20
+
+### Rebrand to Real Estate Suite
+- Renamed the plugin `re-developer-suite` → `real-estate-suite` (folder `plugins/real-estate-suite/`, `plugin.json` name, author "Real Estate Suite", homepage/repository URLs).
+- Renamed the marketplace `name` → `real-estate-suite`; plugin entry name + source updated; display description "Real Estate Suite …".
+- Renamed the GitHub repository `re-developer-claude` → `real-estate-suite`; install instructions now use `mayaincaztec/real-estate-suite`.
+- Plugin id becomes `real-estate-suite@real-estate-suite` — remove and re-add the marketplace, then reinstall.
+- **Skill/agent/command prefixes kept as `re-*`** (re = Real Estate) — no churn, identifiers stable; only branding strings, paths, manifests and tests updated. Tests green.
+- Historical changelog entries below intentionally keep the old names.
+
 ## 0.11.1 - 2026-06-20
 
 - Renamed the marketplace `name` in `.claude-plugin/marketplace.json` from `re-developer` to `re-developer-claude` so it matches the repository name and the UI tab label (removes a source of marketplace-update confusion in the Claude/Cowork app). The plugin id therefore becomes `re-developer-suite@re-developer-claude`; remove and re-add the marketplace (prefer the `mayaincaztec/re-developer-claude` shorthand over the raw `.git` URL), then reinstall the plugin. No skill/content changes.

@@ -1,16 +1,16 @@
 {
-  "name": "re-developer-claude",
+  "name": "real-estate-suite",
   "owner": {
     "name": "mayaincaztec"
   },
   "metadata": {
-    "description": "RE Developer Suite — Vietnamese real-estate developer operating model (Claude Code / Cowork).",
-    "version": "0.11.1"
+    "description": "Real Estate Suite — Vietnamese real-estate developer operating model (Claude Code / Cowork).",
+    "version": "0.12.0"
   },
   "plugins": [
     {
-      "name": "re-developer-suite",
-      "source": "./plugins/re-developer-suite",
+      "name": "real-estate-suite",
+      "source": "./plugins/real-estate-suite",
       "description": "Điều phối nghiệp vụ Chủ đầu tư bất động sản: RE-HQ, Legal, Investment & Finance, Market Research, Project & Design (due diligence, deal structuring, legal drafting)."
     }
   ]

@@ -1,4 +1,4 @@
-# RE Developer Suite Operating Contract
+# Real Estate Suite Operating Contract
 
 ## Handoff packet
 

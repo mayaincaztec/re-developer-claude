@@ -3,7 +3,7 @@ description: Điều phối due diligence đa workstream cho một thương vụ
 argument-hint: [deal-id hoặc mô tả thương vụ]
 ---
 
-Dùng skill `re-inv-dd-coordinator` (RE Developer Suite) để điều phối DD cho: $ARGUMENTS
+Dùng skill `re-inv-dd-coordinator` (Real Estate Suite) để điều phối DD cho: $ARGUMENTS
 
 - Đọc `deals/<deal-id>/_dossier.md` trước nếu có.
 - Chốt scope DD và workstreams; dựng control layer phù hợp quy mô deal.

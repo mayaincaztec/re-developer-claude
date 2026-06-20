@@ -2,8 +2,8 @@
 
 ## Static
 
-- `.claude-plugin/marketplace.json` resolves `./plugins/re-developer-suite`.
-- `plugins/re-developer-suite/.claude-plugin/plugin.json` is valid and version matches the marketplace.
+- `.claude-plugin/marketplace.json` resolves `./plugins/real-estate-suite`.
+- `plugins/real-estate-suite/.claude-plugin/plugin.json` is valid and version matches the marketplace.
 - 21 skills are discovered (`scripts/check_bundle.py` passes), plus 4 agents in `agents/` and 4 slash commands in `commands/`.
 - All intra-bundle relative references resolve (`tests/test_bundle.py` passes).
 - Bundle contains no credentials, databases, logs or deal folders.
