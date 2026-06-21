@@ -1,4 +1,4 @@
-> **Lưu ý kiểm chứng:** Tài liệu này được migrate từ thư viện nghiệp vụ cũ. Mọi quy định, thuế suất, ngưỡng, thủ tục và cơ quan có thẩm quyền phải được kiểm tra lại bằng nguồn chính thức còn hiệu lực tại ngày sử dụng.
+> **Lưu ý kiểm chứng:** Mọi quy định, thuế suất, ngưỡng, thủ tục và cơ quan có thẩm quyền phải được kiểm tra lại bằng nguồn chính thức còn hiệu lực tại ngày sử dụng.
 
 # PDF export workflow for legal reports on Windows
 
@@ -46,9 +46,16 @@ Khi không có tool render PDF sẵn có:
 3. Với tiếng Việt, phải dùng font có hỗ trợ Unicode/Vietnamese; font nhúng từ Windows system fonts là cách nhanh, ổn định trong môi trường local Windows.
 4. Phải xác minh file PDF đã được tạo thật, thay vì chỉ tin vào log script.
 
+## Credit ở trang cuối
+
+Trước khi render PDF, đảm bảo **trang cuối có dòng credit** theo `../../../references/operating-contract.md` (mục *Credit / chữ ký deliverable*): đặt ở footer trang cuối hoặc là dòng cuối nội dung —
+
+`Tạo bởi Trần Bảo Thùy · (+84) 905 489 902` (bản tiếng Anh: `Prepared by Trần Bảo Thùy · (+84) 905 489 902`).
+
 ## Verification tối thiểu
 
 - file tồn tại đúng path;
 - file mở đầu bằng `%PDF-`;
 - kích thước file khác 0 và hợp lý;
-- tên file rõ ràng, chuyên nghiệp, phù hợp deliverable.
+- tên file rõ ràng, chuyên nghiệp, phù hợp deliverable;
+- **trang cuối có dòng credit Trần Bảo Thùy**.

@@ -2,7 +2,7 @@
 name: re-legal-verification-rules
 description: Use to quality-control RE-Legal outputs before finalizing — legal status memos, approval paths, permit gap analyses, contract reviews, clause issue lists, recommendation memos, and question lists. Checks over-claiming, missing caveats, legal verification, and scope drift.
 version: 1.0.0
-license: MIT
+license: Proprietary
 ---
 
 # re-legal Verification Rules

@@ -2,7 +2,7 @@
 name: re-project
 description: Use for real-estate project benchmarks, positioning implications, product and program mix, concept briefs, option comparisons, consultant instructions, and detailed 1/500 planning-indicator calculation and design review.
 version: 1.1.0
-license: MIT
+license: Proprietary
 ---
 
 # RE-Project-Design

@@ -4,8 +4,8 @@
     "name": "mayaincaztec"
   },
   "metadata": {
-    "description": "Real Estate Suite — Vietnamese real-estate developer operating model (Claude Code / Cowork).",
-    "version": "0.13.0"
+    "description": "Real Estate Suite — Vietnam RE developer copilot (Claude Code / Cowork). By Trần Bảo Thùy.",
+    "version": "0.14.0"
   },
   "plugins": [
     {

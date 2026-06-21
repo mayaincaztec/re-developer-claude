@@ -1,8 +1,8 @@
-# legacy agent runtime Imports for re-rnd
+# RE-Market-Research (re-rnd) — library readme
 
-This profile-local bundle contains imported market research real-estate skills and context migrated from the old legacy agent runtime workspace.
+Tài liệu nền và skill nghiên cứu thị trường bất động sản của phòng `RE-Market-Research`.
 
-Included domains:
+Phạm vi:
 - re-rnd
 
-These copies are for the `RE-Market-Research` profile so its memory/workflow can evolve independently from other profiles.
+Các tài liệu này phục vụ profile `RE-Market-Research` để memory/workflow của phòng tiến hóa độc lập với các phòng khác.

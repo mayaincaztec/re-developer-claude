@@ -2,7 +2,7 @@
 name: re-inv-operating-matrix
 description: Use to map a deal task to the right RE-Investment-Finance skill, specialist pulls, template, verification, and escalation — a quick selection layer for the investment deal lifecycle.
 version: 1.0.0
-license: MIT
+license: Proprietary
 ---
 
 # RE-Investment Operating Matrix

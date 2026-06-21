@@ -2,7 +2,7 @@
 name: re-legal-operations
 description: Use to operate the RE-Legal bundle for a new legal task — triage the lane (project legal, contracts, document ops, or out-of-scope coordination), pick the primary skill, deliverable template, verification step, and escalation path. Single operations layer combining intake routing, the operating matrix, and the deliverable-template map.
 version: 1.0.0
-license: MIT
+license: Proprietary
 ---
 
 # RE-Legal Operations (intake → matrix → template)

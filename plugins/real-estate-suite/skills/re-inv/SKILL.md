@@ -2,7 +2,7 @@
 name: re-inv
 description: Use for real-estate investment screening, underwriting assumptions, feasibility study (FS), preliminary and full investment reports, scenario analysis, sensitivities, risk-return synthesis, IC memos, deal structuring, LOI, and due-diligence coordination. Owns the full deal lifecycle.
 version: 2.0.0
-license: MIT
+license: Proprietary
 ---
 
 # RE-Investment-Finance

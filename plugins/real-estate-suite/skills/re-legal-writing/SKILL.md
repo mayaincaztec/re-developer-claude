@@ -2,7 +2,7 @@
 name: re-legal-writing
 description: Use to draft or review Vietnamese legal documents in RE-Legal — cong van (official letters), legal reports, memos, and other formal deliverables for re-legal-licensing or re-legal-counsel workflows, including AI-trace cleanup and professional Vietnamese legal style.
 version: 1.2.0
-license: MIT
+license: Proprietary
 ---
 
 # Legal Writing for Licensing — Vietnamese Professional Drafting

@@ -2,7 +2,7 @@
 name: re-inv-preliminary-report
 description: Use to build a preliminary (sơ bộ) real-estate investment report for a potential project — general info, project legal status, market analysis, pre-feasibility math, and an investment conclusion (go / conditional / no-go).
 version: 1.0.0
-license: MIT
+license: Proprietary
 ---
 
 # RE Preliminary Investment Report (Báo cáo đầu tư sơ bộ)

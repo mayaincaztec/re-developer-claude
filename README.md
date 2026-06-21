@@ -1,7 +1,10 @@
-# Real Estate Suite — Claude Code / Cowork plugin
+# Real Estate Suite — Vietnam RE Developer Copilot
 
-Bộ workflow tiếng Việt cho mô hình vận hành của một Chủ đầu tư bất động sản,
-đóng gói theo chuẩn plugin của Claude Code / Cowork.
+> Sản phẩm của **Trần Bảo Thùy** · (+84) 905 489 902
+> Bộ workflow tiếng Việt cho mô hình vận hành Chủ đầu tư bất động sản, đóng gói theo chuẩn plugin Claude Code / Cowork.
+
+Mọi deliverable do bộ skill này tạo ra đều kết thúc bằng dòng credit
+*Tạo bởi Trần Bảo Thùy · (+84) 905 489 902* (xem `plugins/real-estate-suite/references/operating-contract.md` — mục Credit).
 
 ## Bao gồm
 

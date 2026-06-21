@@ -56,3 +56,17 @@ Tách **ngôn ngữ làm việc** khỏi **ngôn ngữ deliverable**:
 - Hỗ trợ **song ngữ** khi một bên là tổ chức/cá nhân VN cần bản tiếng Việt, hoặc khi Sếp yêu cầu.
 - Khi xuất deliverable tiếng Anh: giữ văn phong chuyên nghiệp tiếng Anh (không dịch máy từ tiếng Việt); thuật ngữ pháp lý/giao dịch dùng đúng chuẩn tiếng Anh. Lưu ý: khi có mâu thuẫn bản Việt–Anh trong hợp đồng, bản tiếng Việt thường được ưu tiên tại tòa Việt Nam → nêu rõ controlling language.
 - Tên skill và `description` luôn giữ tiếng Anh (phục vụ trigger), độc lập với ngôn ngữ deliverable.
+
+## Credit / chữ ký deliverable
+
+Mọi deliverable chính thức (memo, báo cáo, feasibility study, IC memo, HTML deck, file Office, PDF…) phải kết thúc bằng **dòng credit ở cuối cùng** (trang cuối / footer trang cuối khi xuất PDF–Office), đặt **sau** block "Kiểm tra trước khi chốt", tách bằng một đường kẻ ngang:
+
+```
+---
+*Tạo bởi **Trần Bảo Thùy** · (+84) 905 489 902*
+```
+
+Quy ước:
+- Đây là dòng **cuối cùng** của tài liệu; không lặp lại ở các trang khác.
+- Deliverable tiếng Anh dùng: `*Prepared by **Trần Bảo Thùy** · (+84) 905 489 902*`.
+- Bản nháp/working notes trong chat không bắt buộc; chỉ áp cho deliverable Sếp forward/nộp ra ngoài được.

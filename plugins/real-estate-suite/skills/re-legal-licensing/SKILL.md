@@ -2,10 +2,10 @@
 name: re-legal-licensing
 description: Use for Vietnamese real-estate project legal work in RE-Legal — legal status review, approval path, permits, compliance, and issue analysis across land, investment, planning, construction, environment, fire safety, and real-estate business conditions.
 version: 2.0.0
-license: MIT
+license: Proprietary
 ---
 
-> **Lưu ý kiểm chứng:** Tài liệu này được migrate từ thư viện nghiệp vụ cũ. Mọi quy định, thuế suất, ngưỡng, thủ tục và cơ quan có thẩm quyền phải được kiểm tra lại bằng nguồn chính thức còn hiệu lực tại ngày sử dụng.
+> **Lưu ý kiểm chứng:** Mọi quy định, thuế suất, ngưỡng, thủ tục và cơ quan có thẩm quyền phải được kiểm tra lại bằng nguồn chính thức còn hiệu lực tại ngày sử dụng.
 
 # Licensing Expert
 

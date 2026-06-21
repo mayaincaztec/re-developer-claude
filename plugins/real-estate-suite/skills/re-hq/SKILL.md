@@ -2,7 +2,7 @@
 name: re-hq
 description: Use as the main intake and coordination workflow for ambiguous, cross-functional, or decision-oriented real-estate developer tasks involving Legal, Investment & Finance, Market Research, or Project & Design.
 version: 1.0.0
-license: MIT
+license: Proprietary
 ---
 
 # RE-HQ

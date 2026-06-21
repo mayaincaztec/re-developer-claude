@@ -2,10 +2,10 @@
 name: re-inv-deal-structuring
 description: Use for deal structuring and transaction architecture in RE-Investment-Finance — compare share/asset/JV/SPV structures, coordinate legal-tax-finance inputs, and combine FS results into an offer and LOI; pulls RE-Legal specialists only for deep legal assessment.
 version: 3.1.0
-license: MIT
+license: Proprietary
 ---
 
-> **Lưu ý kiểm chứng:** Tài liệu này được migrate từ thư viện nghiệp vụ cũ. Mọi quy định, thuế suất, ngưỡng, thủ tục và cơ quan có thẩm quyền phải được kiểm tra lại bằng nguồn chính thức còn hiệu lực tại ngày sử dụng.
+> **Lưu ý kiểm chứng:** Mọi quy định, thuế suất, ngưỡng, thủ tục và cơ quan có thẩm quyền phải được kiểm tra lại bằng nguồn chính thức còn hiệu lực tại ngày sử dụng.
 
 # Deal Structuring Advisor
 

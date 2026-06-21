@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.14.0 - 2026-06-21
+
+### Cleanup of legacy-library residue + personal rebrand (Trần Bảo Thùy)
+- Removed the "Tài liệu này được migrate từ thư viện nghiệp vụ cũ." sentence from the verification banner across 36 template/reference files (kept the substantive verification caveat). Reworded `references/department-guides/vn-re-research-library-readme.md` to drop the "legacy agent runtime" framing. No real Codex/OpenClaw runtime residue remained in the bundle (the `check_bundle.py` guard against `~/.openclaw`/`hermes-native`/`chrome-relay` is retained).
+- Rebrand (hybrid naming, keeps technical id `real-estate-suite`): `plugin.json` author → **Trần Bảo Thùy**, license **MIT → Proprietary**, description byline; `marketplace.json` description byline; README personal header + credit; added `LICENSE` (proprietary). License frontmatter `MIT → Proprietary` across 22 skills.
+- Output credit rule: every formal deliverable now ends with `*Tạo bởi Trần Bảo Thùy · (+84) 905 489 902*` — added centrally to `references/operating-contract.md` (new "Credit / chữ ký deliverable" section) and to the legal `pdf-export-workflow.md` (last-page footer + verification item).
+
 ## 0.13.0 - 2026-06-21
 
 ### Replace MCP `tvpl` with combined MCP `legal` (vbpl primary + tvpl fallback)

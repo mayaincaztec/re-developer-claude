@@ -2,7 +2,7 @@
 name: re-project-design-planning
 description: Use for real-estate design management and planning-indicator calculation — compute detailed 1/500 planning metrics (FAR, GFA, NSA, density, population, parking, basements), check QCVN compliance, review design consultant deliverables, and optimize project efficiency for the developer (CĐT).
 version: 1.0.0
-license: MIT
+license: Proprietary
 ---
 
 # Design Planning (Quản lý Thiết kế & Tính toán Quy hoạch)

@@ -2,7 +2,7 @@
 name: re-inv-screening
 description: Use to quickly screen an inbound real-estate deal (teaser, CIM, broker offer, or basic project info) and produce a fast go / pass gate before committing analyst time to a preliminary investment report.
 version: 1.0.0
-license: MIT
+license: Proprietary
 ---
 
 # RE-Investment Screening

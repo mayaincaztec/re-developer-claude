@@ -2,7 +2,7 @@
 name: re-rnd
 description: Use for the RE-Market-Research (R&D) department — Vietnam real-estate area studies, comps and pricing, supply-demand, competitor scans, market thesis; maintains the structured project database (Obsidian vault), scans secondary listing prices with the correct unit of analysis, runs data-quality field audits, and produces market reports.
 version: 2.1.0
-license: MIT
+license: Proprietary
 ---
 
 # RE-RnD — phòng nghiên cứu thị trường BĐS

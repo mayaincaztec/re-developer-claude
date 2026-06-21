@@ -2,7 +2,7 @@
 name: re-legal-doc-renamer
 description: Use to rename Vietnamese administrative document files with magic-renamer logic, standardize file names, or handle basic document operations (inventory, classify, move) in RE-Legal.
 version: 2.2.0
-license: MIT
+license: Proprietary
 ---
 
 # Doc Renamer

@@ -2,7 +2,7 @@
 name: initialize-re-workspace
 description: Use when creating or validating a real-estate data workspace for Real Estate Suite without placing deal data inside the plugin.
 version: 1.0.0
-license: MIT
+license: Proprietary
 ---
 
 # Initialize RE Workspace

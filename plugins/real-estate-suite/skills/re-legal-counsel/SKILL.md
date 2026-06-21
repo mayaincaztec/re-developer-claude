@@ -2,7 +2,7 @@
 name: re-legal-counsel
 description: Use for contract and transaction legal work in RE-Legal — contract review, clause risk, negotiation positions, drafting support, dispute notes, transaction legal due-diligence on a document set (data room / contract portfolio, with materiality and severity), batch clause review grids, material-contract schedules, and drafting corporate approval instruments (board/shareholder resolutions and minutes) for Vietnamese real-estate and M&A.
 version: 2.0.0
-license: MIT
+license: Proprietary
 ---
 
 # Legal Counsel

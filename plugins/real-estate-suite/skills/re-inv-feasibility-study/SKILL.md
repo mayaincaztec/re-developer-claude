@@ -2,7 +2,7 @@
 name: re-inv-feasibility-study
 description: Use to build a feasibility study (FS) for a real-estate project — an assumption-driven financial model covering land and CAPEX, revenue from product mix, financing, phased cashflow, returns (NPV/IRR/payback), and sensitivity. Produces both a markdown spec and a working Excel (.xlsx) model.
 version: 1.0.0
-license: MIT
+license: Proprietary
 ---
 
 # RE Feasibility Study (FS)

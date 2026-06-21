@@ -2,7 +2,7 @@
 name: re-inv-verification-rules
 description: Use to quality-control RE-Investment-Finance outputs before finalizing — screening notes, preliminary and full investment reports, feasibility models, IC memos, structuring/LOI, and DD summaries. Checks for fabricated numbers, missing cases, weak assumptions, and scope drift.
 version: 1.0.0
-license: MIT
+license: Proprietary
 ---
 
 # RE-Investment Verification Rules

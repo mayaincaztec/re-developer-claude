@@ -2,7 +2,7 @@
 name: re-inv-full-report
 description: Use to build a full (đầy đủ) real-estate investment report and the IC memo — a deeper version of the preliminary report with FS-backed numbers, base/upside/downside cases, risks, and a go/no-go investment recommendation for the investment committee.
 version: 1.0.0
-license: MIT
+license: Proprietary
 ---
 
 # RE Full Investment Report + IC Memo (Báo cáo đầu tư đầy đủ)

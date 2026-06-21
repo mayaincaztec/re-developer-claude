@@ -1,13 +1,13 @@
 {
   "name": "real-estate-suite",
-  "version": "0.13.0",
-  "description": "Vietnamese real-estate developer workflows for HQ coordination, legal, investment and finance, market research, and project design.",
+  "version": "0.14.0",
+  "description": "Vietnam real-estate developer copilot — HQ coordination, legal, investment & finance, market research, project design. By Trần Bảo Thùy.",
   "author": {
-    "name": "Real Estate Suite"
+    "name": "Trần Bảo Thùy"
   },
   "homepage": "https://github.com/mayaincaztec/real-estate-suite",
   "repository": "https://github.com/mayaincaztec/real-estate-suite",
-  "license": "MIT",
+  "license": "Proprietary",
   "keywords": [
     "real-estate",
     "due-diligence",

@@ -2,7 +2,7 @@
 name: re-inv-dd-coordinator
 description: Use to coordinate multi-workstream due diligence (DD) in RE-Investment-Finance — DD scope, document request list, data room tracker with new-upload triage, clarification log, issue tracker, closing checklist (conditions precedent and closing deliverables), and the consolidated DD findings report; pulls RE-Legal specialists only for deep legal findings.
 version: 3.0.0
-license: MIT
+license: Proprietary
 ---
 
 # DD Coordinator

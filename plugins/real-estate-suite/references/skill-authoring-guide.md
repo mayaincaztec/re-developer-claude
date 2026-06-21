@@ -9,7 +9,7 @@ Quy ước để thêm/sửa skill trong suite một cách nhất quán. Đọc 
 name: <kebab-case, tiếng Anh>
 description: <tiếng Anh, hướng trigger — "Use for/when ...">
 version: <semver, vd 1.0.0>
-license: MIT
+license: Proprietary
 ---
 ```
 - `name`/`description` để tiếng Anh giúp Claude trigger chính xác; **body viết tiếng Việt**.
