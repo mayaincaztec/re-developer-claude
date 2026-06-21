@@ -42,7 +42,7 @@ Dùng khi cần:
 
 Entry/router là `re-project`; specialist skill là `re-project-design-planning` (calc engine + quy trình 9 bước tính chỉ tiêu quy hoạch + kiểm tra QCVN + design review). Template brief: `templates/design-brief.md`.
 
-Cross-link: `re-inv-feasibility-study`/`re-inv-preliminary-report` dùng GFA/NSA/product mix; `re-legal-licensing` cho khả năng phê duyệt; `tvpl` cho hiệu lực QCVN.
+Cross-link: `re-inv-feasibility-study`/`re-inv-preliminary-report` dùng GFA/NSA/product mix; `re-legal-licensing` cho khả năng phê duyệt; `legal` cho hiệu lực QCVN.
 
 ### Mở rộng sau (chưa làm)
 - benchmark pack workflow

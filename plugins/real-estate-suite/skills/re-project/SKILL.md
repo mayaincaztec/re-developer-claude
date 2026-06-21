@@ -19,7 +19,7 @@ Không dùng cho: thẩm định pháp lý dự án (→ `re-legal-licensing`); 
 
 - **`re-project-design-planning`** là skill specialist của phòng: calc engine + quy trình 9 bước tính chỉ tiêu quy hoạch + kiểm tra tuân thủ QCVN + design review (ĐẠT / RỦI RO / TỐI ƯU). **Load `re-project-design-planning`** cho mọi việc tính toán chỉ tiêu hoặc rà hồ sơ thiết kế.
 - Template brief: `../../templates/design-brief.md`.
-- Cross-link: `re-inv`/`re-inv-feasibility-study` (FS dùng GFA/NSA/product mix), `re-legal-licensing` (khả năng phê duyệt / điều chỉnh quy hoạch), `tvpl` (hiệu lực QCVN/luật).
+- Cross-link: `re-inv`/`re-inv-feasibility-study` (FS dùng GFA/NSA/product mix), `re-legal-licensing` (khả năng phê duyệt / điều chỉnh quy hoạch), `legal` (hiệu lực QCVN/luật).
 
 ## Quy trình
 

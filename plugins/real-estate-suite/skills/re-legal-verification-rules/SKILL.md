@@ -1,6 +1,6 @@
 ---
 name: re-legal-verification-rules
-description: Use to quality-control RE-Legal outputs before finalizing — legal status memos, approval paths, permit gap analyses, contract reviews, clause issue lists, recommendation memos, and question lists. Checks over-claiming, missing caveats, tvpl verification, and scope drift.
+description: Use to quality-control RE-Legal outputs before finalizing — legal status memos, approval paths, permit gap analyses, contract reviews, clause issue lists, recommendation memos, and question lists. Checks over-claiming, missing caveats, legal verification, and scope drift.
 version: 1.0.0
 license: MIT
 ---
@@ -43,8 +43,8 @@ Không trộn nhận định pháp lý với hướng xử lý hành chính theo
 ### 4. Kiểm tra routing lần cuối
 Nếu đến cuối mới lộ ra task thực chất là coordination đa stream, phải nói rõ phần nào thuộc `RE-Legal`, phần nào đáng ra phải route `RE-HQ`.
 
-### 5. Kiểm chứng hiệu lực văn bản (tvpl)
-Nếu output có viện dẫn văn bản pháp luật, phải đã đối chiếu tình trạng hiệu lực qua MCP `tvpl` (xem `../../references/tvpl-lookup-protocol.md`) hoặc gắn caveat **"chưa kiểm chứng hiệu lực"**. Không để output dẫn một văn bản có thể đã bị thay thế mà không có dấu kiểm chứng hoặc caveat. Điều này đặc biệt quan trọng với Legal Status Report, Approval Matrix và Recommendation Memo.
+### 5. Kiểm chứng hiệu lực văn bản (legal)
+Nếu output có viện dẫn văn bản pháp luật, phải đã đối chiếu tình trạng hiệu lực qua MCP `legal` (xem `../../references/legal-lookup-protocol.md`) hoặc gắn caveat **"chưa kiểm chứng hiệu lực"**. Không để output dẫn một văn bản có thể đã bị thay thế mà không có dấu kiểm chứng hoặc caveat. Điều này đặc biệt quan trọng với Legal Status Report, Approval Matrix và Recommendation Memo.
 
 ## Quy tắc theo loại deliverable
 
@@ -114,7 +114,7 @@ Phải kiểm tra:
 ### J. Transaction DD Findings Memo (bộ tài liệu giao dịch)
 Phải kiểm tra:
 - đã nêu **coverage data room + ngưỡng materiality** (nguồn ngưỡng, không tự bịa) và **gaps** chưa;
-- mỗi finding đủ: mức độ (🔴🟠🟡🟢) · trích nguyên văn (Quote-First) · kiểm chứng luật qua `tvpl` hoặc caveat · khuyến nghị · owner;
+- mỗi finding đủ: mức độ (🔴🟠🟡🟢) · trích nguyên văn (Quote-First) · kiểm chứng luật qua `legal` hoặc caveat · khuyến nghị · owner;
 - **không tự lấp khoảng trống** bằng web/model knowledge khi hồ sơ mỏng;
 - project-legal (đất/quy hoạch/permit) đã kéo `re-legal-licensing`, không tự kết luận;
 - cờ successor liability + CP/closing đã bàn giao đúng (cp-closing-issue-note / `re-inv-dd-coordinator`);
@@ -129,7 +129,7 @@ Phải kiểm tra:
 
 ### L. Văn kiện phê duyệt nội bộ (corporate resolution)
 Phải kiểm tra:
-- đúng cơ quan quyết định theo loại hình DN; thẩm quyền + tỷ lệ thông qua đã kiểm chứng qua `tvpl` + điều lệ;
+- đúng cơ quan quyết định theo loại hình DN; thẩm quyền + tỷ lệ thông qua đã kiểm chứng qua `legal` + điều lệ;
 - người có liên quan đã loại khỏi biểu quyết (nếu áp dụng);
 - điều kiện tiến hành họp đủ (không tạo văn bản hàm ý cuộc họp hợp lệ khi chưa đủ);
 - quyết nghị nêu chính xác hành động/giá trị/đối tác/ủy quyền ký;
@@ -163,7 +163,7 @@ Với deliverable chính thức, **đính block này vào cuối deliverable** (
 - Điểm đã đủ cơ sở: ...
 - Điểm còn qualified / cần caveat: ...
 - Missing facts / missing docs: ...
-- Hiệu lực văn bản đã kiểm chứng qua tvpl: có / chưa (caveat)
+- Hiệu lực văn bản đã kiểm chứng qua legal: có / chưa (caveat)
 - Có cần route `RE-HQ` không: ...
 ```
 

@@ -42,7 +42,7 @@ plugins/real-estate-suite/
   agents/                                # 4 agent phòng ban (chạy song song qua Agent tool)
   commands/                              # 4 slash commands (/re-screen, /re-fs, /re-dd, /re-status)
   references/                            # tài liệu tham chiếu (routing-map, operating-contract,
-                                         #   workspace-layout, tvpl-lookup-protocol, authoring guide)
+                                         #   workspace-layout, legal-lookup-protocol, authoring guide)
   templates/                             # template deliverable (kèm deal-dossier.md)
   scripts/                               # tiện ích Python (check bundle, init workspace)
 tests/                                   # kiểm thử bundle (gốc repo)

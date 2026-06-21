@@ -6,11 +6,11 @@
 - (đầy đủ) thông tin dự án, bên bán, mục tiêu
 - Phương án cấu trúc đề xuất (link re-inv-deal-structuring):
 
-## 2. Pháp lý dự án & giao dịch  *(re-legal-licensing + re-legal-counsel + tvpl)*
+## 2. Pháp lý dự án & giao dịch  *(re-legal-licensing + re-legal-counsel + legal)*
 - Pháp lý dự án (đất / đầu tư / quy hoạch / mở bán / chuyển nhượng):
 - Pháp lý giao dịch (SPA/SHA/JVA, CP, change-of-control):
 - Blocker / CP / missing docs:
-- Hiệu lực văn bản kiểm chứng qua tvpl:
+- Hiệu lực văn bản kiểm chứng qua legal:
 
 ## 3. Phân tích thị trường
 - Comps đầy đủ, định vị, absorption:

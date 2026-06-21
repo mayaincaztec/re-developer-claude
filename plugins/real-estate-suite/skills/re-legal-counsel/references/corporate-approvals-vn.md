@@ -2,7 +2,7 @@
 
 > Hướng dẫn soạn **văn kiện phê duyệt nội bộ** ủy quyền/chấp thuận giao dịch (M&A, chuyển nhượng dự án, change-of-control, giao dịch lớn) theo **Luật Doanh nghiệp 2020 (Luật số 59/2020/QH14)**. Adapt từ phương pháp written-consent + board-minutes của bộ corporate-legal sang chế định công ty VN.
 >
-> ⚠️ **Mọi ngưỡng % / thẩm quyền / loại văn bản phải kiểm chứng hiệu lực qua `tvpl`** (`../../../references/tvpl-lookup-protocol.md`) tại ngày dùng — LDN và văn bản hướng dẫn có thể đã sửa đổi. Đây là khung định hướng, không thay tra cứu động.
+> ⚠️ **Mọi ngưỡng % / thẩm quyền / loại văn bản phải kiểm chứng hiệu lực qua `legal`** (`../../../references/legal-lookup-protocol.md`) tại ngày dùng — LDN và văn bản hướng dẫn có thể đã sửa đổi. Đây là khung định hướng, không thay tra cứu động.
 
 ## Các loại văn kiện theo loại hình doanh nghiệp
 
@@ -18,7 +18,7 @@ Phân loại hành động (theo logic của written-consent):
 - **Thường lệ** — bổ nhiệm cán bộ, phê duyệt hợp đồng chuẩn, ủy quyền ngân hàng: thẩm quyền thường ở người đại diện/HĐQT theo điều lệ.
 - **Cần cờ rà kỹ (review-flag)** — M&A, huy động vốn, giải thể, giao dịch BĐS trọng yếu, điều khoản change-of-control, **giao dịch ≥ ngưỡng tài sản theo điều lệ/LDN**, **giao dịch với người có liên quan**, thay đổi điều lệ/ngành nghề/vốn.
 
-Các điểm luật cần đối chiếu (kiểm chứng qua tvpl, không chốt cứng số ở đây):
+Các điểm luật cần đối chiếu (kiểm chứng qua legal, không chốt cứng số ở đây):
 - Thẩm quyền & tỷ lệ thông qua của ĐHĐCĐ / HĐQT (CTCP) và HĐTV (TNHH) — gồm ngưỡng giao dịch lớn tính theo % tổng giá trị tài sản ghi trong BCTC gần nhất.
 - Giao dịch với **người có liên quan**: yêu cầu phê duyệt và **loại trừ biểu quyết** của bên có lợi ích liên quan (xung đột lợi ích).
 - Điều lệ công ty có thể quy định ngưỡng/tỷ lệ chặt hơn luật → **điều lệ kiểm soát**; phải đọc điều lệ trước.
@@ -64,11 +64,11 @@ Bế mạc · chữ ký chủ tọa + thư ký
 2. **Cờ xung đột lợi ích** — giao dịch với người có liên quan: ghi rõ bên liên quan, loại khỏi biểu quyết, dẫn căn cứ.
 3. **Điều kiện tiến hành họp / tỷ lệ thông qua** — xác nhận đủ trước khi soạn nghị quyết; thiếu → dừng, không tạo văn bản hàm ý cuộc họp hợp lệ.
 4. **Cổng major one-off** — M&A/huy động vốn/giải thể/giao dịch BĐS trọng yếu yêu cầu ký gấp trong ngày → cảnh báo cần rà bởi luật sư phụ trách trước khi phát hành; bản nháp đánh dấu **DRAFT — để rà soát**.
-5. **Văn kiện là bản nháp pháp lý**, không phải tư vấn về tính hợp lệ cuối cùng; ngưỡng/thẩm quyền phải verify qua tvpl + điều lệ.
+5. **Văn kiện là bản nháp pháp lý**, không phải tư vấn về tính hợp lệ cuối cùng; ngưỡng/thẩm quyền phải verify qua legal + điều lệ.
 
 ## Checklist trước khi phát hành
 - [ ] Đúng loại hình DN → đúng cơ quan quyết định & loại văn kiện
-- [ ] Đã đọc điều lệ; thẩm quyền & tỷ lệ thông qua đúng (kiểm chứng tvpl)
+- [ ] Đã đọc điều lệ; thẩm quyền & tỷ lệ thông qua đúng (kiểm chứng legal)
 - [ ] Người có liên quan đã loại khỏi biểu quyết (nếu áp dụng)
 - [ ] Quyết nghị nêu chính xác hành động, giá trị, đối tác, tài sản, ủy quyền ký
 - [ ] Major action: đã gắn cờ rà soát luật sư phụ trách

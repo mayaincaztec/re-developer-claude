@@ -9,12 +9,12 @@
 - Giá chào / tổng mức đầu tư ước tính:
 - Hình thức giao dịch & mục tiêu đầu tư:
 
-## 2. Pháp lý dự án  *(kéo re-legal-licensing + tvpl)*
+## 2. Pháp lý dự án  *(kéo re-legal-licensing + legal)*
 - Đất đai (nguồn gốc, loại đất, GCN, thế chấp/tranh chấp):
 - Đầu tư (chủ trương đầu tư, lựa chọn nhà đầu tư):
 - Quy hoạch (phù hợp 1/2000–1/500, chỉ tiêu):
 - Blocker / missing docs:
-- Hiệu lực văn bản đã kiểm chứng qua tvpl: có / chưa (caveat)
+- Hiệu lực văn bản đã kiểm chứng qua legal: có / chưa (caveat)
 
 ## 3. Phân tích thị trường  *(kéo re-rnd)*
 - Cung – cầu khu vực:

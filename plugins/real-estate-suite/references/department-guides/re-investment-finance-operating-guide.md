@@ -53,7 +53,7 @@ Profile này sở hữu toàn bộ deal lifecycle. Entry/router là `re-inv`; bu
 - `re-inv-dd-coordinator` — điều phối DD (moved từ RE-HQ)
 - `re-inv-verification-rules` — QC trước khi chốt
 
-Kéo specialist input: `re-legal-licensing`/`re-legal-counsel` (+`tvpl`) cho pháp lý; `re-rnd` cho thị trường; `re-project-design-planning` cho chỉ tiêu quy hoạch/product mix.
+Kéo specialist input: `re-legal-licensing`/`re-legal-counsel` (+`legal`) cho pháp lý; `re-rnd` cho thị trường; `re-project-design-planning` cho chỉ tiêu quy hoạch/product mix.
 
 ## Toolset guidance
 

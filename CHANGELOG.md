@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.13.0 - 2026-06-21
+
+### Replace MCP `tvpl` with combined MCP `legal` (vbpl primary + tvpl fallback)
+- Migrated the legal-lookup tooling from the standalone `tvpl` MCP to a combined `legal` MCP: **vbpl** (Cơ sở dữ liệu quốc gia về pháp luật — vbpl.vn, Bộ Tư pháp; official, free, JSON, machine-readable effect status) as the primary source, **tvpl** (thuvienphapluat.vn) kept as fallback for newly-issued documents vbpl hasn't indexed yet (e.g. NĐ 217/2026/NĐ-CP).
+- Renamed `references/tvpl-lookup-protocol.md` → `references/legal-lookup-protocol.md` and rewrote it for the `legal` interface: `source` param (auto/vbpl/tvpl), `ref`-based identifiers (vbpl `doc_id` vs tvpl URL), auto-fallback, advanced filters (`search_in`, `match_mode`, `scope` tw/dp/all, `doc_type`, `issue_date_*`, `eff_status`), and cross-source `so_sanh_dieu`.
+- Updated all bundle references `mcp__tvpl__*` → `mcp__legal__*` and prose `tvpl` → `legal` across agents (`re-legal`, `re-project`), skills (`re-legal-*`, `re-inv-*`, `re-project-*`), references, and templates (29 files).
+- MCP wiring is user-level (`~/.claude.json`): the standalone `tvpl` server registration is removed; the `tvpl-mcp` package is retained on disk because `legal-mcp` imports it for the fallback path.
+
 ## 0.12.0 - 2026-06-20
 
 ### Rebrand to Real Estate Suite

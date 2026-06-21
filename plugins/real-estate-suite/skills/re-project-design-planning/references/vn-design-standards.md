@@ -1,6 +1,6 @@
 # VN Design Standards — Luật, QCVN, TCVN & tiêu chuẩn quốc tế
 
-> ⚠️ Danh sách **định hướng tĩnh**. Kiểm tra hiệu lực **động** bằng MCP `tvpl` theo `../../../references/tvpl-lookup-protocol.md` trước khi viện dẫn. Pháp lý dự án/phê duyệt → kéo `re-legal-licensing`.
+> ⚠️ Danh sách **định hướng tĩnh**. Kiểm tra hiệu lực **động** bằng MCP `legal` theo `../../../references/legal-lookup-protocol.md` trước khi viện dẫn. Pháp lý dự án/phê duyệt → kéo `re-legal-licensing`.
 
 ## Hệ thống Việt Nam (ưu tiên áp dụng)
 

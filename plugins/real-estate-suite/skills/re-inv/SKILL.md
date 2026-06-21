@@ -29,7 +29,7 @@ Không dùng cho: legal status / clause review một stream (→ `RE-Legal`); ar
 
 ## Specialist input (pull rule)
 
-- **Pháp lý dự án** (đất / đầu tư / quy hoạch / điều kiện mở bán / chuyển nhượng) → kéo `re-legal-licensing` (+ `tvpl` để kiểm chứng hiệu lực).
+- **Pháp lý dự án** (đất / đầu tư / quy hoạch / điều kiện mở bán / chuyển nhượng) → kéo `re-legal-licensing` (+ `legal` để kiểm chứng hiệu lực).
 - **Pháp lý giao dịch** (SPA/SHA/JVA, CP, change-of-control) → kéo `re-legal-counsel`.
 - **Thị trường** (comps, cung-cầu, giá, absorption) → kéo `re-rnd`.
 - **Chỉ tiêu quy hoạch / product mix / GFA** cho pre-FS và FS → kéo `re-project-design-planning`.

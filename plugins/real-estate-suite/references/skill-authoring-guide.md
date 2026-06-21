@@ -32,7 +32,7 @@ license: MIT
 Quy ước thống nhất cho toàn suite:
 
 - **`templates/` (dùng chung, gốc plugin):** mọi **deliverable** — khung output mà người dùng nhận hoặc nộp (memo, report, matrix, issue list, LOI, screening note, IC memo, brief…). Đây là "vỏ" trình bày, không gắn cứng với một skill.
-- **`references/` (trong từng skill):** chỉ **spec kỹ thuật / tài liệu nền** mà skill cần để thực thi — bảng tra (calc engine, QCVN, dictionaries), spec cấu trúc (FS structure, FS Excel build guide), guide nội bộ (entry-points, ma-document-guides, loi-and-offer-guide, tvpl protocol đặt ở `references/` gốc plugin vì dùng chung).
+- **`references/` (trong từng skill):** chỉ **spec kỹ thuật / tài liệu nền** mà skill cần để thực thi — bảng tra (calc engine, QCVN, dictionaries), spec cấu trúc (FS structure, FS Excel build guide), guide nội bộ (entry-points, ma-document-guides, loi-and-offer-guide, legal protocol đặt ở `references/` gốc plugin vì dùng chung).
 
 Quy tắc nhanh: *output giao đi → `templates/`; tài liệu để skill làm việc → `references/`.* Một skill "operations layer" như `re-legal-operations` chỉ **chọn và trỏ** tới `../../templates/...`, không tự chứa file deliverable.
 
@@ -51,7 +51,7 @@ Quy tắc nhanh: *output giao đi → `templates/`; tài liệu để skill làm
 ## Hợp đồng xuyên suốt (phải tuân theo)
 
 - **Finding schema + handoff packet**: `operating-contract.md`.
-- **Pháp lý**: kiểm chứng hiệu lực văn bản qua MCP `tvpl` theo `tvpl-lookup-protocol.md`, hoặc gắn caveat "chưa kiểm chứng".
+- **Pháp lý**: kiểm chứng hiệu lực văn bản qua MCP `legal` theo `legal-lookup-protocol.md`, hoặc gắn caveat "chưa kiểm chứng".
 - **Verification layer**: mỗi phòng có `*-verification-rules`; chạy trước khi chốt output chính thức.
 
 ## Naming convention
@@ -88,4 +88,4 @@ Mục này dành cho người bảo trì suite (không phải skill runtime).
 - [ ] Boundary `RE-Legal` / `RE-Investment-Finance` / `RE-HQ` nhất quán với `routing-map.md`
 - [ ] CHANGELOG + version (`plugin.json` và `marketplace.json` khớp nhau)
 
-**Chu kỳ rà kiến thức tĩnh (mỗi quý hoặc khi có luật mới):** chạy tvpl `check_hieu_luc` cho danh mục trong `re-legal-licensing/references/vn-legal-texts.md`; rà các bảng số liệu có `as-of` (thuế trong `structuring-tax-guide.md`, cơ quan thẩm quyền trong `agencies-and-authority.md`) và cập nhật ngày `as-of` sau khi xác nhận.
+**Chu kỳ rà kiến thức tĩnh (mỗi quý hoặc khi có luật mới):** chạy legal `check_hieu_luc` cho danh mục trong `re-legal-licensing/references/vn-legal-texts.md`; rà các bảng số liệu có `as-of` (thuế trong `structuring-tax-guide.md`, cơ quan thẩm quyền trong `agencies-and-authority.md`) và cập nhật ngày `as-of` sau khi xác nhận.

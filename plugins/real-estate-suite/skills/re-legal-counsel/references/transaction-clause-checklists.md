@@ -37,4 +37,4 @@
 ## Quy tắc dùng
 - Mỗi dấu hiệu dương tính phải kèm **trích nguyên văn** (Quote-First); âm tính phải thử nhiều biến thể trước khi kết luận "không có".
 - Điều khoản phụ thuộc tình trạng pháp lý dự án/đất/permit → **kéo `re-legal-licensing`**, không tự kết luận.
-- Hệ quả pháp lý dẫn chiếu luật → kiểm chứng qua `tvpl` hoặc gắn caveat.
+- Hệ quả pháp lý dẫn chiếu luật → kiểm chứng qua `legal` hoặc gắn caveat.

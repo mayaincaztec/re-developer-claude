@@ -20,7 +20,7 @@ Không dùng cho: đánh giá sơ bộ (→ `re-inv-preliminary-report`); chỉ 
 Mở rộng 5 phần của báo cáo sơ bộ, chuyên sâu hơn và gắn số FS:
 
 1. **Thông tin chung & cấu trúc giao dịch** — đầy đủ; tóm tắt phương án cấu trúc (link `re-inv-deal-structuring`).
-2. **Pháp lý dự án & giao dịch** — kéo `re-legal-licensing` (dự án) + `re-legal-counsel` (giao dịch); hiệu lực văn bản kiểm chứng qua `tvpl`; nêu blocker, CP, missing docs.
+2. **Pháp lý dự án & giao dịch** — kéo `re-legal-licensing` (dự án) + `re-legal-counsel` (giao dịch); hiệu lực văn bản kiểm chứng qua `legal`; nêu blocker, CP, missing docs.
 3. **Phân tích thị trường** — kéo `re-rnd`; comps đầy đủ, định vị, absorption, rủi ro thị trường.
 4. **Nghiên cứu khả thi (FS)** — kết quả từ `re-inv-feasibility-study`: TDC, GDV, NPV, IRR dự án & vốn chủ, payback, peak funding, margin; **base/upside/downside** + sensitivity; "what must be true".
 5. **Kết luận & khuyến nghị đầu tư** — Go / Conditional / No-Go; thesis; upside/downside; điều kiện tiên quyết; rủi ro chính & mitigation; owners & next steps.
@@ -40,7 +40,7 @@ Mở rộng 5 phần của báo cáo sơ bộ, chuyên sâu hơn và gắn số 
 ## Kiểm tra
 
 - [ ] 5 phần đầy đủ + gắn số FS
-- [ ] Pháp lý dự án + giao dịch đã kéo specialist; hiệu lực văn bản kiểm chứng qua `tvpl`
+- [ ] Pháp lý dự án + giao dịch đã kéo specialist; hiệu lực văn bản kiểm chứng qua `legal`
 - [ ] Base/upside/downside + sensitivity có trong phần FS
 - [ ] IC memo có thesis / cases / what-must-be-true / conditions / owners
 - [ ] Recommendation go/conditional/no-go rõ + điều kiện + next steps

@@ -1,7 +1,7 @@
 # Cơ quan & thẩm quyền BĐS sau sáp nhập 2025
 
 > **as-of: 2025** — cập nhật dòng này sau mỗi đợt rà định kỳ (xem mục Bảo trì trong `../../../references/skill-authoring-guide.md`).
-> ⚠️ Danh sách **định hướng tĩnh**. Khi kết luận về thẩm quyền/thủ tục cụ thể, kiểm chứng hiệu lực văn bản phân định thẩm quyền (NĐ 29/33/35/150/2025…) qua MCP `tvpl` theo `../../../references/tvpl-lookup-protocol.md`.
+> ⚠️ Danh sách **định hướng tĩnh**. Khi kết luận về thẩm quyền/thủ tục cụ thể, kiểm chứng hiệu lực văn bản phân định thẩm quyền (NĐ 29/33/35/150/2025…) qua MCP `legal` theo `../../../references/legal-lookup-protocol.md`.
 
 ## Cơ quan sau sáp nhập
 

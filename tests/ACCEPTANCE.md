@@ -15,7 +15,7 @@
 - Run one task for each department (Legal, Investment & Finance, Market Research, Project & Design).
 - Run one ambiguous routing task through RE-HQ.
 - Run the deal lifecycle through RE-Investment-Finance: screening → preliminary report → FS → full report/IC → structuring + LOI → DD.
-- Confirm a legal task uses `tvpl` to verify legal-text status (or states it could not).
+- Confirm a legal task uses `legal` to verify legal-text status (or states it could not).
 - Confirm outputs distinguish confirmed, inferred, assumed and unresolved items.
 - Confirm current web sources include links and access dates.
 

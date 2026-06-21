@@ -48,16 +48,16 @@ Không dùng cho:
 ## Nguyên tắc bắt buộc
 
 ### 1. Kiểm tra hiệu lực pháp lý trước khi viện dẫn
-Trước mọi kết luận material có viện dẫn văn bản, **dùng MCP `tvpl` để kiểm chứng động** theo `../../references/tvpl-lookup-protocol.md`:
+Trước mọi kết luận material có viện dẫn văn bản, **dùng MCP `legal` để kiểm chứng động** theo `../../references/legal-lookup-protocol.md`:
 1. `search_van_ban` → `check_hieu_luc` để xác nhận tình trạng + văn bản thay thế;
 2. `get_dieu` để trích **nguyên văn** điều khoản làm căn cứ (không paraphrase rồi kết luận mạnh);
 3. `get_luoc_do` / `so_sanh_dieu` khi cần lần theo dẫn chiếu hoặc đối chiếu luật cũ ↔ mới.
 
-Bổ sung kiểm tra ngoài tvpl khi cần: cổng pháp luật chính thức / công báo / cổng bộ–ngành–địa phương; thủ tục hành chính công bố chính thức; **văn bản địa phương** đúng tỉnh/thành (tvpl có thể không đủ cho cấp địa phương — nêu rõ giới hạn).
+Bổ sung kiểm tra ngoài legal khi cần: cổng pháp luật chính thức / công báo / cổng bộ–ngành–địa phương; thủ tục hành chính công bố chính thức; **văn bản địa phương** đúng tỉnh/thành (legal có thể không đủ cho cấp địa phương — nêu rõ giới hạn).
 
-`references/vn-legal-texts.md` và `vn-realestate-legal-framework.md` chỉ là danh sách **tĩnh** định hướng — phải đối chiếu hiệu lực động bằng tvpl trước khi viện dẫn.
+`references/vn-legal-texts.md` và `vn-realestate-legal-framework.md` chỉ là danh sách **tĩnh** định hướng — phải đối chiếu hiệu lực động bằng legal trước khi viện dẫn.
 
-Không dùng văn bản đã hết hiệu lực làm căn cứ mà không nói rõ giới hạn. Nếu chưa tra được qua tvpl, ghi rõ **"chưa kiểm chứng hiệu lực"** thay vì giả định còn hiệu lực.
+Không dùng văn bản đã hết hiệu lực làm căn cứ mà không nói rõ giới hạn. Nếu chưa tra được qua legal, ghi rõ **"chưa kiểm chứng hiệu lực"** thay vì giả định còn hiệu lực.
 
 ### 2. Xác định địa phương và cơ quan thẩm quyền hiện hành
 Với câu hỏi về thủ tục, thẩm quyền, văn bản địa phương hoặc thực tiễn xử lý hồ sơ, phải xác định dự án thuộc tỉnh / thành phố nào. Nếu user chưa nêu, đây là missing fact quan trọng phải đánh dấu. Khi nêu cơ quan thẩm quyền, dùng tên **sau sáp nhập 2025** và lưu ý mô hình **chính quyền 2 cấp** (xem `references/agencies-and-authority.md`); viện dẫn cấp huyện chỉ cho sự kiện quá khứ.
@@ -285,7 +285,7 @@ Ngoài ra, dùng thêm:
 
 - [ ] Đã xác định đúng deliverable
 - [ ] Đã xác định địa phương hoặc đánh dấu đây là missing fact trọng yếu
-- [ ] Đã kiểm tra hiệu lực văn bản qua `tvpl` (hoặc nêu rõ chưa kiểm chứng được) và logic chuyển tiếp ở mức cần thiết
+- [ ] Đã kiểm tra hiệu lực văn bản qua `legal` (hoặc nêu rõ chưa kiểm chứng được) và logic chuyển tiếp ở mức cần thiết
 - [ ] Đã rà đủ các lớp pháp lý liên quan
 - [ ] Đã tách Fact / Legal Basis / Assessment / Action
 - [ ] Đã nêu severity, missing docs và next step cho các issue chính

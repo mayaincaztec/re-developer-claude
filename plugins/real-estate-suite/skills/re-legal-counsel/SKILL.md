@@ -118,7 +118,7 @@ Tối thiểu làm rõ:
 - pháp luật điều chỉnh nếu đã biết;
 - audience của output là management, legal team hay cả hai.
 
-Khi điều khoản dẫn chiếu hoặc phụ thuộc một văn bản luật cụ thể (governing law, điều kiện luật định, statutory remedy), **kiểm chứng văn bản đó qua MCP `tvpl`** theo `../../references/tvpl-lookup-protocol.md` (`check_hieu_luc` + `get_dieu`) trước khi kết luận về legal effect.
+Khi điều khoản dẫn chiếu hoặc phụ thuộc một văn bản luật cụ thể (governing law, điều kiện luật định, statutory remedy), **kiểm chứng văn bản đó qua MCP `legal`** theo `../../references/legal-lookup-protocol.md` (`check_hieu_luc` + `get_dieu`) trước khi kết luận về legal effect.
 
 ### Bước 3 — Đọc tài liệu theo Quote-First Protocol
 Khi review hợp đồng:
@@ -177,11 +177,11 @@ Phải kéo `re-legal-licensing` nếu điều khoản phụ thuộc các vấn 
 
 ## Quy trình Mode 4 — Transaction Legal DD
 
-Theo `references/transaction-dd-playbook.md`: (1) kiểm kê data room + map nhóm vấn đề, ghi gaps; (2) lọc theo materiality (ngưỡng lấy từ handoff/dossier, không tự bịa); (3) trích issue theo bộ rà chuẩn + Quote-First, nhiều tài liệu cùng loại dùng tabular review; (4) phát biểu finding theo format bắt buộc, kiểm chứng luật qua `tvpl`; (5) tổng hợp theo nhóm + bottom-line + gaps. Project-legal (đất/quy hoạch/permit) → kéo `re-legal-licensing`; điều phối DD đa stream → `re-inv-dd-coordinator`; CP/closing → `cp-closing-issue-note-template`. Đóng gói: `../../templates/transaction-dd-findings-memo.md`; schedule HĐ trọng yếu: `../../templates/material-contract-schedule.md`.
+Theo `references/transaction-dd-playbook.md`: (1) kiểm kê data room + map nhóm vấn đề, ghi gaps; (2) lọc theo materiality (ngưỡng lấy từ handoff/dossier, không tự bịa); (3) trích issue theo bộ rà chuẩn + Quote-First, nhiều tài liệu cùng loại dùng tabular review; (4) phát biểu finding theo format bắt buộc, kiểm chứng luật qua `legal`; (5) tổng hợp theo nhóm + bottom-line + gaps. Project-legal (đất/quy hoạch/permit) → kéo `re-legal-licensing`; điều phối DD đa stream → `re-inv-dd-coordinator`; CP/closing → `cp-closing-issue-note-template`. Đóng gói: `../../templates/transaction-dd-findings-memo.md`; schedule HĐ trọng yếu: `../../templates/material-contract-schedule.md`.
 
 ## Quy trình Mode 5 — Văn kiện phê duyệt nội bộ
 
-Theo `references/corporate-approvals-vn.md`: xác định loại hình DN → cơ quan quyết định & loại văn kiện; **đọc điều lệ trước**; xác định thẩm quyền + tỷ lệ thông qua (kiểm chứng `tvpl`); cờ xung đột lợi ích (loại bên liên quan khỏi biểu quyết); cổng major one-off (M&A/huy động vốn/giải thể ký gấp → rà luật sư phụ trách). Output: `../../templates/corporate-resolution-vn.md`, đánh dấu DRAFT để rà soát.
+Theo `references/corporate-approvals-vn.md`: xác định loại hình DN → cơ quan quyết định & loại văn kiện; **đọc điều lệ trước**; xác định thẩm quyền + tỷ lệ thông qua (kiểm chứng `legal`); cờ xung đột lợi ích (loại bên liên quan khỏi biểu quyết); cổng major one-off (M&A/huy động vốn/giải thể ký gấp → rà luật sư phụ trách). Output: `../../templates/corporate-resolution-vn.md`, đánh dấu DRAFT để rà soát.
 
 ## Dạng đầu ra
 
@@ -297,7 +297,7 @@ Ngoài ra, dùng thêm:
 - [ ] Đã phân loại mức ưu tiên của issue
 - [ ] Đã đưa fallback hoặc hướng sửa cho các điểm quan trọng
 - [ ] Đã kiểm tra xem issue có phụ thuộc pháp lý dự án hay không
-- [ ] Văn bản luật dẫn chiếu đã được kiểm chứng qua `tvpl` (hoặc nêu rõ chưa kiểm chứng được)
+- [ ] Văn bản luật dẫn chiếu đã được kiểm chứng qua `legal` (hoặc nêu rõ chưa kiểm chứng được)
 - [ ] Đã cân nhắc gọi `re-legal-licensing` nếu có project/regulatory dependency
 - [ ] Đã route `RE-HQ` nếu task đã chuyển thành coordination đa stream
 - [ ] Đã gọi `re-legal-writing` nếu output cuối là memo / notice / recommendation tiếng Việt quan trọng

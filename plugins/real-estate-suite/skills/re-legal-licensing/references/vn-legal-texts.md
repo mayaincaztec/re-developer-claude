@@ -3,7 +3,7 @@
 # Văn bản Pháp luật Nền tảng BĐS Việt Nam
 
 > **as-of: 2025** — ngày xác minh gần nhất của danh sách này; cập nhật dòng này sau mỗi đợt rà hiệu lực định kỳ (xem mục Bảo trì trong `../../../references/skill-authoring-guide.md`).
-> ⚠️ Danh sách chỉ mang tính **định hướng tĩnh**. Kiểm tra hiệu lực **động** bằng MCP `tvpl` theo `../../../references/tvpl-lookup-protocol.md` trước khi viện dẫn.
+> ⚠️ Danh sách chỉ mang tính **định hướng tĩnh**. Kiểm tra hiệu lực **động** bằng MCP `legal` theo `../../../references/legal-lookup-protocol.md` trước khi viện dẫn.
 
 ---
 

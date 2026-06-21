@@ -1,5 +1,5 @@
 # DRAFT — Văn kiện phê duyệt nội bộ (để rà soát)
-> ⚠️ Bản nháp pháp lý — chưa phải văn kiện đã thông qua. Thẩm quyền & tỷ lệ thông qua phải kiểm chứng qua `tvpl` + điều lệ trước khi phát hành. Major action (M&A/huy động vốn/giải thể) → rà luật sư phụ trách.
+> ⚠️ Bản nháp pháp lý — chưa phải văn kiện đã thông qua. Thẩm quyền & tỷ lệ thông qua phải kiểm chứng qua `legal` + điều lệ trước khi phát hành. Major action (M&A/huy động vốn/giải thể) → rà luật sư phụ trách.
 
 <!-- Chọn 1 trong 2 khối theo hình thức quyết nghị; xóa khối không dùng -->
 
@@ -10,7 +10,7 @@ NGHỊ QUYẾT/QUYẾT ĐỊNH số .../...-[viết tắt cơ quan]
 [Cơ quan: HĐQT / ĐHĐCĐ / HĐTV / Chủ sở hữu] · Ngày ... · Hình thức: [họp / lấy ý kiến bằng văn bản]
 
 CĂN CỨ:
-- Luật Doanh nghiệp 2020 và văn bản hướng dẫn (đã kiểm chứng hiệu lực qua tvpl: [ngày]);
+- Luật Doanh nghiệp 2020 và văn bản hướng dẫn (đã kiểm chứng hiệu lực qua legal: [ngày]);
 - Điều lệ Công ty [điều/khoản];
 - [Tờ trình / hồ sơ giao dịch].
 
@@ -42,7 +42,7 @@ Ngày · Địa điểm/hình thức (trực tiếp/trực tuyến)
 
 ## Checklist trước phát hành
 - [ ] Đúng cơ quan quyết định theo loại hình DN
-- [ ] Thẩm quyền & tỷ lệ thông qua đúng (tvpl + điều lệ)
+- [ ] Thẩm quyền & tỷ lệ thông qua đúng (legal + điều lệ)
 - [ ] Người có liên quan đã loại khỏi biểu quyết (nếu áp dụng)
 - [ ] Quyết nghị nêu chính xác hành động / giá trị / đối tác / ủy quyền ký
 - [ ] Major action: đã gắn cờ rà soát luật sư phụ trách

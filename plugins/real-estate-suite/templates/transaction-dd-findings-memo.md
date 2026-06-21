@@ -22,7 +22,7 @@ Mức độ: 🔴 / 🟠 / 🟡 / 🟢
 Tài liệu: [path data room + tên] (Điều/khoản)
 Trích dẫn: "<nguyên văn>"
 Nội dung: [tài liệu nói gì + vì sao quan trọng]
-Kiểm chứng luật: [tvpl: tình trạng + ngày | "chưa kiểm chứng"]
+Kiểm chứng luật: [legal: tình trạng + ngày | "chưa kiểm chứng"]
 Khuyến nghị: [điều chỉnh giá / indemnity / consent / R&W / CP / walk]
 Owner / next step: ...
 ```

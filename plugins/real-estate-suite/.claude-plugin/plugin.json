@@ -1,6 +1,6 @@
 {
   "name": "real-estate-suite",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "description": "Vietnamese real-estate developer workflows for HQ coordination, legal, investment and finance, market research, and project design.",
   "author": {
     "name": "Real Estate Suite"
@@ -8,5 +8,11 @@
   "homepage": "https://github.com/mayaincaztec/real-estate-suite",
   "repository": "https://github.com/mayaincaztec/real-estate-suite",
   "license": "MIT",
-  "keywords": ["real-estate", "due-diligence", "investment", "legal", "vietnam"]
+  "keywords": [
+    "real-estate",
+    "due-diligence",
+    "investment",
+    "legal",
+    "vietnam"
+  ]
 }

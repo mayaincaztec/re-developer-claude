@@ -27,7 +27,7 @@ Không dùng cho: thẩm định pháp lý dự án (→ `re-legal-licensing`); 
 3. **Mọi con số phải có nguồn**: QCVN / TCVN / giả định có căn cứ / thị trường.
 4. **Luôn ≥ 2 phương án** để CĐT lựa chọn (tối ưu + an toàn); không đưa 1 phương án duy nhất.
 5. Thứ tự ưu tiên khi xung đột: **Khả thi pháp lý → Hiệu quả kinh doanh → Tối ưu chi phí → Thẩm mỹ bền vững**; chọn PA dễ phê duyệt nhất + bảo vệ lợi ích CĐT.
-6. Khi tính tuân thủ liên quan QCVN/luật, kiểm chứng hiệu lực văn bản qua `tvpl` (xem `../../references/tvpl-lookup-protocol.md`); khả năng phê duyệt pháp lý kéo `re-legal-licensing`.
+6. Khi tính tuân thủ liên quan QCVN/luật, kiểm chứng hiệu lực văn bản qua `legal` (xem `../../references/legal-lookup-protocol.md`); khả năng phê duyệt pháp lý kéo `re-legal-licensing`.
 
 ## Quy trình tính toán 9 bước (bắt buộc)
 
@@ -55,7 +55,7 @@ Chỉ có DT đất + loại hình → giả định D/H/FAR theo QCVN. D×H ra 
 
 - `re-inv-feasibility-study` / `re-inv-preliminary-report` dùng GFA/NSA/product mix từ skill này làm input doanh thu–chi phí.
 - `re-legal-licensing` cho khả năng phê duyệt / điều chỉnh quy hoạch.
-- `tvpl` cho hiệu lực QCVN/luật.
+- `legal` cho hiệu lực QCVN/luật.
 
 ## Văn phong & output
 
@@ -66,5 +66,5 @@ Chuyên nghiệp, sắc bén, thực tế — như báo cáo nội bộ cho HĐQ
 - [ ] Đã chạy đủ 9 bước (hoặc nêu rõ bước nào không áp dụng)
 - [ ] Mọi giả định có `[GIẢ ĐỊNH]` + căn cứ; chỉ tiêu 1/2000 (nếu có) được ưu tiên
 - [ ] Bảng kiểm tra tuân thủ có kết luận ĐẠT/CẢNH BÁO/KHÔNG ĐẠT cho từng chỉ tiêu
-- [ ] Hiệu lực QCVN/luật kiểm chứng qua `tvpl` ở điểm trọng yếu
+- [ ] Hiệu lực QCVN/luật kiểm chứng qua `legal` ở điểm trọng yếu
 - [ ] Đã đưa ≥ 2 phương án + lý do chọn

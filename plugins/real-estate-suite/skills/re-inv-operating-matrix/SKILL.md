@@ -22,9 +22,9 @@ Không dùng cho: thay phân tích đầu tư; thay quyết định khi task cò
 | Giai đoạn / loại việc | Primary skill | Specialist pull | Template / output | Verification | Escalation |
 |---|---|---|---|---|---|
 | Sàng lọc deal đầu vào | `re-inv-screening` | — (1 câu hỏi legal/market nếu cần) | `deal-screening-note` | `re-inv-verification-rules` | nếu Proceed → BC sơ bộ |
-| Báo cáo đầu tư sơ bộ | `re-inv-preliminary-report` | `re-legal-licensing`+`tvpl`, `re-rnd`, `re-project-design-planning` | `preliminary-investment-report` | `re-inv-verification-rules` | nếu Go/Conditional → FS |
+| Báo cáo đầu tư sơ bộ | `re-inv-preliminary-report` | `re-legal-licensing`+`legal`, `re-rnd`, `re-project-design-planning` | `preliminary-investment-report` | `re-inv-verification-rules` | nếu Go/Conditional → FS |
 | Feasibility study (FS) | `re-inv-feasibility-study` | `re-project-design-planning` (GFA/mix), `re-rnd` (giá) | `fs-structure` + `fs-excel-build-guide` → `.xlsx` | `re-inv-verification-rules` | — |
-| Báo cáo đầy đủ / IC memo | `re-inv-full-report` | `re-legal-licensing`+`re-legal-counsel`+`tvpl`, `re-rnd` | `full-investment-report` + `investment-memo` | `re-inv-verification-rules` | nếu cần duyệt đa phòng cấp executive → `RE-HQ` |
+| Báo cáo đầy đủ / IC memo | `re-inv-full-report` | `re-legal-licensing`+`re-legal-counsel`+`legal`, `re-rnd` | `full-investment-report` + `investment-memo` | `re-inv-verification-rules` | nếu cần duyệt đa phòng cấp executive → `RE-HQ` |
 | Cấu trúc deal + LOI | `re-inv-deal-structuring` | `re-legal-counsel`/`re-legal-licensing`, `re-inv-feasibility-study` | `loi` + `loi-and-offer-guide` | `re-inv-verification-rules` | nếu cấu trúc cần trọng tài đa phòng → `RE-HQ` |
 | Điều phối DD | `re-inv-dd-coordinator` | `RE-Legal` (`re-legal-licensing`/`re-legal-counsel`), các stream khác | `dd-executive-summary` + `finding` | `re-inv-verification-rules` | quyết định đa phòng cấp executive → `RE-HQ` |
 | Closing checklist (CP/CD) | `re-inv-dd-coordinator` | `re-legal-counsel` (cp-closing, material-contract-schedule) | `closing-checklist` | `re-inv-verification-rules` | chứng nhận sẵn-sàng-closing là kết luận pháp lý → `RE-Legal` |
@@ -36,7 +36,7 @@ Không dùng cho: thay phân tích đầu tư; thay quyết định khi task cò
 
 1. Nếu task chưa rõ giai đoạn → dùng entry `re-inv` để chốt decision/deliverable trước.
 2. Chọn primary skill theo giai đoạn lifecycle (screening → sơ bộ → FS → đầy đủ/IC → structure/LOI → DD).
-3. Kéo specialist input đúng domain: pháp lý → `re-legal-licensing`/`re-legal-counsel` (+`tvpl`); thị trường → `re-rnd`; chỉ tiêu quy hoạch/product mix → `re-project-design-planning`.
+3. Kéo specialist input đúng domain: pháp lý → `re-legal-licensing`/`re-legal-counsel` (+`legal`); thị trường → `re-rnd`; chỉ tiêu quy hoạch/product mix → `re-project-design-planning`.
 4. Trước khi chốt bất kỳ output chính thức nào → `re-inv-verification-rules`.
 5. Chỉ route `RE-HQ` khi cần tổng hợp đa phòng cấp executive hoặc trọng tài xung đột — không phải cho từng bước lifecycle.
 
