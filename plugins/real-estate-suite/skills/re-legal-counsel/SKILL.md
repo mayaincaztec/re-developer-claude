@@ -58,6 +58,8 @@ Không dùng cho:
 ### 4. Transaction Legal DD (rà soát bộ tài liệu giao dịch)
 Áp dụng khi cần trích issue pháp lý từ **một bộ tài liệu** (data room, danh mục hợp đồng của target) cho M&A / chuyển nhượng dự án — theo nhóm vấn đề + materiality + severity, hoặc rà hàng loạt hợp đồng cùng loại bằng lưới (tabular review). Đây là **legal stream chuyên sâu** mà `re-inv-dd-coordinator` kéo về; `re-legal-counsel` phát hành findings, không ôm điều phối DD. Phương pháp: `references/transaction-dd-playbook.md` + `references/transaction-clause-checklists.md`.
 
+Khi target là **công ty cổ phần** và cần rà **hồ sơ pháp lý doanh nghiệp (entity-level)** — tư cách pháp nhân, ĐKKD, cổ đông/vốn/chủ sở hữu hưởng lợi, quản trị nội bộ, giấy phép con cấp pháp nhân, kế toán–thuế, lao động, dữ liệu cá nhân, tài sản/IP/bảo hiểm, thanh tra–tranh chấp — dùng `references/corporate-legal-records-checklist-ctcp.md` làm **xương sống request → completeness → red flag** (10 nhóm, ưu tiên P1/P2/P3). **Ranh giới:** rà hồ sơ pháp lý **doanh nghiệp** là của `re-legal-counsel`; **pháp lý dự án** (đất / quy hoạch / GPXD / điều kiện mở bán / PCCC–ĐTM dự án) là của `re-legal-licensing` (workstream tách trong DD).
+
 ### 5. Soạn văn kiện phê duyệt nội bộ
 Áp dụng khi cần soạn nghị quyết/biên bản HĐQT, ĐHĐCĐ, HĐTV hoặc quyết định chủ sở hữu để **ủy quyền/chấp thuận giao dịch** (M&A, chuyển nhượng dự án, change-of-control, giao dịch lớn / với người có liên quan) theo Luật Doanh nghiệp 2020. Phương pháp + cổng chặn: `references/corporate-approvals-vn.md`.
 
@@ -179,6 +181,8 @@ Phải kéo `re-legal-licensing` nếu điều khoản phụ thuộc các vấn 
 
 Theo `references/transaction-dd-playbook.md`: (1) kiểm kê data room + map nhóm vấn đề, ghi gaps; (2) lọc theo materiality (ngưỡng lấy từ handoff/dossier, không tự bịa); (3) trích issue theo bộ rà chuẩn + Quote-First, nhiều tài liệu cùng loại dùng tabular review; (4) phát biểu finding theo format bắt buộc, kiểm chứng luật qua `legal`; (5) tổng hợp theo nhóm + bottom-line + gaps. Project-legal (đất/quy hoạch/permit) → kéo `re-legal-licensing`; điều phối DD đa stream → `re-inv-dd-coordinator`; CP/closing → `cp-closing-issue-note-template`. Đóng gói: `../../templates/transaction-dd-findings-memo.md`; schedule HĐ trọng yếu: `../../templates/material-contract-schedule.md`.
 
+Khi target là CTCP và rà **hồ sơ pháp lý doanh nghiệp (entity)**, dùng `references/corporate-legal-records-checklist-ctcp.md` làm DRL + lưới completeness 10 nhóm (request → Có/Thiếu/N/A → red flag → finding); xuất review grid trong reference đó hoặc cuộn narrative lên `transaction-dd-findings-memo`. Mục pháp lý **dự án** không đánh giá ở đây → `re-legal-licensing`.
+
 ## Quy trình Mode 5 — Văn kiện phê duyệt nội bộ
 
 Theo `references/corporate-approvals-vn.md`: xác định loại hình DN → cơ quan quyết định & loại văn kiện; **đọc điều lệ trước**; xác định thẩm quyền + tỷ lệ thông qua (kiểm chứng `legal`); cờ xung đột lợi ích (loại bên liên quan khỏi biểu quyết); cổng major one-off (M&A/huy động vốn/giải thể ký gấp → rà luật sư phụ trách). Output: `../../templates/corporate-resolution-vn.md`, đánh dấu DRAFT để rà soát.
@@ -268,6 +272,7 @@ Dùng khi cần đào sâu guide theo loại tài liệu:
 - `references/cp-closing-and-structuring-support.md`
 - `references/negotiation-and-dispute-playbook.md` — tier issue, đàm phán 3 vòng, khung & bảng so sánh phương án tranh chấp, thời hiệu, trọng tài
 - `references/transaction-dd-playbook.md` — rà bộ tài liệu giao dịch: nhóm vấn đề, materiality, severity, finding format, tabular review (Mode 4)
+- `references/corporate-legal-records-checklist-ctcp.md` — checklist hồ sơ pháp lý **doanh nghiệp** CTCP (10 nhóm, P1/P2/P3) dùng làm DRL + lưới completeness/red-flag cho entity-level legal DD (Mode 4); ranh giới corporate ↔ project (project → `re-legal-licensing`)
 - `references/transaction-clause-checklists.md` — bộ dấu hiệu change-of-control / assignment / MAC / MFN / indemnity / termination / CP / successor liability
 - `references/corporate-approvals-vn.md` — soạn nghị quyết/biên bản phê duyệt giao dịch theo Luật Doanh nghiệp 2020 (Mode 5)
 

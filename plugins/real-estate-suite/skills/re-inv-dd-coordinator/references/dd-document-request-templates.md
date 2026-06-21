@@ -11,6 +11,8 @@
 
 ### WORKSTREAM I: LEGAL & CORPORATE
 
+> **Owner:** `re-legal-counsel` (pháp lý **doanh nghiệp / entity**). DRL rút gọn dưới đây là lõi; khi target là **CTCP**, dùng checklist sâu 10 nhóm `../../re-legal-counsel/references/corporate-legal-records-checklist-ctcp.md` (request → completeness → red flag) làm xương sống. **Pháp lý dự án** (đất/quy hoạch/GPXD/mở bán/PCCC–ĐTM dự án) thuộc **WORKSTREAM II** → `re-legal-licensing`, KHÔNG gộp vào đây.
+
 **A. Hồ sơ pháp lý Công ty**
 | Mã | Tài liệu | P |
 |---|---|---|

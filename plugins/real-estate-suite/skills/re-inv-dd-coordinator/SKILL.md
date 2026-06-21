@@ -45,6 +45,7 @@ Chỉ huy động `RE-Legal` khi cần **nội dung đánh giá pháp lý chuyê
 - **Key Findings DD về pháp lý công ty / corporate legal / transaction documents** → gọi `re-legal-counsel`
   - ví dụ: corporate status, shareholder arrangements, material contracts, financing documents, dispute exposure, change-of-control implications.
   - `re-legal-counsel` rà bộ tài liệu theo `transaction-dd-playbook` (nhóm vấn đề + materiality + severity, tabular review cho hợp đồng hàng loạt) và trả `transaction-dd-findings-memo`; coordinator điều phối, không tự làm legal extraction.
+  - target là **CTCP**: brief `re-legal-counsel` dùng checklist hồ sơ pháp lý doanh nghiệp 10 nhóm (`corporate-legal-records-checklist-ctcp`) làm DRL + lưới completeness/red-flag cho WORKSTREAM I; pháp lý **dự án** vẫn tách sang `re-legal-licensing` (WORKSTREAM II).
 - **Cần polish legal memo tiếng Việt** → sau khi specialist legal xong, có thể yêu cầu `re-legal-writing` trong `RE-Legal`.
 
 Nguyên tắc: `RE-Investment-Finance` điều phối DD; `RE-Legal` phát hành legal analysis chuyên sâu theo từng lane.

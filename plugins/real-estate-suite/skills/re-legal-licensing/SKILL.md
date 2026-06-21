@@ -35,6 +35,7 @@ Không dùng cho:
 - clause-by-clause contract review;
 - redline hợp đồng;
 - dispute memo thiên về allocation of liability;
+- **rà hồ sơ pháp lý doanh nghiệp/entity** (tư cách pháp nhân, ĐKKD, cổ đông/vốn/BO, quản trị nội bộ, giấy phép con cấp pháp nhân, kế toán–thuế, lao động…) → đây là của `re-legal-counsel` (xem `corporate-legal-records-checklist-ctcp`); licensing chỉ lo **pháp lý dự án**;
 - điều phối DD nhiều workstream;
 - deal structuring hoặc transaction architecture nhiều team.
 

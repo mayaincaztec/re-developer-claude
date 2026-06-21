@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.15.0 - 2026-06-21
+
+### Corporate legal records checklist (CTCP) → re-legal-counsel + DD
+- New reference `re-legal-counsel/references/corporate-legal-records-checklist-ctcp.md`: the 10-group internal corporate legal records checklist for a joint stock company (I corporate · II shareholders/capital/BO · III governance · IV entity business licenses · V contracts · VI accounting/tax · VII labor/SI · VIII personal data · IX assets/IP/insurance · X inspection/dispute), reframed as a DD/review tool — request (P1/P2/P3) → completeness (Có/Thiếu/N/A) → red flag → finding, plus a review-grid output shape.
+- Ownership boundary made explicit: **corporate/entity legal records review = `re-legal-counsel`**; **project legal (land/zoning/construction permit/sale conditions/project PCCC-EIA) = `re-legal-licensing`**. Group IV split: entity-level business-condition licenses → counsel; project-specific permits → licensing.
+- Wired into `re-legal-counsel` SKILL (Mode 4 + Quy trình Mode 4 + References) and `re-inv-dd-coordinator` (WORKSTREAM I owner note + brief guidance); reciprocal boundary note added to `re-legal-licensing`.
+
 ## 0.14.0 - 2026-06-21
 
 ### Cleanup of legacy-library residue + personal rebrand (Trần Bảo Thùy)
