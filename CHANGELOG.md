@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.17.0 - 2026-07-02
+
+### re-legal-counsel: M&A clause playbook + contract reading method (from "Bẫy trong điều khoản hợp đồng" handbook)
+Reviewed Herman, Henry & Dominic's *"Bẫy trong điều khoản hợp đồng"* handbook (2026 ed., internal/community-shared) and integrated the parts that strengthen `re-legal-counsel`'s contract draft/review/negotiation work, especially M&A.
+- New reference `references/ma-clause-playbook-vn.md`: 10 M&A clause patterns (Reps & Warranties, Indemnification, MAC, Earn-out, Escrow, Drag/Tag-along, ROFR/ROFO, Non-compete post-M&A, Conditions Precedent, SHA-vs-Điều lệ) — each with the common Anglo-American-template trap, the actual Vietnamese legal basis (BLDS/LDN articles, VIAC dispute patterns), and a drafting checklist. Complements the existing `ma-document-guides.md` (US/ABA/SRS Acquiom market benchmarks) by adding the Vietnamese-law-validity layer market benchmarks don't cover.
+- New reference `references/contract-reading-review-method.md`: the handbook's 7 nguyên tắc + 7-round reading process, wired in as the concrete technique behind the existing Quote-First Protocol (Bước 3) — applies to all contract types, not just M&A.
+- SKILL.md updated: Bước 3 points to the reading method; Bước 5 (M&A clause family) points to the new playbook; new "Lỗi thường gặp" item on not Anglicizing SPA/SHA concepts without VN-law mapping; References section updated. Full case text (original clauses, VIAC dispute narratives, annotated rewrites) stays in the source file under `assets/re-legal-counsel/` — the new references summarize for quick lookup and point back to it for verbatim drafting language.
+
 ## 0.15.0 - 2026-06-21
 
 ### Corporate legal records checklist (CTCP) → re-legal-counsel + DD
