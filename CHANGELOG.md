@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.18.0 - 2026-07-02
+
+### re-legal-counsel: 50 M&A traps catalog + 50 negotiation briefs (from two more HHD handbooks)
+Reviewed two more Herman, Henry & Dominic handbooks (2026, English, jurisdiction-neutral international M&A practice) and integrated them as two complementary lenses for SPA/SSA/SHA work:
+- New reference `references/ma-traps-catalog.md` — from *"50 M&A Traps in the Fine Print"*: navigable catalog of 50 clause-level traps grouped by SPA family (price/completion, earnout, liability limits, reps/disclosure, deal certainty, boilerplate, restrictive covenants, SHA/preferred), each with a one-line "what bites" + the compounding cross-links. Headlines the book's core theme (**traps compound** — read clauses against their definitions and each other). This is the **review/redline** lens; deeper on the *mechanics of harm* than the market-benchmark refs. Points back to the source for verbatim worked scenarios + before/after redlines.
+- New reference `references/ma-negotiation-briefs.md` — from *"Private M&A Negotiation"*: 50 negotiation briefs in 10 parts, distilling each topic's **both-sides positions + fair middle ground + linkage/trade-offs**. This is the **negotiate/prep** lens — the counterparty's arguments and the balanced market landing, which the existing refs didn't carry. Complements `negotiation-and-dispute-playbook.md` (generic 3-round method).
+- SKILL.md updated: Bước 5 now routes to a four-lens M&A stack (traps / negotiation / VN-law / US-benchmark) with an explicit reminder that traps+briefs are jurisdiction-neutral and must be overlaid with VN law via `ma-clause-playbook-vn.md` + verified through MCP `legal`. References section updated. v2.2.0.
+
 ## 0.17.0 - 2026-07-02
 
 ### re-legal-counsel: M&A clause playbook + contract reading method (from "Bẫy trong điều khoản hợp đồng" handbook)
